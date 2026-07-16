@@ -3,1376 +3,969 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Fabrik du Cache Clim – Cache climatiseur & pompe à chaleur sur mesure</title>
-  <meta name="description" content="Fabrication française de cache climatiseur et cache pompe à chaleur en aluminium composite. Sur mesure, 15 designs, 10 finitions. Basé à Canet-en-Roussillon.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>La Fabrik du Cache Clim – Décoration pour climatiseur, fabrication française</title>
+  <meta name="description" content="Caches climatiseur et pompe à chaleur design, fabriqués à Canet-en-Roussillon. Sur mesure, 15 designs, pour particuliers et professionnels. Revendeurs bienvenus.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --noir: #111111;
-      --gris-fonce: #1e1e1e;
-      --gris: #3a3a3a;
-      --gris-moyen: #6b6b6b;
-      --gris-clair: #e8e8e8;
+      --bleu: #1a3a5c;
+      --bleu-mid: #2563a8;
+      --bleu-clair: #3b82f6;
+      --bleu-pale: #dbeafe;
+      --bleu-very-pale: #f0f7ff;
       --blanc: #ffffff;
-      --accent: #e85d04;
-      --accent-dark: #c44d00;
-      --accent-light: #ff7a30;
-      --vert: #2d6a4f;
-      --bleu: #1d3557;
-      --fond: #f5f5f3;
-      --fond2: #ebebeb;
-      --radius: 12px;
-      --radius-lg: 20px;
-      --shadow: 0 4px 24px rgba(0,0,0,0.08);
-      --shadow-lg: 0 12px 48px rgba(0,0,0,0.14);
+      --gris-clair: #f4f6f8;
+      --gris-texte: #64748b;
+      --gris-border: #e2e8f0;
+      --noir: #0f172a;
+      --or: #c9a84c;
+      --radius: 14px;
+      --radius-lg: 22px;
+      --shadow-sm: 0 2px 12px rgba(26,58,92,.07);
+      --shadow: 0 6px 30px rgba(26,58,92,.10);
+      --shadow-lg: 0 16px 60px rgba(26,58,92,.15);
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--fond); color: var(--noir); line-height: 1.6; }
+    body { font-family: 'Inter', sans-serif; background: var(--blanc); color: var(--noir); line-height: 1.6; }
 
-    /* ─── HEADER ─── */
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: var(--noir); color: var(--blanc);
-      padding: 0 5vw;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    }
-    .header-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 70px; max-width: 1280px; margin: 0 auto;
-    }
+    .top-bar { background: var(--bleu); color: white; text-align: center; padding: 9px 20px; font-size: 13px; font-weight: 500; }
+    .top-bar a { color: var(--or); text-decoration: none; font-weight: 700; }
+
+    header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gris-border); padding: 0 5vw; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; max-width: 1300px; margin: 0 auto; gap: 20px; }
     .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .logo-icon {
-      width: 42px; height: 42px; background: var(--accent);
-      border-radius: 10px; display: flex; align-items: center; justify-content: center;
-      font-size: 20px; color: white;
-    }
-    .logo-text { line-height: 1.1; }
-    .logo-text strong { display: block; font-size: 15px; font-weight: 800; color: white; letter-spacing: -0.3px; }
-    .logo-text span { font-size: 10px; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
-    nav { display: flex; align-items: center; gap: 8px; }
-    nav a {
-      color: #ccc; text-decoration: none; font-size: 13px; font-weight: 500;
-      padding: 8px 14px; border-radius: 8px; transition: all .2s;
-    }
-    nav a:hover { color: white; background: rgba(255,255,255,.08); }
-    .btn-cart {
-      background: var(--accent); color: white; border: none; cursor: pointer;
-      padding: 10px 18px; border-radius: 10px; font-weight: 700; font-size: 13px;
-      display: flex; align-items: center; gap: 8px; transition: background .2s; position: relative;
-    }
-    .btn-cart:hover { background: var(--accent-dark); }
-    .cart-badge {
-      position: absolute; top: -6px; right: -6px;
-      background: white; color: var(--accent); font-size: 10px; font-weight: 900;
-      width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      border: 2px solid var(--accent);
-    }
-    .hamburger { display: none; background: none; border: none; color: white; font-size: 22px; cursor: pointer; }
+    .logo-mark { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--bleu), var(--bleu-mid)); display: flex; align-items: center; justify-content: center; font-size: 20px; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(37,99,168,.3); }
+    .logo-text strong { display: block; font-size: 15px; font-weight: 800; color: var(--bleu); line-height: 1.1; }
+    .logo-text span { font-size: 10px; color: var(--gris-texte); letter-spacing: .8px; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { color: var(--gris-texte); text-decoration: none; font-size: 13.5px; font-weight: 500; padding: 8px 14px; border-radius: 8px; transition: all .2s; white-space: nowrap; }
+    nav a:hover { color: var(--bleu); background: var(--bleu-very-pale); }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .btn-cart { background: var(--bleu); color: white; border: none; cursor: pointer; padding: 10px 20px; border-radius: 10px; font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px; transition: all .2s; position: relative; white-space: nowrap; }
+    .btn-cart:hover { background: var(--bleu-mid); transform: translateY(-1px); box-shadow: var(--shadow); }
+    .cart-badge { position: absolute; top: -7px; right: -7px; background: var(--or); color: white; font-size: 10px; font-weight: 900; width: 20px; height: 20px; border-radius: 50%; display: none; align-items: center; justify-content: center; }
+    .hamburger { display: none; background: none; border: none; color: var(--bleu); font-size: 22px; cursor: pointer; }
 
-    /* ─── HERO ─── */
-    .hero {
-      background: var(--noir);
-      padding: 90px 5vw 80px;
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; top: 0; right: 0; width: 50%; height: 100%;
-      background: linear-gradient(135deg, transparent 0%, rgba(232,93,4,.08) 100%);
-      pointer-events: none;
-    }
-    .hero-inner {
-      max-width: 1280px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(232,93,4,.15); color: var(--accent-light);
-      border: 1px solid rgba(232,93,4,.3); border-radius: 100px;
-      padding: 6px 16px; font-size: 12px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-size: clamp(36px, 5vw, 62px); font-weight: 900; color: white;
-      line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 20px;
-    }
-    .hero h1 em { color: var(--accent); font-style: normal; }
-    .hero p { color: #aaa; font-size: 17px; line-height: 1.7; margin-bottom: 36px; max-width: 480px; }
+    .hero { background: linear-gradient(135deg, var(--bleu) 0%, #0d2d4f 100%); padding: 100px 5vw 80px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 60px; background: white; clip-path: ellipse(55% 100% at 50% 100%); }
+    .hero-bg { position: absolute; inset: 0; opacity: .04; background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 32px 32px; }
+    .hero-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,.85); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 24px; }
+    .hero-eyebrow i { color: var(--or); }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 4.5vw, 60px); font-weight: 700; color: white; line-height: 1.1; letter-spacing: -.5px; margin-bottom: 22px; }
+    .hero h1 em { color: var(--or); font-style: normal; display: block; }
+    .hero-desc { color: rgba(255,255,255,.75); font-size: 16px; line-height: 1.75; margin-bottom: 36px; max-width: 460px; }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--accent); color: white; text-decoration: none;
-      padding: 15px 30px; border-radius: 12px; font-weight: 700; font-size: 15px;
-      display: inline-flex; align-items: center; gap: 10px; transition: all .2s;
-      border: 2px solid var(--accent);
-    }
-    .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); transform: translateY(-1px); }
-    .btn-outline {
-      background: transparent; color: white; text-decoration: none;
-      padding: 15px 30px; border-radius: 12px; font-weight: 600; font-size: 15px;
-      display: inline-flex; align-items: center; gap: 10px; transition: all .2s;
-      border: 2px solid rgba(255,255,255,.2);
-    }
-    .btn-outline:hover { border-color: white; background: rgba(255,255,255,.05); }
-    .hero-stats {
-      display: flex; gap: 40px; margin-top: 50px; padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,.1);
-    }
-    .stat strong { display: block; font-size: 32px; font-weight: 900; color: white; }
-    .stat span { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
-    .hero-visual {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-    }
-    .hero-card {
-      background: var(--gris-fonce); border: 1px solid #2a2a2a;
-      border-radius: var(--radius); padding: 24px; position: relative; overflow: hidden;
-      transition: transform .3s, border-color .3s;
-    }
-    .hero-card:hover { transform: translateY(-3px); border-color: var(--accent); }
-    .hero-card:first-child { grid-column: 1 / -1; }
-    .hero-card .card-label {
-      font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px;
-      color: var(--accent); font-weight: 700; margin-bottom: 10px;
-    }
-    .hero-card h3 { font-size: 18px; font-weight: 700; color: white; margin-bottom: 6px; }
-    .hero-card p { font-size: 13px; color: #888; }
-    .hero-card .price {
-      margin-top: 16px; font-size: 22px; font-weight: 800; color: white;
-    }
-    .hero-card .price small { font-size: 13px; color: #777; font-weight: 400; }
-    .card-tag {
-      position: absolute; top: 16px; right: 16px;
-      background: var(--accent); color: white; font-size: 9px; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 1px;
-      padding: 4px 10px; border-radius: 100px;
-    }
+    .btn-white { background: white; color: var(--bleu); text-decoration: none; padding: 15px 30px; border-radius: 12px; font-weight: 800; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; transition: all .2s; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,.25); }
+    .btn-ghost { background: rgba(255,255,255,.1); color: white; text-decoration: none; padding: 15px 28px; border-radius: 12px; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; transition: all .2s; border: 1.5px solid rgba(255,255,255,.25); }
+    .btn-ghost:hover { background: rgba(255,255,255,.18); }
+    .hero-trust { display: flex; gap: 30px; margin-top: 44px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,.12); flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.7); }
+    .trust-item i { color: var(--or); font-size: 16px; }
+    .trust-item span { font-size: 13px; font-weight: 500; }
+    .hero-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .hero-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); padding: 22px; backdrop-filter: blur(10px); transition: all .3s; }
+    .hero-card:hover { background: rgba(255,255,255,.13); transform: translateY(-3px); }
+    .hero-card:first-child { grid-column: 1/-1; }
+    .hc-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--or); font-weight: 700; margin-bottom: 8px; }
+    .hc-title { font-size: 16px; font-weight: 700; color: white; margin-bottom: 5px; }
+    .hc-desc { font-size: 12px; color: rgba(255,255,255,.6); }
+    .hc-price { font-size: 20px; font-weight: 900; color: white; margin-top: 14px; }
+    .hc-price small { font-size: 12px; color: rgba(255,255,255,.5); font-weight: 400; }
 
-    /* ─── BANDEAU AVANTAGES ─── */
-    .avantages-bar { background: var(--accent); padding: 18px 5vw; }
-    .avantages-inner {
-      max-width: 1280px; margin: 0 auto;
-      display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;
-    }
-    .avantage { display: flex; align-items: center; gap: 10px; color: white; }
-    .avantage i { font-size: 18px; opacity: .9; }
-    .avantage span { font-size: 13px; font-weight: 600; }
+    .stats-strip { background: white; padding: 50px 5vw; border-bottom: 1px solid var(--gris-border); }
+    .stats-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 30px; }
+    .stat-item { text-align: center; }
+    .stat-item strong { display: block; font-size: 38px; font-weight: 900; color: var(--bleu); font-family: 'Playfair Display', serif; line-height: 1; margin-bottom: 6px; }
+    .stat-item span { font-size: 13px; color: var(--gris-texte); text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
 
-    /* ─── SECTION BOUTIQUE ─── */
-    section { padding: 80px 5vw; }
-    .section-inner { max-width: 1280px; margin: 0 auto; }
-    .section-header { margin-bottom: 48px; }
-    .section-tag {
-      display: inline-block; background: rgba(232,93,4,.1); color: var(--accent);
-      border: 1px solid rgba(232,93,4,.25); border-radius: 100px;
-      padding: 5px 14px; font-size: 11px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px;
-    }
-    .section-header h2 {
-      font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -1px; color: var(--noir);
-    }
-    .section-header p { color: var(--gris-moyen); font-size: 16px; margin-top: 10px; max-width: 560px; }
+    section { padding: 90px 5vw; }
+    .section-inner { max-width: 1300px; margin: 0 auto; }
+    .section-header { margin-bottom: 52px; }
+    .section-header.center { text-align: center; }
+    .section-header.center p { margin: 0 auto; }
+    .s-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--bleu-pale); color: var(--bleu); border-radius: 100px; padding: 5px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; }
+    .section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; color: var(--bleu); letter-spacing: -.3px; line-height: 1.15; }
+    .section-header p { color: var(--gris-texte); font-size: 16px; margin-top: 12px; max-width: 580px; line-height: 1.75; }
 
-    /* Filtres catégories */
-    .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
-    .filter-btn {
-      background: white; border: 2px solid var(--gris-clair); color: var(--gris);
-      padding: 9px 20px; border-radius: 100px; font-size: 13px; font-weight: 600;
-      cursor: pointer; transition: all .2s;
-    }
-    .filter-btn:hover, .filter-btn.active {
-      background: var(--noir); border-color: var(--noir); color: white;
-    }
+    .boutique { background: var(--gris-clair); }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 38px; }
+    .filter-btn { background: white; border: 1.5px solid var(--gris-border); color: var(--gris-texte); padding: 9px 20px; border-radius: 100px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .2s; }
+    .filter-btn:hover { border-color: var(--bleu-clair); color: var(--bleu); }
+    .filter-btn.active { background: var(--bleu); border-color: var(--bleu); color: white; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 24px; }
+    .product-card { background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: all .3s; border: 1.5px solid transparent; }
+    .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--bleu-clair); }
+    .product-img { height: 210px; display: flex; align-items: center; justify-content: center; position: relative; font-size: 70px; }
+    .product-badge { position: absolute; top: 14px; left: 14px; background: var(--bleu); color: white; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 100px; }
+    .product-badge.vert { background: #059669; }
+    .product-badge.or { background: var(--or); }
+    .product-body { padding: 20px 22px 0; }
+    .product-cat { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--bleu-clair); margin-bottom: 5px; }
+    .product-name { font-size: 16px; font-weight: 800; color: var(--bleu); margin-bottom: 8px; font-family: 'Playfair Display', serif; }
+    .product-desc { font-size: 13px; color: var(--gris-texte); line-height: 1.55; margin-bottom: 14px; }
+    .color-dots { display: flex; gap: 6px; margin-bottom: 10px; }
+    .cdot { width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(0,0,0,.1); cursor: pointer; transition: transform .15s; }
+    .cdot:hover { transform: scale(1.25); }
+    .product-footer { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; border-top: 1px solid var(--gris-border); margin-top: 14px; }
+    .product-price strong { font-size: 20px; font-weight: 900; color: var(--bleu); }
+    .product-price small { display: block; font-size: 11px; color: var(--gris-texte); }
+    .btn-add { background: var(--bleu); color: white; border: none; cursor: pointer; padding: 10px 18px; border-radius: 10px; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 7px; transition: all .2s; }
+    .btn-add:hover { background: var(--bleu-mid); transform: translateY(-1px); }
 
-    /* Grille produits */
-    .products-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 24px;
-    }
-    .product-card {
-      background: white; border-radius: var(--radius-lg); overflow: hidden;
-      box-shadow: var(--shadow); transition: all .3s; position: relative;
-      border: 1px solid transparent;
-    }
-    .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
-    .product-img {
-      height: 220px; display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-    }
-    .product-img-inner {
-      width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
-      font-size: 64px;
-    }
-    .product-badge {
-      position: absolute; top: 14px; left: 14px;
-      background: var(--accent); color: white; font-size: 10px; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 1px;
-      padding: 4px 12px; border-radius: 100px;
-    }
-    .product-badge.badge-new { background: var(--vert); }
-    .product-badge.badge-promo { background: #c1121f; }
-    .product-body { padding: 22px; }
-    .product-category { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 6px; }
-    .product-name { font-size: 17px; font-weight: 800; color: var(--noir); margin-bottom: 8px; }
-    .product-desc { font-size: 13px; color: var(--gris-moyen); line-height: 1.5; margin-bottom: 18px; }
-    .product-colors { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
-    .color-dot {
-      width: 18px; height: 18px; border-radius: 50%;
-      border: 2px solid rgba(0,0,0,.1); cursor: pointer;
-      transition: transform .15s;
-    }
-    .color-dot:hover { transform: scale(1.2); }
-    .product-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 22px; background: var(--fond); border-top: 1px solid var(--gris-clair);
-    }
-    .product-price strong { font-size: 22px; font-weight: 900; color: var(--noir); }
-    .product-price small { display: block; font-size: 11px; color: var(--gris-moyen); }
-    .btn-add {
-      background: var(--noir); color: white; border: none; cursor: pointer;
-      padding: 10px 18px; border-radius: 10px; font-size: 13px; font-weight: 700;
-      display: flex; align-items: center; gap: 8px; transition: background .2s;
-    }
-    .btn-add:hover { background: var(--accent); }
+    .config-section { background: white; }
+    .config-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
+    .config-form { display: flex; flex-direction: column; gap: 28px; }
+    .config-form .group-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gris-texte); margin-bottom: 12px; }
+    .color-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+    .cswatch { width: 38px; height: 38px; border-radius: 10px; cursor: pointer; border: 3px solid transparent; transition: all .2s; position: relative; }
+    .cswatch:hover { transform: scale(1.1); }
+    .cswatch.sel { border-color: var(--bleu); box-shadow: 0 0 0 2px white, 0 0 0 4px var(--bleu); }
+    .cswatch.sel::after { content:'✓'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:white; font-size:14px; font-weight:900; text-shadow:0 1px 3px rgba(0,0,0,.6); }
+    .motif-opts { display: flex; gap: 8px; flex-wrap: wrap; }
+    .motif-btn { padding: 8px 16px; border-radius: 8px; border: 1.5px solid var(--gris-border); font-size: 12px; font-weight: 600; color: var(--gris-texte); cursor: pointer; background: white; transition: all .2s; }
+    .motif-btn:hover { border-color: var(--bleu-clair); color: var(--bleu); }
+    .motif-btn.sel { background: var(--bleu-pale); border-color: var(--bleu); color: var(--bleu); }
+    .dim-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .dim-group label { font-size: 11px; color: var(--gris-texte); font-weight: 600; margin-bottom: 6px; display: block; }
+    .dim-input { width: 100%; padding: 12px 14px; border: 1.5px solid var(--gris-border); border-radius: 10px; font-size: 14px; font-weight: 700; color: var(--bleu); outline: none; transition: border-color .2s; font-family: inherit; }
+    .dim-input:focus { border-color: var(--bleu-clair); }
+    .config-preview { background: var(--bleu); border-radius: var(--radius-lg); padding: 38px; position: sticky; top: 90px; color: white; }
+    .config-preview h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: white; margin-bottom: 24px; }
+    .preview-visual { width: 100%; aspect-ratio: 4/3; background: rgba(255,255,255,.06); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; border: 1px dashed rgba(255,255,255,.2); }
+    .preview-box { width: 55%; height: 55%; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 8px 30px rgba(0,0,0,.4); transition: all .4s; }
+    .prev-rows { display: flex; flex-direction: column; }
+    .prev-row { display: flex; justify-content: space-between; align-items: center; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .prev-row:last-child { border: none; }
+    .prev-row .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,.5); font-weight: 600; }
+    .prev-row .val { font-size: 13px; font-weight: 700; color: white; text-align: right; max-width: 60%; }
+    .prev-price { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; color: var(--or); text-align: center; margin: 22px 0 4px; }
+    .prev-price-sub { text-align: center; font-size: 12px; color: rgba(255,255,255,.4); margin-bottom: 22px; }
+    .btn-devis { width: 100%; background: var(--or); color: var(--bleu); border: none; cursor: pointer; padding: 16px; border-radius: 12px; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; transition: all .2s; font-family: 'Inter', sans-serif; }
+    .btn-devis:hover { background: #b8943f; transform: translateY(-1px); }
 
-    /* ─── CONFIGURATEUR ─── */
-    .configurateur { background: var(--noir); color: white; }
-    .configurateur .section-tag { background: rgba(232,93,4,.2); }
-    .configurateur .section-header h2 { color: white; }
-    .configurateur .section-header p { color: #aaa; }
-    .config-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-    .config-form { display: flex; flex-direction: column; gap: 24px; }
-    .config-group label {
-      display: block; font-size: 12px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 1px; color: #999; margin-bottom: 10px;
-    }
-    .config-options { display: flex; gap: 10px; flex-wrap: wrap; }
-    .config-option {
-      padding: 10px 18px; border-radius: 10px; border: 2px solid #2a2a2a;
-      color: #ccc; font-size: 13px; font-weight: 600; cursor: pointer;
-      transition: all .2s; background: transparent;
-    }
-    .config-option:hover, .config-option.selected {
-      border-color: var(--accent); color: var(--accent-light); background: rgba(232,93,4,.08);
-    }
-    .config-color-options { display: flex; gap: 10px; flex-wrap: wrap; }
-    .config-color {
-      width: 40px; height: 40px; border-radius: 10px; cursor: pointer;
-      border: 3px solid transparent; transition: all .2s; position: relative;
-    }
-    .config-color:hover, .config-color.selected { border-color: var(--accent); transform: scale(1.1); }
-    .config-color.selected::after {
-      content: '✓'; position: absolute; inset: 0; display: flex;
-      align-items: center; justify-content: center; color: white;
-      font-size: 14px; font-weight: 900; text-shadow: 0 1px 3px rgba(0,0,0,.5);
-    }
-    .config-dimensions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-    .config-input-group { display: flex; flex-direction: column; gap: 6px; }
-    .config-input-group label { color: #888; font-size: 11px; }
-    .config-input {
-      background: #1a1a1a; border: 2px solid #2a2a2a; color: white;
-      padding: 12px 14px; border-radius: 10px; font-size: 14px; font-weight: 600;
-      outline: none; width: 100%; transition: border-color .2s;
-    }
-    .config-input:focus { border-color: var(--accent); }
-    .config-preview {
-      background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: var(--radius-lg);
-      padding: 40px; position: sticky; top: 90px;
-    }
-    .config-preview h3 { font-size: 16px; font-weight: 800; color: white; margin-bottom: 24px; }
-    .preview-visual {
-      width: 100%; aspect-ratio: 4/3;
-      background: #111; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 24px; border: 1px dashed #333; position: relative; overflow: hidden;
-    }
-    .preview-box {
-      width: 60%; height: 60%; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; transition: all .5s;
-      box-shadow: 0 8px 30px rgba(0,0,0,.5);
-    }
-    .preview-summary { display: flex; flex-direction: column; gap: 12px; }
-    .preview-row {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 10px 0; border-bottom: 1px solid #2a2a2a;
-    }
-    .preview-row:last-child { border: none; }
-    .preview-row span:first-child { font-size: 12px; color: #777; text-transform: uppercase; letter-spacing: 1px; }
-    .preview-row span:last-child { font-size: 14px; font-weight: 700; color: white; }
-    .preview-price { font-size: 32px; font-weight: 900; color: var(--accent); margin: 20px 0 6px; text-align: center; }
-    .preview-price-sub { text-align: center; font-size: 12px; color: #666; margin-bottom: 20px; }
-    .btn-devis {
-      width: 100%; background: var(--accent); color: white; border: none; cursor: pointer;
-      padding: 16px; border-radius: 12px; font-size: 15px; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 1px; transition: background .2s;
-    }
-    .btn-devis:hover { background: var(--accent-dark); }
+    .designs-section { background: var(--bleu-very-pale); }
+    .designs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px,1fr)); gap: 12px; }
+    .design-card { background: white; border-radius: 14px; padding: 20px 12px 16px; text-align: center; border: 1.5px solid var(--gris-border); cursor: pointer; transition: all .2s; box-shadow: var(--shadow-sm); }
+    .design-card:hover, .design-card.active { border-color: var(--bleu-clair); transform: translateY(-3px); box-shadow: var(--shadow); }
+    .design-emoji { font-size: 30px; margin-bottom: 8px; }
+    .design-name { font-size: 12px; font-weight: 700; color: var(--bleu); }
 
-    /* ─── DESIGNS ─── */
-    .designs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
-    .design-card {
-      background: white; border-radius: 14px; padding: 20px 14px;
-      text-align: center; border: 2px solid transparent; cursor: pointer;
-      transition: all .2s; box-shadow: var(--shadow);
-    }
-    .design-card:hover, .design-card.active { border-color: var(--accent); transform: translateY(-2px); }
-    .design-emoji { font-size: 32px; margin-bottom: 8px; }
-    .design-name { font-size: 12px; font-weight: 700; color: var(--noir); }
+    .pourquoi-section { background: white; }
+    .atouts-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .atout-card { padding: 32px; border-radius: var(--radius-lg); border: 1.5px solid var(--gris-border); transition: all .25s; }
+    .atout-card:hover { border-color: var(--bleu-clair); box-shadow: var(--shadow); transform: translateY(-3px); }
+    .atout-icon { width: 52px; height: 52px; border-radius: 14px; background: var(--bleu-pale); color: var(--bleu); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px; }
+    .atout-card h3 { font-size: 16px; font-weight: 800; color: var(--bleu); margin-bottom: 10px; }
+    .atout-card p { font-size: 14px; color: var(--gris-texte); line-height: 1.65; }
 
-    /* ─── POURQUOI NOUS ─── */
-    .pourquoi { background: white; }
-    .avantages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-    .avantage-card {
-      padding: 32px; border-radius: var(--radius-lg);
-      background: var(--fond); border: 1px solid var(--gris-clair);
-      transition: box-shadow .2s;
-    }
-    .avantage-card:hover { box-shadow: var(--shadow-lg); }
-    .avantage-icon {
-      width: 52px; height: 52px; border-radius: 14px;
-      background: rgba(232,93,4,.1); color: var(--accent);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px; margin-bottom: 18px;
-    }
-    .avantage-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 10px; }
-    .avantage-card p { font-size: 14px; color: var(--gris-moyen); line-height: 1.6; }
+    .cibles-section { background: var(--bleu); }
+    .cibles-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .cible-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius-lg); padding: 36px 28px; text-align: center; transition: all .3s; }
+    .cible-card:hover { background: rgba(255,255,255,.14); transform: translateY(-4px); }
+    .cible-icon { font-size: 42px; margin-bottom: 18px; display: block; }
+    .cible-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: white; margin-bottom: 12px; }
+    .cible-card p { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.65; }
+    .cible-tag { display: inline-block; background: var(--or); color: var(--bleu); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 100px; margin-top: 16px; }
 
-    /* ─── TÉMOIGNAGES ─── */
-    .temoignages { background: var(--fond2); }
-    .temos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .temo-card {
-      background: white; border-radius: var(--radius-lg); padding: 28px;
-      box-shadow: var(--shadow);
-    }
-    .temo-stars { color: #f59e0b; font-size: 14px; margin-bottom: 14px; }
-    .temo-text { font-size: 14px; color: var(--gris); line-height: 1.7; font-style: italic; margin-bottom: 20px; }
+    .revendeurs-section { background: var(--gris-clair); }
+    .rev-inner { background: white; border-radius: var(--radius-lg); padding: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; box-shadow: var(--shadow); }
+    .rev-inner h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--bleu); line-height: 1.2; margin-bottom: 16px; }
+    .rev-inner > div > p { color: var(--gris-texte); font-size: 15px; line-height: 1.75; margin-bottom: 20px; }
+    .av-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+    .av-list li { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--noir); }
+    .av-list li i { color: var(--bleu-clair); font-size: 16px; width: 20px; }
+    .btn-rev { display: inline-flex; align-items: center; gap: 10px; background: var(--bleu); color: white; text-decoration: none; padding: 15px 30px; border-radius: 12px; font-weight: 700; font-size: 14px; transition: all .2s; }
+    .btn-rev:hover { background: var(--bleu-mid); transform: translateY(-1px); box-shadow: var(--shadow); }
+    .rev-illus { background: var(--bleu-very-pale); border-radius: var(--radius-lg); padding: 50px; text-align: center; }
+    .rev-illus .big-icon { font-size: 80px; display: block; margin-bottom: 20px; }
+    .rev-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .rev-stat { background: white; border-radius: 12px; padding: 18px; text-align: center; box-shadow: var(--shadow-sm); }
+    .rev-stat strong { display: block; font-size: 22px; font-weight: 900; color: var(--bleu); font-family: 'Playfair Display', serif; }
+    .rev-stat span { font-size: 12px; color: var(--gris-texte); }
+
+    .temos-section { background: white; }
+    .temos-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .temo-card { background: var(--gris-clair); border-radius: var(--radius-lg); padding: 28px; border: 1.5px solid var(--gris-border); }
+    .temo-stars { color: var(--or); font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+    .temo-text { font-size: 14px; color: var(--gris-texte); line-height: 1.7; font-style: italic; margin-bottom: 20px; }
     .temo-author { display: flex; align-items: center; gap: 12px; }
-    .temo-avatar {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: var(--gris-clair); display: flex; align-items: center; justify-content: center;
-      font-size: 16px; font-weight: 700; color: var(--gris);
-    }
-    .temo-author strong { font-size: 14px; font-weight: 700; display: block; }
-    .temo-author span { font-size: 12px; color: var(--gris-moyen); }
+    .temo-av { width: 40px; height: 40px; border-radius: 50%; background: var(--bleu); color: white; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; flex-shrink: 0; }
+    .temo-author strong { font-size: 14px; font-weight: 700; color: var(--bleu); display: block; }
+    .temo-author span { font-size: 12px; color: var(--gris-texte); }
 
-    /* ─── CONTACT ─── */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-    .contact-info { display: flex; flex-direction: column; gap: 24px; }
-    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
-    .contact-item-icon {
-      width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
-      background: rgba(232,93,4,.1); color: var(--accent);
-      display: flex; align-items: center; justify-content: center; font-size: 18px;
-    }
-    .contact-item strong { display: block; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
-    .contact-item p, .contact-item a { font-size: 14px; color: var(--gris-moyen); text-decoration: none; }
-    .contact-item a:hover { color: var(--accent); }
-    .contact-form { background: white; border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow); }
-    .contact-form h3 { font-size: 22px; font-weight: 800; margin-bottom: 24px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-    .form-group label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gris); }
-    .form-group input, .form-group select, .form-group textarea {
-      padding: 12px 16px; border: 2px solid var(--gris-clair); border-radius: 10px;
-      font-size: 14px; font-family: inherit; outline: none; transition: border-color .2s; color: var(--noir);
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
+    .contact-section { background: var(--bleu-very-pale); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+    .contact-info-block { display: flex; flex-direction: column; gap: 16px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; background: white; border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--gris-border); }
+    .ci-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--bleu-pale); color: var(--bleu); display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+    .ci-body strong { display: block; font-size: 13px; font-weight: 700; color: var(--bleu); margin-bottom: 4px; }
+    .ci-body p, .ci-body a { font-size: 13px; color: var(--gris-texte); text-decoration: none; line-height: 1.6; }
+    .ci-body a:hover { color: var(--bleu); }
+    .horaires-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; }
+    .h-item { font-size: 12px; color: var(--gris-texte); }
+    .h-item strong { color: var(--bleu); font-weight: 700; display: block; }
+    .contact-form { background: white; border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow); border: 1px solid var(--gris-border); }
+    .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--bleu); margin-bottom: 6px; }
+    .contact-form > p { font-size: 14px; color: var(--gris-texte); margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .form-group label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gris-texte); }
+    .form-group input, .form-group select, .form-group textarea { padding: 12px 16px; border: 1.5px solid var(--gris-border); border-radius: 10px; font-size: 14px; font-family: inherit; outline: none; transition: border-color .2s; color: var(--noir); background: white; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--bleu-clair); }
     .form-group textarea { resize: vertical; min-height: 100px; }
-    .btn-submit {
-      width: 100%; background: var(--accent); color: white; border: none; cursor: pointer;
-      padding: 15px; border-radius: 12px; font-size: 15px; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 1px; transition: background .2s;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-    }
-    .btn-submit:hover { background: var(--accent-dark); }
+    .btn-send { width: 100%; background: var(--bleu); color: white; border: none; cursor: pointer; padding: 15px; border-radius: 12px; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all .2s; font-family: 'Inter', sans-serif; }
+    .btn-send:hover { background: var(--bleu-mid); transform: translateY(-1px); box-shadow: var(--shadow); }
 
-    /* ─── FOOTER ─── */
-    footer { background: var(--noir); color: #aaa; padding: 60px 5vw 30px; }
-    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    footer { background: var(--bleu); color: rgba(255,255,255,.7); padding: 64px 5vw 28px; }
+    .footer-inner { max-width: 1300px; margin: 0 auto; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
-    .footer-brand .logo { margin-bottom: 16px; }
-    .footer-brand p { font-size: 13px; line-height: 1.7; color: #666; }
-    .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: white; margin-bottom: 18px; }
+    .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; text-decoration: none; }
+    .footer-logo-mark { width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,.15); display: flex; align-items: center; justify-content: center; font-size: 18px; color: white; }
+    .footer-logo strong { font-size: 14px; font-weight: 800; color: white; display: block; }
+    .footer-logo span { font-size: 10px; color: rgba(255,255,255,.5); letter-spacing: 1px; text-transform: uppercase; }
+    .footer-brand-desc { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,.5); }
+    .footer-made { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 12px; font-weight: 600; color: var(--or); }
+    .footer-col h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: white; margin-bottom: 18px; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-col ul li a { color: #666; text-decoration: none; font-size: 13px; transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--accent); }
-    .footer-bottom { border-top: 1px solid #1e1e1e; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .footer-bottom p { font-size: 12px; color: #444; }
-    .footer-bottom a { color: #666; text-decoration: none; }
-    .footer-bottom a:hover { color: var(--accent); }
+    .footer-col ul li a { color: rgba(255,255,255,.5); text-decoration: none; font-size: 13px; transition: color .2s; }
+    .footer-col ul li a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,.35); }
+    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; font-size: 12px; }
+    .footer-bottom a:hover { color: rgba(255,255,255,.8); }
 
-    /* ─── PANIER SIDEBAR ─── */
-    .cart-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 200;
-      opacity: 0; pointer-events: none; transition: opacity .3s;
-    }
+    .cart-overlay { position: fixed; inset: 0; background: rgba(15,23,42,.5); z-index: 200; opacity: 0; pointer-events: none; transition: opacity .3s; }
     .cart-overlay.open { opacity: 1; pointer-events: all; }
-    .cart-sidebar {
-      position: fixed; top: 0; right: -460px; width: 440px; max-width: 100vw;
-      height: 100vh; background: white; z-index: 201;
-      display: flex; flex-direction: column; transition: right .3s cubic-bezier(.4,0,.2,1);
-      box-shadow: -10px 0 60px rgba(0,0,0,.2);
-    }
+    .cart-sidebar { position: fixed; top: 0; right: -460px; width: 440px; max-width: 100vw; height: 100vh; background: white; z-index: 201; display: flex; flex-direction: column; transition: right .35s cubic-bezier(.4,0,.2,1); box-shadow: -10px 0 60px rgba(0,0,0,.15); }
     .cart-sidebar.open { right: 0; }
-    .cart-header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 24px; border-bottom: 1px solid var(--gris-clair);
-    }
-    .cart-header h3 { font-size: 18px; font-weight: 800; }
-    .cart-close { background: none; border: none; cursor: pointer; font-size: 20px; color: var(--gris); }
-    .cart-items { flex: 1; overflow-y: auto; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px; }
-    .cart-item { display: flex; gap: 14px; align-items: center; padding: 14px; background: var(--fond); border-radius: 12px; }
-    .cart-item-img { width: 56px; height: 56px; border-radius: 8px; background: var(--gris-clair); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+    .cart-header { display: flex; justify-content: space-between; align-items: center; padding: 24px; border-bottom: 1px solid var(--gris-border); }
+    .cart-header h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--bleu); }
+    .cart-close { background: var(--gris-clair); border: none; cursor: pointer; width: 36px; height: 36px; border-radius: 8px; font-size: 16px; color: var(--gris-texte); display: flex; align-items: center; justify-content: center; }
+    .cart-items { flex: 1; overflow-y: auto; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; }
+    .cart-item { display: flex; gap: 14px; align-items: center; padding: 14px; background: var(--gris-clair); border-radius: 12px; }
+    .cart-item-img { width: 54px; height: 54px; border-radius: 10px; background: var(--bleu-pale); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
     .cart-item-info { flex: 1; }
-    .cart-item-info strong { display: block; font-size: 14px; font-weight: 700; }
-    .cart-item-info span { font-size: 12px; color: var(--gris-moyen); }
-    .cart-item-price { font-size: 16px; font-weight: 800; }
-    .cart-item-remove { background: none; border: none; cursor: pointer; color: var(--gris-moyen); font-size: 16px; }
-    .cart-item-remove:hover { color: #c44d00; }
-    .cart-footer { padding: 20px 24px; border-top: 1px solid var(--gris-clair); }
+    .cart-item-info strong { display: block; font-size: 14px; font-weight: 700; color: var(--bleu); }
+    .cart-item-info span { font-size: 12px; color: var(--gris-texte); }
+    .cart-item-price { font-size: 15px; font-weight: 800; color: var(--bleu); }
+    .cart-item-rm { background: none; border: none; cursor: pointer; color: var(--gris-texte); font-size: 15px; padding: 4px; }
+    .cart-item-rm:hover { color: #dc2626; }
+    .cart-footer { padding: 20px 24px; border-top: 1px solid var(--gris-border); }
     .cart-total { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-    .cart-total span { font-size: 15px; color: var(--gris-moyen); }
-    .cart-total strong { font-size: 24px; font-weight: 900; }
-    .btn-checkout {
-      width: 100%; background: var(--accent); color: white; border: none; cursor: pointer;
-      padding: 15px; border-radius: 12px; font-size: 15px; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; transition: background .2s;
-    }
-    .btn-checkout:hover { background: var(--accent-dark); }
-    .cart-empty { text-align: center; padding: 60px 20px; color: var(--gris-moyen); }
-    .cart-empty i { font-size: 48px; display: block; margin-bottom: 16px; color: var(--gris-clair); }
-    .cart-empty p { font-size: 15px; }
+    .cart-total span { font-size: 14px; color: var(--gris-texte); }
+    .cart-total strong { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--bleu); }
+    .btn-checkout { width: 100%; background: var(--bleu); color: white; border: none; cursor: pointer; padding: 16px; border-radius: 12px; font-size: 15px; font-weight: 800; margin-bottom: 10px; transition: all .2s; font-family: 'Inter', sans-serif; }
+    .btn-checkout:hover { background: var(--bleu-mid); }
+    .cart-empty { text-align: center; padding: 60px 20px; color: var(--gris-texte); }
+    .cart-empty i { font-size: 48px; display: block; margin-bottom: 16px; color: var(--gris-border); }
 
-    /* ─── NOTIFICATION ─── */
-    .notif {
-      position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
-      background: var(--noir); color: white; padding: 14px 24px; border-radius: 100px;
-      font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 10px;
-      z-index: 300; transition: transform .4s cubic-bezier(.4,0,.2,1); box-shadow: var(--shadow-lg);
-    }
+    .notif { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--bleu); color: white; padding: 14px 24px; border-radius: 100px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 10px; z-index: 300; transition: transform .4s cubic-bezier(.4,0,.2,1); box-shadow: var(--shadow-lg); }
     .notif.show { transform: translateX(-50%) translateY(0); }
-    .notif i { color: var(--accent-light); }
+    .notif i { color: var(--or); }
 
-    /* ─── MODAL DEVIS ─── */
-    .modal-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 400;
-      display: flex; align-items: center; justify-content: center; padding: 20px;
-      opacity: 0; pointer-events: none; transition: opacity .3s;
-    }
+    .modal-overlay { position: fixed; inset: 0; background: rgba(15,23,42,.7); z-index: 400; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity .3s; }
     .modal-overlay.open { opacity: 1; pointer-events: all; }
-    .modal {
-      background: white; border-radius: 24px; padding: 40px; width: 100%; max-width: 540px;
-      max-height: 90vh; overflow-y: auto;
-      transform: scale(.95); transition: transform .3s;
-    }
+    .modal { background: white; border-radius: 24px; padding: 44px; width: 100%; max-width: 540px; max-height: 90vh; overflow-y: auto; transform: scale(.95); transition: transform .3s; }
     .modal-overlay.open .modal { transform: scale(1); }
-    .modal h3 { font-size: 22px; font-weight: 900; margin-bottom: 6px; }
-    .modal p { font-size: 14px; color: var(--gris-moyen); margin-bottom: 24px; }
-    .modal-close-btn { float: right; background: var(--fond); border: none; cursor: pointer; padding: 8px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+    .modal h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--bleu); margin-bottom: 6px; }
+    .modal > p { font-size: 14px; color: var(--gris-texte); margin-bottom: 24px; }
+    .modal-recap { background: var(--bleu-very-pale); border: 1px solid var(--bleu-pale); border-radius: 12px; padding: 16px; font-size: 13px; color: var(--bleu); line-height: 1.8; margin-bottom: 24px; }
+    .modal-close { float: right; background: var(--gris-clair); border: none; cursor: pointer; padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 600; color: var(--gris-texte); }
 
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 1024px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-visual { display: none; }
-      .config-grid { grid-template-columns: 1fr; }
-      .avantages-grid { grid-template-columns: 1fr 1fr; }
-      .temos-grid { grid-template-columns: 1fr; }
+    @media (max-width: 1100px) {
+      .hero-inner, .config-grid, .contact-grid, .rev-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-cards { display: none; }
+      .atouts-grid, .cibles-grid, .temos-grid { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .stats-inner { grid-template-columns: repeat(2,1fr); }
     }
     @media (max-width: 768px) {
       nav { display: none; }
-      nav.mobile-open {
-        display: flex; flex-direction: column;
-        position: fixed; top: 70px; left: 0; right: 0;
-        background: var(--noir); padding: 20px; gap: 4px; z-index: 99;
-      }
+      nav.mobile-open { display: flex; flex-direction: column; position: fixed; top: 113px; left: 0; right: 0; background: white; padding: 12px 16px; gap: 4px; z-index: 99; border-bottom: 1px solid var(--gris-border); box-shadow: var(--shadow); }
       .hamburger { display: block; }
       section { padding: 60px 5vw; }
-      .avantages-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .atouts-grid, .cibles-grid, .temos-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
-      .hero-stats { gap: 24px; }
-      .config-dimensions { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .dim-grid { grid-template-columns: 1fr; }
+      .rev-inner { padding: 28px; }
     }
     @media (max-width: 480px) {
-      .footer-grid { grid-template-columns: 1fr; }
+      .stats-inner { grid-template-columns: 1fr 1fr; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<div class="top-bar">
+  🇫🇷 Fabrication 100% française à Canet-en-Roussillon &nbsp;·&nbsp; <a href="tel:0775769232">07 75 76 92 32</a> &nbsp;·&nbsp; Livraison offerte en France métropolitaine
+</div>
+
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
-      <div class="logo-icon"><i class="fa-solid fa-snowflake"></i></div>
+      <div class="logo-mark"><i class="fa-solid fa-snowflake"></i></div>
       <div class="logo-text">
         <strong>La Fabrik du Cache Clim</strong>
-        <span>Fabrication française · Canet-en-Roussillon</span>
+        <span>Décoration · Climatisation · Sur mesure</span>
       </div>
     </a>
     <nav id="mainNav">
       <a href="#boutique">Boutique</a>
-      <a href="#sur-mesure">Sur Mesure</a>
+      <a href="#sur-mesure">Sur mesure</a>
       <a href="#designs">Designs</a>
-      <a href="#pourquoi">Pourquoi nous</a>
+      <a href="#professionnels">Pro & Revendeurs</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div style="display:flex;gap:10px;align-items:center;">
-      <button class="btn-cart" id="cartBtn" onclick="toggleCart()">
+    <div class="header-actions">
+      <button class="btn-cart" onclick="toggleCart()">
         <i class="fa-solid fa-bag-shopping"></i>
-        <span id="cartCount">0</span> articles
-        <span class="cart-badge" id="cartBadge" style="display:none">0</span>
+        <span id="cartCount">Panier</span>
+        <span class="cart-badge" id="cartBadge">0</span>
       </button>
       <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="home">
+  <div class="hero-bg"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">
-        <i class="fa-solid fa-star"></i>
-        Fabrication française · Plus de 20 ans d'expérience
-      </div>
-      <h1>Décorez <em>votre<br>climatisation</em></h1>
-      <p>Caches climatiseur et pompes à chaleur en aluminium composite, fabriqués à Canet-en-Roussillon. 15 designs, 10 finitions, sur mesure possible.</p>
+      <div class="hero-eyebrow"><i class="fa-solid fa-award"></i> Artisan · Canet-en-Roussillon (66)</div>
+      <h1>Habiller votre clim,<em>c'est notre métier.</em></h1>
+      <p class="hero-desc">Caches climatiseur et pompes à chaleur en aluminium composite, conçus pour s'intégrer avec élégance à votre façade. 15 designs, 10 finitions, sur mesure possible.</p>
       <div class="hero-btns">
-        <a href="#boutique" class="btn-primary"><i class="fa-solid fa-store"></i> Voir la boutique</a>
-        <a href="#sur-mesure" class="btn-outline"><i class="fa-solid fa-ruler-combined"></i> Configurateur sur mesure</a>
+        <a href="#boutique" class="btn-white"><i class="fa-solid fa-store"></i> Voir la boutique</a>
+        <a href="#sur-mesure" class="btn-ghost"><i class="fa-solid fa-ruler-combined"></i> Configurer le mien</a>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><strong>+20</strong><span>Ans d'expérience</span></div>
-        <div class="stat"><strong>15</strong><span>Designs disponibles</span></div>
-        <div class="stat"><strong>100%</strong><span>Fabrication française</span></div>
+      <div class="hero-trust">
+        <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><span>Aluminium composite</span></div>
+        <div class="trust-item"><i class="fa-solid fa-truck-fast"></i><span>Livraison offerte</span></div>
+        <div class="trust-item"><i class="fa-solid fa-screwdriver-wrench"></i><span>Pose en 20 min</span></div>
+        <div class="trust-item"><i class="fa-solid fa-flag"></i><span>Made in France</span></div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-card">
-        <span class="card-tag">Bestseller</span>
-        <div class="card-label">Cache Clim Standard</div>
-        <h3>6 Couleurs disponibles</h3>
-        <p>Blanc, Anthracite, Noir, Ivoire, Vert Anglais, Chocolat</p>
-        <div class="price">À partir de <strong>230 €</strong> <small>TTC</small></div>
-      </div>
-      <div class="hero-card">
-        <div class="card-label">Motifs & Patterns</div>
-        <h3>4 thèmes</h3>
-        <p>Végétal, Géométrique, Naturel…</p>
-        <div class="price">Dès <strong>260 €</strong></div>
-      </div>
-      <div class="hero-card">
-        <span class="card-tag" style="background:#2d6a4f">Sur mesure</span>
-        <div class="card-label">Configurateur</div>
-        <h3>Entièrement personnalisé</h3>
-        <p>Dimensions, couleur, motif au choix</p>
-        <div class="price">À partir de <strong>399 €</strong></div>
-      </div>
+    <div class="hero-cards">
+      <div class="hero-card"><div class="hc-label">⭐ Bestseller</div><div class="hc-title">Cache Clim Couleur Unie</div><div class="hc-desc">6 coloris · Fixations incluses · Pose simple</div><div class="hc-price">Dès 230 € <small>TTC</small></div></div>
+      <div class="hero-card"><div class="hc-label">🎨 Décoratif</div><div class="hc-title">Motifs & Designs</div><div class="hc-desc">15 designs exclusifs</div><div class="hc-price">Dès 260 €</div></div>
+      <div class="hero-card"><div class="hc-label">📐 Sur mesure</div><div class="hc-title">Vos dimensions exactes</div><div class="hc-desc">7 à 10 jours · Livraison offerte</div><div class="hc-price">Dès 399 €</div></div>
     </div>
   </div>
 </section>
 
-<!-- BANDEAU AVANTAGES -->
-<div class="avantages-bar">
-  <div class="avantages-inner">
-    <div class="avantage"><i class="fa-solid fa-truck-fast"></i><span>Livraison France métropolitaine</span></div>
-    <div class="avantage"><i class="fa-solid fa-screwdriver-wrench"></i><span>Fixations murales incluses</span></div>
-    <div class="avantage"><i class="fa-solid fa-shield-halved"></i><span>Résistant UV & intempéries</span></div>
-    <div class="avantage"><i class="fa-solid fa-star"></i><span>Garantie aluminium composite</span></div>
-    <div class="avantage"><i class="fa-solid fa-headset"></i><span>07 75 76 92 32</span></div>
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item"><strong>+20</strong><span>Ans d'expérience</span></div>
+    <div class="stat-item"><strong>15</strong><span>Designs exclusifs</span></div>
+    <div class="stat-item"><strong>100%</strong><span>Fabrication française</span></div>
+    <div class="stat-item"><strong>10</strong><span>Finitions disponibles</span></div>
   </div>
 </div>
 
-<!-- BOUTIQUE -->
-<section id="boutique">
+<section class="boutique" id="boutique">
   <div class="section-inner">
     <div class="section-header">
-      <span class="section-tag">Notre boutique</span>
-      <h2>Nos cache climatiseurs</h2>
-      <p>Des modèles prêts à poser, compatibles avec toutes les marques : Toshiba, Samsung, LG, Hitachi, Carrier…</p>
+      <div class="s-tag"><i class="fa-solid fa-store"></i> Boutique</div>
+      <h2>Nos modèles</h2>
+      <p>Compatibles avec toutes les marques : Toshiba, Samsung, LG, Hitachi, Daikin, Carrier… Livrés avec fixations murales, prêts à poser.</p>
     </div>
     <div class="filters">
-      <button class="filter-btn active" onclick="filterProducts('all', this)">Tous les produits</button>
-      <button class="filter-btn" onclick="filterProducts('couleurs', this)">Couleurs unies</button>
-      <button class="filter-btn" onclick="filterProducts('motifs', this)">Avec motifs</button>
-      <button class="filter-btn" onclick="filterProducts('sur-mesure', this)">Sur mesure</button>
+      <button class="filter-btn active" onclick="filterProducts('all',this)">Tous</button>
+      <button class="filter-btn" onclick="filterProducts('couleurs',this)">Couleurs unies</button>
+      <button class="filter-btn" onclick="filterProducts('motifs',this)">Motifs décoratifs</button>
+      <button class="filter-btn" onclick="filterProducts('matieres',this)">Finitions matières</button>
+      <button class="filter-btn" onclick="filterProducts('mesure',this)">Sur mesure</button>
     </div>
     <div class="products-grid" id="productsGrid">
-
-      <!-- PRODUIT 1 -->
       <div class="product-card" data-cat="couleurs">
-        <div class="product-img" style="background: linear-gradient(135deg, #f5f5f3, #e8e8e8);">
-          <div class="product-img-inner">🏠</div>
-          <span class="product-badge">Populaire</span>
-        </div>
+        <div class="product-img" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0)">🏠<span class="product-badge">Populaire</span></div>
         <div class="product-body">
-          <div class="product-category">Couleurs unies</div>
-          <div class="product-name">Cache Clim Blanc RAL 9003</div>
-          <div class="product-desc">Structure aluminium composite, résistant UV, montage facile. Compatible toutes marques.</div>
-          <div class="product-colors">
-            <div class="color-dot" style="background:#ffffff;border-color:#ccc" title="Blanc RAL 9003"></div>
-            <div class="color-dot" style="background:#3d3d3d" title="Gris Anthracite RAL 7016"></div>
-            <div class="color-dot" style="background:#111111" title="Noir RAL 9005"></div>
-            <div class="color-dot" style="background:#fffff0;border-color:#ccc" title="Ivoire RAL 1015"></div>
-            <div class="color-dot" style="background:#2d6a4f" title="Vert Anglais RAL 6005"></div>
-            <div class="color-dot" style="background:#5c3d2e" title="Chocolat RAL 8015"></div>
+          <div class="product-cat">Couleur unie</div>
+          <div class="product-name">Blanc — RAL 9003</div>
+          <div class="product-desc">Élégance classique pour toutes les façades. Résistant UV, ne jaunit pas.</div>
+          <div class="color-dots">
+            <div class="cdot" style="background:#fff;border-color:#ccc" title="Blanc"></div>
+            <div class="cdot" style="background:#3d3d3d" title="Anthracite"></div>
+            <div class="cdot" style="background:#111" title="Noir"></div>
+            <div class="cdot" style="background:#fffff0;border-color:#ccc" title="Ivoire"></div>
+            <div class="cdot" style="background:#2d6a4f" title="Vert Anglais"></div>
+            <div class="cdot" style="background:#5c3d2e" title="Chocolat"></div>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price">
-            <strong>230 €</strong>
-            <small>TTC · Petit modèle</small>
-          </div>
-          <button class="btn-add" onclick="addToCart('Cache Clim Couleur Unie', 230, '🏠')"><i class="fa-solid fa-plus"></i> Ajouter</button>
+          <div class="product-price"><strong>230 €</strong><small>TTC · Petit modèle</small></div>
+          <button class="btn-add" onclick="addToCart('Cache Clim Blanc',230,'🏠')"><i class="fa-solid fa-plus"></i> Ajouter</button>
         </div>
       </div>
-
-      <!-- PRODUIT 2 -->
       <div class="product-card" data-cat="couleurs">
-        <div class="product-img" style="background: linear-gradient(135deg, #2d2d2d, #1a1a1a);">
-          <div class="product-img-inner">🖤</div>
-        </div>
+        <div class="product-img" style="background:linear-gradient(135deg,#1e293b,#334155)">🖤</div>
         <div class="product-body">
-          <div class="product-category">Couleurs unies</div>
-          <div class="product-name">Cache Clim Gris Anthracite RAL 7016</div>
-          <div class="product-desc">Finition mat contemporaine, très demandée pour les façades modernes.</div>
-          <div class="product-colors">
-            <div class="color-dot" style="background:#3d3d3d" title="Gris Anthracite"></div>
-            <div class="color-dot" style="background:#111111" title="Noir"></div>
-          </div>
+          <div class="product-cat">Couleur unie</div>
+          <div class="product-name">Gris Anthracite — RAL 7016</div>
+          <div class="product-desc">Le choix contemporain. S'intègre parfaitement aux façades modernes et épurées.</div>
         </div>
         <div class="product-footer">
-          <div class="product-price">
-            <strong>250 €</strong>
-            <small>TTC · Moyen modèle</small>
-          </div>
-          <button class="btn-add" onclick="addToCart('Cache Clim Gris Anthracite', 250, '🖤')"><i class="fa-solid fa-plus"></i> Ajouter</button>
+          <div class="product-price"><strong>250 €</strong><small>TTC · Moyen modèle</small></div>
+          <button class="btn-add" onclick="addToCart('Cache Clim Anthracite',250,'🖤')"><i class="fa-solid fa-plus"></i> Ajouter</button>
         </div>
       </div>
-
-      <!-- PRODUIT 3 -->
       <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background: linear-gradient(135deg, #1a3c20, #2d6a4f);">
-          <div class="product-img-inner">🌿</div>
-          <span class="product-badge badge-new">Nouveau</span>
-        </div>
+        <div class="product-img" style="background:linear-gradient(135deg,#052e16,#14532d)">🌿<span class="product-badge vert">Nouveau</span></div>
         <div class="product-body">
-          <div class="product-category">Motifs végétaux</div>
+          <div class="product-cat">Motif végétal</div>
           <div class="product-name">Design Feuillage</div>
-          <div class="product-desc">Motif feuillage délicat sur fond vert anglais. Idéal pour terrasse ou jardin.</div>
+          <div class="product-desc">Motif nature délicat, idéal pour terrasse ou jardin. Impression haute résolution.</div>
         </div>
         <div class="product-footer">
-          <div class="product-price">
-            <strong>275 €</strong>
-            <small>TTC · 3 tailles</small>
-          </div>
-          <button class="btn-add" onclick="addToCart('Cache Clim Design Feuillage', 275, '🌿')"><i class="fa-solid fa-plus"></i> Ajouter</button>
+          <div class="product-price"><strong>275 €</strong><small>TTC · 3 tailles</small></div>
+          <button class="btn-add" onclick="addToCart('Cache Clim Feuillage',275,'🌿')"><i class="fa-solid fa-plus"></i> Ajouter</button>
         </div>
       </div>
-
-      <!-- PRODUIT 4 -->
       <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background: linear-gradient(135deg, #f5e6d3, #e8c99a);">
-          <div class="product-img-inner">🌸</div>
-        </div>
+        <div class="product-img" style="background:linear-gradient(135deg,#fdf4ff,#f3e8ff)">🌸</div>
         <div class="product-body">
-          <div class="product-category">Motifs floraux</div>
+          <div class="product-cat">Motif floral</div>
           <div class="product-name">Design Marguerite</div>
-          <div class="product-desc">Motif floral élégant, parfait pour apporter une touche de charme à votre façade.</div>
+          <div class="product-desc">Touche de charme pour votre extérieur. Délicat et raffiné.</div>
         </div>
         <div class="product-footer">
-          <div class="product-price">
-            <strong>275 €</strong>
-            <small>TTC · 3 tailles</small>
-          </div>
-          <button class="btn-add" onclick="addToCart('Cache Clim Design Marguerite', 275, '🌸')"><i class="fa-solid fa-plus"></i> Ajouter</button>
+          <div class="product-price"><strong>275 €</strong><small>TTC · 3 tailles</small></div>
+          <button class="btn-add" onclick="addToCart('Cache Clim Marguerite',275,'🌸')"><i class="fa-solid fa-plus"></i> Ajouter</button>
         </div>
       </div>
-
-      <!-- PRODUIT 5 -->
       <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background: linear-gradient(135deg, #1a1040, #2a1860);">
-          <div class="product-img-inner">🌊</div>
-        </div>
+        <div class="product-img" style="background:linear-gradient(135deg,#0c4a6e,#075985)">🌊</div>
         <div class="product-body">
-          <div class="product-category">Motifs géographiques</div>
-          <div class="product-name">Design Orient Express</div>
-          <div class="product-desc">Motif arabesque raffiné pour une décoration exotique et élégante.</div>
+          <div class="product-cat">Motif arabesque</div>
+          <div class="product-name">Orient Express</div>
+          <div class="product-desc">Motif arabesque raffiné pour une décoration élégante et originale.</div>
         </div>
         <div class="product-footer">
-          <div class="product-price">
-            <strong>285 €</strong>
-            <small>TTC · 3 tailles</small>
-          </div>
-          <button class="btn-add" onclick="addToCart('Cache Clim Orient Express', 285, '🌊')"><i class="fa-solid fa-plus"></i> Ajouter</button>
+          <div class="product-price"><strong>285 €</strong><small>TTC · 3 tailles</small></div>
+          <button class="btn-add" onclick="addToCart('Cache Clim Orient Express',285,'🌊')"><i class="fa-solid fa-plus"></i> Ajouter</button>
         </div>
       </div>
-
-      <!-- PRODUIT 6 -->
-      <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background: linear-gradient(135deg, #4a3728, #6b4f3a);">
-          <div class="product-img-inner">🎋</div>
-        </div>
+      <div class="product-card" data-cat="matieres">
+        <div class="product-img" style="background:linear-gradient(135deg,#92400e,#b45309)">🪵</div>
         <div class="product-body">
-          <div class="product-category">Motifs naturels</div>
+          <div class="product-cat">Finition matière</div>
+          <div class="product-name">Aspect Bois</div>
+          <div class="product-desc">Chaleur du bois sans entretien. Impression numérique haute définition.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>300 €</strong><small>TTC · Grand modèle</small></div>
+          <button class="btn-add" onclick="addToCart('Cache Clim Aspect Bois',300,'🪵')"><i class="fa-solid fa-plus"></i> Ajouter</button>
+        </div>
+      </div>
+      <div class="product-card" data-cat="matieres">
+        <div class="product-img" style="background:linear-gradient(135deg,#7f1d1d,#991b1b)">🧱</div>
+        <div class="product-body">
+          <div class="product-cat">Finition matière</div>
+          <div class="product-name">Aspect Rouille Corten</div>
+          <div class="product-desc">Rendu acier Corten tendance, très prisé en architecture contemporaine.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>300 €</strong><small>TTC · Grand modèle</small></div>
+          <button class="btn-add" onclick="addToCart('Cache Clim Rouille Corten',300,'🧱')"><i class="fa-solid fa-plus"></i> Ajouter</button>
+        </div>
+      </div>
+      <div class="product-card" data-cat="motifs">
+        <div class="product-img" style="background:linear-gradient(135deg,#1c3a6e,#1e40af)">🎋</div>
+        <div class="product-body">
+          <div class="product-cat">Motif naturel</div>
           <div class="product-name">Design Bambou</div>
-          <div class="product-desc">Ambiance zen garantie avec ce motif bambou sobre et contemporain.</div>
+          <div class="product-desc">Ambiance zen et contemporaine. Idéal pour les espaces design.</div>
         </div>
         <div class="product-footer">
-          <div class="product-price">
-            <strong>275 €</strong>
-            <small>TTC · 3 tailles</small>
-          </div>
-          <button class="btn-add" onclick="addToCart('Cache Clim Design Bambou', 275, '🎋')"><i class="fa-solid fa-plus"></i> Ajouter</button>
+          <div class="product-price"><strong>275 €</strong><small>TTC · 3 tailles</small></div>
+          <button class="btn-add" onclick="addToCart('Cache Clim Bambou',275,'🎋')"><i class="fa-solid fa-plus"></i> Ajouter</button>
         </div>
       </div>
-
-      <!-- PRODUIT 7 – SUR MESURE -->
-      <div class="product-card" data-cat="sur-mesure" style="border: 2px solid var(--accent)">
-        <div class="product-img" style="background: linear-gradient(135deg, #1a0a00, #3a1a00);">
-          <div class="product-img-inner">📐</div>
-          <span class="product-badge">Sur mesure</span>
-        </div>
+      <div class="product-card" data-cat="mesure" style="border:1.5px solid var(--bleu-clair)">
+        <div class="product-img" style="background:linear-gradient(135deg,var(--bleu-very-pale),var(--bleu-pale))">📐<span class="product-badge or">Sur mesure</span></div>
         <div class="product-body">
-          <div class="product-category">Entièrement personnalisé</div>
+          <div class="product-cat">Personnalisé</div>
           <div class="product-name">Cache Clim Sur Mesure</div>
-          <div class="product-desc">Dimensions au mm près, couleur et motif au choix parmi 25 options. Délai 7-10 jours.</div>
+          <div class="product-desc">Dimensions exactes au millimètre, couleur et motif au choix parmi 25 options. Fabriqué à Canet. Délai 7–10 jours.</div>
         </div>
         <div class="product-footer">
-          <div class="product-price">
-            <strong>399 € – 499 €</strong>
-            <small>TTC · Livraison offerte</small>
-          </div>
-          <button class="btn-add" onclick="scrollToConfig()"><i class="fa-solid fa-ruler-combined"></i> Configurer</button>
+          <div class="product-price"><strong>399 – 499 €</strong><small>TTC · Livraison offerte</small></div>
+          <button class="btn-add" onclick="scrollToSM()"><i class="fa-solid fa-ruler-combined"></i> Configurer</button>
         </div>
       </div>
-
-      <!-- PRODUIT 8 -->
-      <div class="product-card" data-cat="couleurs">
-        <div class="product-img" style="background: linear-gradient(135deg, #8B5e3c, #6b4a2a);">
-          <div class="product-img-inner">🟫</div>
-        </div>
-        <div class="product-body">
-          <div class="product-category">Finition bois & matière</div>
-          <div class="product-name">Finition Bois</div>
-          <div class="product-desc">L'aspect chaleureux du bois sans l'entretien. Finition imprimée haute résolution.</div>
-        </div>
-        <div class="product-footer">
-          <div class="product-price">
-            <strong>325 €</strong>
-            <small>TTC · Grand modèle</small>
-          </div>
-          <button class="btn-add" onclick="addToCart('Cache Clim Finition Bois', 325, '🟫')"><i class="fa-solid fa-plus"></i> Ajouter</button>
-        </div>
-      </div>
-
-      <!-- PRODUIT 9 -->
-      <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background: linear-gradient(135deg, #1c3144, #2c4a6a);">
-          <div class="product-img-inner">🌅</div>
-        </div>
-        <div class="product-body">
-          <div class="product-category">Motifs paysage</div>
-          <div class="product-name">Design Vue sur Mer</div>
-          <div class="product-desc">Panorama marin poétique, idéal pour les maisons en bord de mer ou les amoureux de la côte.</div>
-        </div>
-        <div class="product-footer">
-          <div class="product-price">
-            <strong>285 €</strong>
-            <small>TTC · 3 tailles</small>
-          </div>
-          <button class="btn-add" onclick="addToCart('Cache Clim Vue sur Mer', 285, '🌅')"><i class="fa-solid fa-plus"></i> Ajouter</button>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- CONFIGURATEUR SUR MESURE -->
-<section class="configurateur" id="sur-mesure">
+<section class="config-section" id="sur-mesure">
   <div class="section-inner">
     <div class="section-header">
-      <span class="section-tag">Configurateur</span>
-      <h2>Votre cache clim <em style="color:var(--accent)">sur mesure</em></h2>
-      <p>Paramétrez votre cache clim aux dimensions exactes de votre unité extérieure. Fabrication et livraison en 7 à 10 jours.</p>
+      <div class="s-tag"><i class="fa-solid fa-ruler-combined"></i> Configurateur</div>
+      <h2>Votre cache clim sur mesure</h2>
+      <p>Choisissez vos dimensions, couleur et motif. Nous fabriquons dans notre atelier et livrons en 7 à 10 jours.</p>
     </div>
     <div class="config-grid">
       <div class="config-form">
-
-        <div class="config-group">
-          <label><i class="fa-solid fa-palette"></i> Couleur ou finition</label>
-          <div class="config-color-options">
-            <div class="config-color selected" style="background:#ffffff;border:2px solid #ccc" title="Blanc RAL 9003" onclick="selectColor(this, 'Blanc (RAL 9003)')"></div>
-            <div class="config-color" style="background:#3d3d3d" title="Gris Anthracite RAL 7016" onclick="selectColor(this, 'Gris Anthracite (RAL 7016)')"></div>
-            <div class="config-color" style="background:#111111" title="Noir RAL 9005" onclick="selectColor(this, 'Noir (RAL 9005)')"></div>
-            <div class="config-color" style="background:#fffff0;border-color:#ccc" title="Ivoire RAL 1015" onclick="selectColor(this, 'Ivoire (RAL 1015)')"></div>
-            <div class="config-color" style="background:#2d6a4f" title="Vert Anglais RAL 6005" onclick="selectColor(this, 'Vert Anglais (RAL 6005)')"></div>
-            <div class="config-color" style="background:#5c3d2e" title="Chocolat RAL 8015" onclick="selectColor(this, 'Chocolat (RAL 8015)')"></div>
-            <div class="config-color" style="background:linear-gradient(135deg,#8B5e3c,#c17f4a)" title="Bois" onclick="selectColor(this, 'Finition Bois')"></div>
-            <div class="config-color" style="background:linear-gradient(135deg,#8b4513,#c0501e)" title="Rouille" onclick="selectColor(this, 'Finition Rouille')"></div>
-            <div class="config-color" style="background:linear-gradient(135deg,#4a3728,#6b4a30)" title="Brique" onclick="selectColor(this, 'Finition Brique')"></div>
-            <div class="config-color" style="background:linear-gradient(135deg,#1a3c20,#2d6a4f)" title="Buisson" onclick="selectColor(this, 'Finition Buisson')"></div>
+        <div>
+          <label class="group-label"><i class="fa-solid fa-palette"></i>&nbsp; Couleur ou finition</label>
+          <div class="color-grid">
+            <div class="cswatch sel" style="background:#ffffff;outline:1px solid #ddd" title="Blanc" onclick="selColor(this,'Blanc (RAL 9003)')"></div>
+            <div class="cswatch" style="background:#3d3d3d" title="Gris Anthracite" onclick="selColor(this,'Gris Anthracite (RAL 7016)')"></div>
+            <div class="cswatch" style="background:#111" title="Noir" onclick="selColor(this,'Noir (RAL 9005)')"></div>
+            <div class="cswatch" style="background:#fffff0;outline:1px solid #ddd" title="Ivoire" onclick="selColor(this,'Ivoire (RAL 1015)')"></div>
+            <div class="cswatch" style="background:#2d6a4f" title="Vert Anglais" onclick="selColor(this,'Vert Anglais (RAL 6005)')"></div>
+            <div class="cswatch" style="background:#5c3d2e" title="Chocolat" onclick="selColor(this,'Chocolat (RAL 8015)')"></div>
+            <div class="cswatch" style="background:linear-gradient(135deg,#92400e,#b45309)" title="Bois" onclick="selColor(this,'Finition Bois')"></div>
+            <div class="cswatch" style="background:linear-gradient(135deg,#7f1d1d,#b91c1c)" title="Rouille Corten" onclick="selColor(this,'Finition Rouille Corten')"></div>
+            <div class="cswatch" style="background:linear-gradient(135deg,#78350f,#a16207)" title="Brique" onclick="selColor(this,'Finition Brique')"></div>
+            <div class="cswatch" style="background:linear-gradient(135deg,#14532d,#166534)" title="Buisson" onclick="selColor(this,'Finition Buisson')"></div>
           </div>
         </div>
-
-        <div class="config-group">
-          <label><i class="fa-solid fa-image"></i> Motif (optionnel)</label>
-          <div class="config-options">
-            <button class="config-option selected" onclick="selectOption(this, 'motif', 'Sans motif')">Sans motif</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Feuillage')">🌿 Feuillage</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Bambou')">🎋 Bambou</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Marguerite')">🌸 Marguerite</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Horizon')">🌅 Horizon</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Orient Express')">✨ Orient Express</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Mosaïque')">🔷 Mosaïque</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Zèbre')">🦓 Zèbre</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Léopard')">🐆 Léopard</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Fleur de Lys')">⚜️ Fleur de Lys</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Vue sur Mer')">🌊 Vue sur Mer</button>
-            <button class="config-option" onclick="selectOption(this, 'motif', 'Eden')">🌴 Eden</button>
+        <div>
+          <label class="group-label"><i class="fa-solid fa-image"></i>&nbsp; Motif (optionnel)</label>
+          <div class="motif-opts">
+            <button class="motif-btn sel" onclick="selMotif(this,'Sans motif')">Sans motif</button>
+            <button class="motif-btn" onclick="selMotif(this,'Feuillage')">🌿 Feuillage</button>
+            <button class="motif-btn" onclick="selMotif(this,'Bambou')">🎋 Bambou</button>
+            <button class="motif-btn" onclick="selMotif(this,'Marguerite')">🌸 Marguerite</button>
+            <button class="motif-btn" onclick="selMotif(this,'Horizon')">🌅 Horizon</button>
+            <button class="motif-btn" onclick="selMotif(this,'Orient Express')">✨ Orient Express</button>
+            <button class="motif-btn" onclick="selMotif(this,'Mosaïque')">🔷 Mosaïque</button>
+            <button class="motif-btn" onclick="selMotif(this,'Zèbre')">🦓 Zèbre</button>
+            <button class="motif-btn" onclick="selMotif(this,'Léopard')">🐆 Léopard</button>
+            <button class="motif-btn" onclick="selMotif(this,'Fleur de Lys')">⚜️ Fleur de Lys</button>
+            <button class="motif-btn" onclick="selMotif(this,'Vue sur Mer')">🌊 Vue sur Mer</button>
+            <button class="motif-btn" onclick="selMotif(this,'Eden')">🌴 Eden</button>
           </div>
         </div>
-
-        <div class="config-group">
-          <label><i class="fa-solid fa-ruler"></i> Dimensions (cm)</label>
-          <div class="config-dimensions">
-            <div class="config-input-group">
-              <label>Longueur (50–110 cm)</label>
-              <input type="number" class="config-input" id="dimL" min="50" max="110" value="80" placeholder="80" oninput="updatePreview()">
-            </div>
-            <div class="config-input-group">
-              <label>Hauteur (50–120 cm)</label>
-              <input type="number" class="config-input" id="dimH" min="50" max="120" value="70" placeholder="70" oninput="updatePreview()">
-            </div>
-            <div class="config-input-group">
-              <label>Profondeur (40–65 cm)</label>
-              <input type="number" class="config-input" id="dimP" min="40" max="65" value="45" placeholder="45" oninput="updatePreview()">
-            </div>
+        <div>
+          <label class="group-label"><i class="fa-solid fa-ruler"></i>&nbsp; Dimensions (en cm)</label>
+          <div class="dim-grid">
+            <div class="dim-group"><label>Longueur (50–110)</label><input class="dim-input" id="dL" type="number" min="50" max="110" value="80" oninput="updatePrev()"></div>
+            <div class="dim-group"><label>Hauteur (50–120)</label><input class="dim-input" id="dH" type="number" min="50" max="120" value="70" oninput="updatePrev()"></div>
+            <div class="dim-group"><label>Profondeur (40–65)</label><input class="dim-input" id="dP" type="number" min="40" max="65" value="45" oninput="updatePrev()"></div>
           </div>
         </div>
-
-        <div class="config-group">
-          <label><i class="fa-solid fa-wrench"></i> Type de fixation</label>
-          <div class="config-options">
-            <button class="config-option selected" onclick="selectOption(this, 'fixation', 'Fixation murale (incluse)')">Fixation murale (incluse)</button>
-            <button class="config-option" onclick="selectOption(this, 'fixation', 'Sur pied (en option)')">Sur pied (+30 €)</button>
+        <div>
+          <label class="group-label"><i class="fa-solid fa-wrench"></i>&nbsp; Fixation</label>
+          <div class="motif-opts">
+            <button class="motif-btn sel" onclick="selFix(this,'Murale (incluse)')">Fixation murale (incluse)</button>
+            <button class="motif-btn" onclick="selFix(this,'Sur pied (+30 €)')">Sur pied (+30 €)</button>
           </div>
         </div>
-
       </div>
-
-      <!-- APERÇU -->
       <div class="config-preview">
         <h3>Votre sélection</h3>
         <div class="preview-visual">
-          <div class="preview-box" id="previewBox" style="background:#ffffff;border:1px solid #ddd;">
-            <span style="font-size:36px">❄️</span>
-          </div>
+          <div class="preview-box" id="prevBox" style="background:#fff;border:1px solid #ddd">❄️</div>
         </div>
-        <div class="preview-summary">
-          <div class="preview-row">
-            <span>Couleur</span>
-            <span id="previewColor">Blanc (RAL 9003)</span>
-          </div>
-          <div class="preview-row">
-            <span>Motif</span>
-            <span id="previewMotif">Sans motif</span>
-          </div>
-          <div class="preview-row">
-            <span>Dimensions</span>
-            <span id="previewDim">80 × 70 × 45 cm</span>
-          </div>
-          <div class="preview-row">
-            <span>Fixation</span>
-            <span id="previewFixation">Murale (incluse)</span>
-          </div>
-          <div class="preview-row">
-            <span>Délai</span>
-            <span style="color:#2d6a4f">7 à 10 jours ouvrés</span>
-          </div>
+        <div class="prev-rows">
+          <div class="prev-row"><span class="lbl">Couleur</span><span class="val" id="pvColor">Blanc (RAL 9003)</span></div>
+          <div class="prev-row"><span class="lbl">Motif</span><span class="val" id="pvMotif">Sans motif</span></div>
+          <div class="prev-row"><span class="lbl">Dimensions</span><span class="val" id="pvDim">80 × 70 × 45 cm</span></div>
+          <div class="prev-row"><span class="lbl">Fixation</span><span class="val" id="pvFix">Murale</span></div>
+          <div class="prev-row"><span class="lbl">Délai</span><span class="val" style="color:#86efac">7 – 10 jours ouvrés</span></div>
+          <div class="prev-row"><span class="lbl">Livraison</span><span class="val" style="color:#86efac">Offerte</span></div>
         </div>
-        <div class="preview-price" id="previewPrice">399 €</div>
-        <div class="preview-price-sub">TTC · Livraison offerte en France métropolitaine</div>
-        <button class="btn-devis" onclick="openDevisModal()">
-          <i class="fa-solid fa-paper-plane"></i> Demander un devis gratuit
-        </button>
+        <div class="prev-price" id="pvPrice">399 €</div>
+        <div class="prev-price-sub">TTC · Livraison offerte en France</div>
+        <button class="btn-devis" onclick="openModal()"><i class="fa-solid fa-paper-plane"></i>&nbsp; Demander un devis gratuit</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TOUS LES DESIGNS -->
-<section id="designs">
+<section class="designs-section" id="designs">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-tag">15 designs</span>
+    <div class="section-header center">
+      <div class="s-tag"><i class="fa-solid fa-swatchbook"></i> 15 designs</div>
       <h2>Tous nos motifs</h2>
-      <p>Chaque motif est imprimé haute résolution sur aluminium composite. Résistance UV garantie, couleurs stables dans le temps.</p>
+      <p>Impression haute résolution sur aluminium composite. Résistance UV garantie, couleurs stables dans le temps.</p>
     </div>
     <div class="designs-grid">
-      <div class="design-card active" onclick="toggleDesign(this)"><div class="design-emoji">🌿</div><div class="design-name">Feuillage</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🌸</div><div class="design-name">Fleur</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🌅</div><div class="design-name">Horizon</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🐆</div><div class="design-name">Léopard</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">⚜️</div><div class="design-name">Fleur de Lys</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🌼</div><div class="design-name">Marguerite</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🔷</div><div class="design-name">Mosaïque</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">✨</div><div class="design-name">Orient Express</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🍀</div><div class="design-name">Trèfle</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🦓</div><div class="design-name">Zèbre</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🌊</div><div class="design-name">Vue sur Mer</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🔍</div><div class="design-name">Zoom</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🌴</div><div class="design-name">Eden</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🎋</div><div class="design-name">Bambou</div></div>
-      <div class="design-card" onclick="toggleDesign(this)"><div class="design-emoji">🍇</div><div class="design-name">Cassis</div></div>
+      <div class="design-card active"><div class="design-emoji">🌿</div><div class="design-name">Feuillage</div></div>
+      <div class="design-card"><div class="design-emoji">🌸</div><div class="design-name">Fleur</div></div>
+      <div class="design-card"><div class="design-emoji">🌅</div><div class="design-name">Horizon</div></div>
+      <div class="design-card"><div class="design-emoji">🐆</div><div class="design-name">Léopard</div></div>
+      <div class="design-card"><div class="design-emoji">⚜️</div><div class="design-name">Fleur de Lys</div></div>
+      <div class="design-card"><div class="design-emoji">🌼</div><div class="design-name">Marguerite</div></div>
+      <div class="design-card"><div class="design-emoji">🔷</div><div class="design-name">Mosaïque</div></div>
+      <div class="design-card"><div class="design-emoji">✨</div><div class="design-name">Orient Express</div></div>
+      <div class="design-card"><div class="design-emoji">🍀</div><div class="design-name">Trèfle</div></div>
+      <div class="design-card"><div class="design-emoji">🦓</div><div class="design-name">Zèbre</div></div>
+      <div class="design-card"><div class="design-emoji">🌊</div><div class="design-name">Vue sur Mer</div></div>
+      <div class="design-card"><div class="design-emoji">🔍</div><div class="design-name">Zoom</div></div>
+      <div class="design-card"><div class="design-emoji">🌴</div><div class="design-name">Eden</div></div>
+      <div class="design-card"><div class="design-emoji">🎋</div><div class="design-name">Bambou</div></div>
+      <div class="design-card"><div class="design-emoji">🍇</div><div class="design-name">Cassis</div></div>
     </div>
   </div>
 </section>
 
-<!-- POURQUOI NOUS -->
-<section class="pourquoi" id="pourquoi">
+<section class="pourquoi-section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-tag">Nos engagements</span>
+    <div class="section-header center">
+      <div class="s-tag"><i class="fa-solid fa-star"></i> Nos engagements</div>
       <h2>Pourquoi choisir La Fabrik ?</h2>
-      <p>Plus de 20 ans à fabriquer des caches climatiseurs à Canet-en-Roussillon. Qualité, durabilité, esthétique.</p>
+      <p>Artisan local depuis plus de 20 ans, qualité et esthétique au cœur de chaque produit.</p>
     </div>
-    <div class="avantages-grid">
-      <div class="avantage-card">
-        <div class="avantage-icon"><i class="fa-solid fa-flag"></i></div>
-        <h3>100 % Fabrication française</h3>
-        <p>Tout est fabriqué dans notre atelier de Canet-en-Roussillon. Aucune sous-traitance à l'étranger. Vous soutenez un artisan local.</p>
+    <div class="atouts-grid">
+      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-flag"></i></div><h3>Fabrication locale</h3><p>Tout est fabriqué dans notre atelier de Canet-en-Roussillon. Vous soutenez l'artisanat local et bénéficiez d'un contrôle qualité rigoureux à chaque étape.</p></div>
+      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Aluminium composite durable</h3><p>Résistant aux UV, intempéries et températures de -50°C à +90°C. Ne rouille pas, ne se déforme pas, ne se décolore pas dans le temps.</p></div>
+      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Pose simple & rapide</h3><p>Fixations murales fournies, notice illustrée incluse. Montage en 20 minutes sans compétence particulière. Livré prêt à installer.</p></div>
+      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-wind"></i></div><h3>Airflow préservé</h3><p>Conçus pour ne jamais gêner la ventilation de votre unité. Perforations calibrées pour un flux d'air optimal et un fonctionnement optimal de votre climatiseur.</p></div>
+      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-ruler-combined"></i></div><h3>Sur mesure disponible</h3><p>De 50 à 110 cm de long, 50 à 120 cm de haut. Nous nous adaptons à toutes les marques et tous les modèles d'unités extérieures du marché.</p></div>
+      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-headset"></i></div><h3>Conseil personnalisé</h3><p>Notre équipe vous accompagne du choix du modèle jusqu'à la pose. Disponible du lundi au vendredi de 9h à 17h par téléphone ou email.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cibles-section" id="professionnels">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="s-tag" style="background:rgba(255,255,255,.15);color:white"><i class="fa-solid fa-briefcase"></i> Pour tous</div>
+      <h2 style="color:white">Particuliers, professionnels<br>et revendeurs</h2>
+      <p style="color:rgba(255,255,255,.7);margin:0 auto">Que vous soyez propriétaire, installateur, architecte ou distributeur, nous avons une offre adaptée.</p>
+    </div>
+    <div class="cibles-grid">
+      <div class="cible-card">
+        <span class="cible-icon">🏠</span>
+        <h3>Particuliers</h3>
+        <p>Commande en ligne ou sur devis, livraison à domicile. Conseil personnalisé par téléphone pour choisir le bon modèle selon votre façade.</p>
+        <span class="cible-tag">Commande directe</span>
       </div>
-      <div class="avantage-card">
-        <div class="avantage-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <h3>Aluminium composite longue durée</h3>
-        <p>Résistant aux UV, aux intempéries, aux températures de -50°C à +90°C. Ne rouille pas, ne se déforme pas, ne se décolore pas.</p>
+      <div class="cible-card">
+        <span class="cible-icon">🔧</span>
+        <h3>Professionnels</h3>
+        <p>Installateurs, plombiers-chauffagistes, architectes, promoteurs. Tarifs professionnels sur demande, commandes groupées et délais maîtrisés.</p>
+        <span class="cible-tag">Tarif pro sur demande</span>
       </div>
-      <div class="avantage-card">
-        <div class="avantage-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-        <h3>Montage en 20 minutes</h3>
-        <p>Fixations murales incluses, notice détaillée fournie. Aucun outil spécial requis. Installation simple et rapide par tous.</p>
-      </div>
-      <div class="avantage-card">
-        <div class="avantage-icon"><i class="fa-solid fa-wind"></i></div>
-        <h3>Circulation d'air optimale</h3>
-        <p>Nos caches sont conçus pour ne pas gêner le fonctionnement de votre climatiseur. Perforations calibrées pour un flux d'air maximal.</p>
-      </div>
-      <div class="avantage-card">
-        <div class="avantage-icon"><i class="fa-solid fa-ruler-combined"></i></div>
-        <h3>Sur mesure possible</h3>
-        <p>Dimensions personnalisées de 50 à 110 cm de longueur. Nous nous adaptons à toutes les unités extérieures du marché.</p>
-      </div>
-      <div class="avantage-card">
-        <div class="avantage-icon"><i class="fa-solid fa-headset"></i></div>
-        <h3>Conseil personnalisé</h3>
-        <p>Notre équipe vous accompagne du choix du modèle jusqu'à la pose. Disponible du lundi au vendredi, 9h–17h.</p>
+      <div class="cible-card">
+        <span class="cible-icon">🤝</span>
+        <h3>Revendeurs</h3>
+        <p>Nous cherchons des revendeurs en France. Marges attractives, catalogue complet fourni, support commercial et technique dédié.</p>
+        <span class="cible-tag">Partenariat ouvert</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TÉMOIGNAGES -->
-<section class="temoignages">
+<section class="revendeurs-section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-tag">Avis clients</span>
-      <h2>Ils ont adopté nos cache clim</h2>
+    <div class="rev-inner">
+      <div>
+        <div class="s-tag"><i class="fa-solid fa-handshake"></i> Devenez revendeur</div>
+        <h2>Distribuez nos cache clim dans votre région</h2>
+        <p>Nous sommes à la recherche de partenaires revendeurs sur tout le territoire. Négoce, magasin de décoration, quincaillerie, e-commerce : rejoignez notre réseau.</p>
+        <ul class="av-list">
+          <li><i class="fa-solid fa-check-circle"></i> Marges commerciales attractives</li>
+          <li><i class="fa-solid fa-check-circle"></i> Catalogue complet + photos HD fournies</li>
+          <li><i class="fa-solid fa-check-circle"></i> Produit unique, fabriqué en France</li>
+          <li><i class="fa-solid fa-check-circle"></i> Personnalisation sur mesure possible</li>
+          <li><i class="fa-solid fa-check-circle"></i> Support technique et commercial dédié</li>
+          <li><i class="fa-solid fa-check-circle"></i> Délais de fabrication maîtrisés (7–10j)</li>
+        </ul>
+        <a href="#contact" class="btn-rev"><i class="fa-solid fa-paper-plane"></i> Nous contacter pour un partenariat</a>
+      </div>
+      <div class="rev-illus">
+        <span class="big-icon">🤝</span>
+        <div class="rev-stats">
+          <div class="rev-stat"><strong>+20</strong><span>Ans de savoir-faire</span></div>
+          <div class="rev-stat"><strong>100%</strong><span>Made in France</span></div>
+          <div class="rev-stat"><strong>15</strong><span>Designs exclusifs</span></div>
+          <div class="rev-stat"><strong>7–10j</strong><span>Délai fabrication</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="temos-section">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="s-tag"><i class="fa-solid fa-star"></i> Avis clients</div>
+      <h2>Ils nous font confiance</h2>
     </div>
     <div class="temos-grid">
       <div class="temo-card">
         <div class="temo-stars">★★★★★</div>
-        <p class="temo-text">« Excellent produit, qualité irréprochable. Le design Feuillage est magnifique sur notre façade, exactement ce qu'on cherchait. Livraison rapide et montage très simple. »</p>
-        <div class="temo-author">
-          <div class="temo-avatar">M</div>
-          <div><strong>Marie-Claire D.</strong><span>Montpellier (34)</span></div>
-        </div>
+        <p class="temo-text">« Produit magnifique, qualité irréprochable. Le design Feuillage est exactement ce qu'on cherchait pour notre terrasse. Montage ultra simple, livraison rapide. »</p>
+        <div class="temo-author"><div class="temo-av">M</div><div><strong>Marie-Claire D.</strong><span>Montpellier (34)</span></div></div>
       </div>
       <div class="temo-card">
         <div class="temo-stars">★★★★★</div>
-        <p class="temo-text">« Commandé un modèle sur mesure pour une unité PAC assez grande. Rendu parfait, dimensions exactes au millimètre. Le service client est à l'écoute et réactif. »</p>
-        <div class="temo-author">
-          <div class="temo-avatar">J</div>
-          <div><strong>Jean-Pierre R.</strong><span>Toulouse (31)</span></div>
-        </div>
+        <p class="temo-text">« Commande sur mesure pour une pompe à chaleur assez grande. Dimensions parfaites au mm. Le service client est excellent et très réactif. Je recommande. »</p>
+        <div class="temo-author"><div class="temo-av">J</div><div><strong>Jean-Pierre R.</strong><span>Toulouse (31)</span></div></div>
       </div>
       <div class="temo-card">
         <div class="temo-stars">★★★★★</div>
-        <p class="temo-text">« Très satisfait du cache clim anthracite. Ça change complètement l'aspect de la façade. La qualité de l'aluminium composite est supérieure à d'autres marques que j'avais vues. »</p>
-        <div class="temo-author">
-          <div class="temo-avatar">P</div>
-          <div><strong>Philippe B.</strong><span>Perpignan (66)</span></div>
-        </div>
+        <p class="temo-text">« En tant qu'installateur, je propose systématiquement ces cache clim à mes clients. Qualité constante, délais respectés. Un vrai partenaire de confiance. »</p>
+        <div class="temo-author"><div class="temo-av">P</div><div><strong>Philippe B.</strong><span>Installateur · Perpignan (66)</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section class="contact-section" id="contact">
   <div class="section-inner">
     <div class="section-header">
-      <span class="section-tag">Nous contacter</span>
-      <h2>Parlons de votre projet</h2>
+      <div class="s-tag"><i class="fa-solid fa-location-dot"></i> Contactez-nous</div>
+      <h2>Venez nous rendre visite<br>ou écrivez-nous</h2>
+      <p>Notre atelier est ouvert du lundi au vendredi sur rendez-vous. N'hésitez pas à passer voir nos échantillons en personne.</p>
     </div>
     <div class="contact-grid">
-      <div class="contact-info">
-        <p style="font-size:16px;color:var(--gris-moyen);margin-bottom:20px;">Une question sur un modèle, une demande de devis sur mesure ou besoin d'un conseil d'installation ? Contactez-nous.</p>
+      <div class="contact-info-block">
         <div class="contact-item">
-          <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
-          <div>
-            <strong>Téléphone</strong>
-            <a href="tel:0775769232">07 75 76 92 32</a>
-            <p>Lundi–Vendredi · 9h–17h</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div>
+          <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="ci-body">
             <strong>Atelier & showroom</strong>
             <p>9 rue de la Close, ZI Las Bigues<br>66140 Canet-en-Roussillon</p>
-            <p style="font-size:12px;color:var(--accent);margin-top:4px;">Sur rendez-vous uniquement</p>
+            <p style="font-size:11px;color:var(--bleu-clair);margin-top:5px;font-weight:600">Sur rendez-vous uniquement</p>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
-          <div>
-            <strong>Email</strong>
-            <a href="mailto:contact@lafabrikducacheclim.fr">contact@lafabrikducacheclim.fr</a>
+          <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="ci-body">
+            <strong>Horaires d'ouverture</strong>
+            <div class="horaires-grid">
+              <div class="h-item"><strong>Lundi</strong>9h00 – 17h00</div>
+              <div class="h-item"><strong>Mardi</strong>9h00 – 17h00</div>
+              <div class="h-item"><strong>Mercredi</strong>9h00 – 17h00</div>
+              <div class="h-item"><strong>Jeudi</strong>9h00 – 17h00</div>
+              <div class="h-item"><strong>Vendredi</strong>9h00 – 17h00</div>
+              <div class="h-item" style="color:#dc2626"><strong>Sam. – Dim.</strong>Fermé</div>
+            </div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon"><i class="fa-solid fa-globe"></i></div>
-          <div>
+          <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="ci-body"><strong>Téléphone</strong><a href="tel:0775769232">07 75 76 92 32</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="ci-body"><strong>Email</strong><a href="mailto:contact@rezo-fabrik.fr">contact@rezo-fabrik.fr</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fa-solid fa-globe"></i></div>
+          <div class="ci-body">
             <strong>Notre site principal</strong>
             <a href="https://www.rezo-fabrik.fr" target="_blank">www.rezo-fabrik.fr</a>
-            <p style="font-size:12px;color:var(--gris-moyen);margin-top:2px;">Découpe & personnalisation tous matériaux</p>
+            <p style="font-size:11px;margin-top:3px">Découpe & personnalisation tous matériaux</p>
           </div>
         </div>
       </div>
-
       <div class="contact-form">
-        <h3>Demande de renseignements</h3>
+        <h3>Envoyez-nous un message</h3>
+        <p>Devis, question produit, partenariat revendeur… Réponse sous 24h.</p>
         <div class="form-row">
-          <div class="form-group">
-            <label>Prénom</label>
-            <input type="text" placeholder="Jean">
-          </div>
-          <div class="form-group">
-            <label>Nom</label>
-            <input type="text" placeholder="Dupont">
-          </div>
+          <div class="form-group"><label>Prénom</label><input type="text" placeholder="Jean"></div>
+          <div class="form-group"><label>Nom</label><input type="text" placeholder="Dupont"></div>
+        </div>
+        <div class="form-group"><label>Email *</label><input type="email" placeholder="jean.dupont@email.fr"></div>
+        <div class="form-group"><label>Téléphone</label><input type="tel" placeholder="06 XX XX XX XX"></div>
+        <div class="form-group">
+          <label>Vous êtes</label>
+          <select><option>Particulier</option><option>Professionnel (installateur, artisan…)</option><option>Revendeur potentiel</option><option>Architecte / Promoteur</option></select>
         </div>
         <div class="form-group">
-          <label>Email</label>
-          <input type="email" placeholder="jean.dupont@mail.fr">
+          <label>Objet</label>
+          <select><option>Demande de devis sur mesure</option><option>Question sur un modèle</option><option>Demande de partenariat revendeur</option><option>Commande en cours</option><option>Autre</option></select>
         </div>
-        <div class="form-group">
-          <label>Téléphone</label>
-          <input type="tel" placeholder="06 XX XX XX XX">
-        </div>
-        <div class="form-group">
-          <label>Sujet</label>
-          <select>
-            <option>Demande de devis sur mesure</option>
-            <option>Question sur un produit</option>
-            <option>Commande en cours</option>
-            <option>Conseil d'installation</option>
-            <option>Autre</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea placeholder="Décrivez votre projet, les dimensions de votre unité extérieure, votre modèle de climatiseur…"></textarea>
-        </div>
-        <button class="btn-submit" onclick="submitForm(event)">
-          <i class="fa-solid fa-paper-plane"></i> Envoyer ma demande
-        </button>
+        <div class="form-group"><label>Message</label><textarea placeholder="Décrivez votre projet, les dimensions de votre unité, votre marque de climatiseur…"></textarea></div>
+        <button class="btn-send" onclick="sendForm(event)"><i class="fa-solid fa-paper-plane"></i> Envoyer ma demande</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#" class="logo">
-          <div class="logo-icon"><i class="fa-solid fa-snowflake"></i></div>
-          <div class="logo-text">
-            <strong>La Fabrik du Cache Clim</strong>
-            <span>Fabrication française</span>
-          </div>
+      <div>
+        <a href="#" class="footer-logo">
+          <div class="footer-logo-mark"><i class="fa-solid fa-snowflake"></i></div>
+          <div><strong>La Fabrik du Cache Clim</strong><span>Fabrication française</span></div>
         </a>
-        <p style="margin-top:16px">Spécialiste français des caches climatiseur et pompes à chaleur en aluminium composite. Basé à Canet-en-Roussillon depuis plus de 20 ans.</p>
-        <p style="margin-top:12px">Une marque de <a href="https://www.rezo-fabrik.fr" target="_blank" style="color:var(--accent)">REZO-FABRIK</a></p>
+        <p class="footer-brand-desc">Spécialiste des caches climatiseur et pompes à chaleur en aluminium composite. Fabriqués dans notre atelier de Canet-en-Roussillon depuis plus de 20 ans. Pour particuliers, professionnels et revendeurs.</p>
+        <div class="footer-made"><i class="fa-solid fa-flag"></i> Fabriqué à Canet-en-Roussillon (66140)</div>
+        <p style="margin-top:12px;font-size:12px;color:rgba(255,255,255,.3)">Une marque <a href="https://www.rezo-fabrik.fr" style="color:rgba(255,255,255,.4)">REZO-FABRIK</a></p>
       </div>
       <div class="footer-col">
         <h4>Boutique</h4>
         <ul>
           <li><a href="#boutique">Couleurs unies</a></li>
-          <li><a href="#boutique">Motifs & designs</a></li>
+          <li><a href="#boutique">Motifs décoratifs</a></li>
+          <li><a href="#boutique">Finitions matières</a></li>
           <li><a href="#sur-mesure">Sur mesure</a></li>
           <li><a href="#designs">Tous les designs</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Informations</h4>
+        <h4>Professionnels</h4>
         <ul>
-          <li><a href="#pourquoi">Pourquoi nous</a></li>
+          <li><a href="#professionnels">Espace pro</a></li>
+          <li><a href="#professionnels">Devenir revendeur</a></li>
+          <li><a href="#contact">Tarifs pro</a></li>
           <li><a href="#">Guide d'installation</a></li>
           <li><a href="#">Compatibilité marques</a></li>
-          <li><a href="#">Livraison & retours</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:0775769232">07 75 76 92 32</a></li>
-          <li><a href="mailto:contact@lafabrikducacheclim.fr">Nous écrire</a></li>
-          <li><a href="#contact">Formulaire de contact</a></li>
+          <li><a href="mailto:contact@rezo-fabrik.fr">contact@rezo-fabrik.fr</a></li>
+          <li><a href="#contact">Canet-en-Roussillon (66)</a></li>
+          <li><a href="#">Lun–Ven · 9h–17h</a></li>
           <li><a href="https://www.rezo-fabrik.fr" target="_blank">REZO-FABRIK</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2024 La Fabrik du Cache Clim – une marque REZO-FABRIK · Canet-en-Roussillon (66)</p>
-      <div style="display:flex;gap:20px">
-        <a href="#">Mentions légales</a>
-        <a href="#">CGV</a>
-        <a href="#">Politique de confidentialité</a>
-      </div>
+      <p>© 2024 La Fabrik du Cache Clim · REZO-FABRIK · 9 rue de la Close, ZI Las Bigues · 66140 Canet-en-Roussillon</p>
+      <div style="display:flex;gap:20px"><a href="#">Mentions légales</a><a href="#">CGV</a><a href="#">Confidentialité</a></div>
     </div>
   </div>
 </footer>
 
-<!-- PANIER -->
 <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
 <div class="cart-sidebar" id="cartSidebar">
-  <div class="cart-header">
-    <h3><i class="fa-solid fa-bag-shopping"></i> Mon panier</h3>
-    <button class="cart-close" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
-  </div>
-  <div class="cart-items" id="cartItems">
-    <div class="cart-empty">
-      <i class="fa-solid fa-bag-shopping"></i>
-      <p>Votre panier est vide</p>
-    </div>
-  </div>
+  <div class="cart-header"><h3>Mon panier</h3><button class="cart-close" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button></div>
+  <div class="cart-items" id="cartItems"><div class="cart-empty"><i class="fa-solid fa-bag-shopping"></i><p>Votre panier est vide</p></div></div>
   <div class="cart-footer" id="cartFooter" style="display:none">
-    <div class="cart-total">
-      <span>Total TTC</span>
-      <strong id="cartTotal">0 €</strong>
-    </div>
+    <div class="cart-total"><span>Total TTC</span><strong id="cartTotal">0 €</strong></div>
     <button class="btn-checkout" onclick="checkout()"><i class="fa-solid fa-lock"></i> Passer commande</button>
-    <p style="font-size:11px;text-align:center;color:var(--gris-moyen);margin-top:8px">Paiement sécurisé · Livraison offerte</p>
+    <p style="font-size:11px;text-align:center;color:var(--gris-texte);margin-top:8px">Paiement sécurisé · Livraison offerte en France</p>
   </div>
 </div>
 
-<!-- NOTIFICATION -->
-<div class="notif" id="notif"><i class="fa-solid fa-check"></i> <span id="notifText">Ajouté au panier !</span></div>
+<div class="notif" id="notif"><i class="fa-solid fa-check"></i><span id="notifTxt">Produit ajouté !</span></div>
 
-<!-- MODAL DEVIS -->
 <div class="modal-overlay" id="devisModal">
   <div class="modal">
-    <button class="modal-close-btn" onclick="closeDevisModal()"><i class="fa-solid fa-xmark"></i> Fermer</button>
-    <h3>Demande de devis sur mesure</h3>
-    <p>Nous vous répondons sous 24h avec un devis détaillé.</p>
-    <div id="devisConfig" style="background:var(--fond);padding:16px;border-radius:12px;margin-bottom:20px;font-size:13px;line-height:1.8;color:var(--gris)"></div>
+    <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i> Fermer</button>
+    <h3>Devis sur mesure</h3>
+    <p>Réponse sous 24h, sans engagement.</p>
+    <div class="modal-recap" id="modalRecap"></div>
     <div class="form-row">
-      <div class="form-group"><label>Prénom</label><input type="text" id="devisPrenom" placeholder="Jean"></div>
-      <div class="form-group"><label>Nom</label><input type="text" id="devisNom" placeholder="Dupont"></div>
+      <div class="form-group"><label>Prénom</label><input type="text" id="mPrenom" placeholder="Jean"></div>
+      <div class="form-group"><label>Nom</label><input type="text" id="mNom" placeholder="Dupont"></div>
     </div>
-    <div class="form-group"><label>Email *</label><input type="email" id="devisEmail" placeholder="jean@mail.fr"></div>
-    <div class="form-group"><label>Téléphone</label><input type="tel" id="dEvisTel" placeholder="06 XX XX XX XX"></div>
-    <div class="form-group"><label>Marque de votre climatiseur</label><input type="text" id="devisMarque" placeholder="Samsung, LG, Toshiba…"></div>
-    <button class="btn-submit" onclick="submitDevis()"><i class="fa-solid fa-paper-plane"></i> Envoyer ma demande</button>
+    <div class="form-group"><label>Email *</label><input type="email" id="mEmail" placeholder="jean@mail.fr"></div>
+    <div class="form-group"><label>Téléphone</label><input type="tel" id="mTel" placeholder="06 XX XX XX XX"></div>
+    <div class="form-group"><label>Marque du climatiseur</label><input type="text" id="mMarque" placeholder="Samsung, Daikin, LG…"></div>
+    <div class="form-group"><label>Vous êtes</label><select id="mProfil"><option>Particulier</option><option>Professionnel</option><option>Revendeur</option></select></div>
+    <button class="btn-send" onclick="submitDevis()"><i class="fa-solid fa-paper-plane"></i> Envoyer ma demande</button>
   </div>
 </div>
 
 <script>
-  // ── ÉTAT ──
   let cart = [];
-  let configState = {
-    color: 'Blanc (RAL 9003)',
-    colorBg: '#ffffff',
-    motif: 'Sans motif',
-    fixation: 'Fixation murale (incluse)',
-  };
+  let cfg = { color:'Blanc (RAL 9003)', colorBg:'#ffffff', motif:'Sans motif', fix:'Murale (incluse)' };
 
-  // ── NAVIGATION MOBILE ──
-  function toggleMenu() {
-    const nav = document.getElementById('mainNav');
-    nav.classList.toggle('mobile-open');
-  }
+  function toggleMenu() { document.getElementById('mainNav').classList.toggle('mobile-open'); }
 
-  // ── PANIER ──
   function toggleCart() {
     document.getElementById('cartSidebar').classList.toggle('open');
     document.getElementById('cartOverlay').classList.toggle('open');
   }
-
   function addToCart(name, price, emoji) {
-    const existing = cart.find(i => i.name === name);
-    if (existing) { existing.qty++; }
-    else { cart.push({ name, price, emoji, qty: 1, id: Date.now() }); }
-    updateCartUI();
-    showNotif('Ajouté au panier : ' + name);
+    const ex = cart.find(i => i.name === name);
+    if (ex) ex.qty++; else cart.push({ name, price, emoji, qty:1, id:Date.now() });
+    renderCart(); showNotif('Ajouté : ' + name);
   }
-
-  function removeFromCart(id) {
-    cart = cart.filter(i => i.id !== id);
-    updateCartUI();
-  }
-
-  function updateCartUI() {
-    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    const count = cart.reduce((s, i) => s + i.qty, 0);
-
-    document.getElementById('cartCount').textContent = count + ' article' + (count > 1 ? 's' : '');
+  function removeFromCart(id) { cart = cart.filter(i => i.id !== id); renderCart(); }
+  function renderCart() {
+    const count = cart.reduce((s,i)=>s+i.qty,0);
+    const total = cart.reduce((s,i)=>s+i.price*i.qty,0);
     const badge = document.getElementById('cartBadge');
-    badge.textContent = count;
-    badge.style.display = count > 0 ? 'flex' : 'none';
-
-    const container = document.getElementById('cartItems');
-    const footer = document.getElementById('cartFooter');
-
-    if (cart.length === 0) {
-      container.innerHTML = '<div class="cart-empty"><i class="fa-solid fa-bag-shopping"></i><p>Votre panier est vide</p></div>';
-      footer.style.display = 'none';
+    document.getElementById('cartCount').textContent = count > 0 ? count+' article'+(count>1?'s':'') : 'Panier';
+    badge.textContent = count; badge.style.display = count > 0 ? 'flex' : 'none';
+    const el = document.getElementById('cartItems');
+    const ft = document.getElementById('cartFooter');
+    if (!cart.length) {
+      el.innerHTML = '<div class="cart-empty"><i class="fa-solid fa-bag-shopping"></i><p>Votre panier est vide</p></div>';
+      ft.style.display = 'none';
     } else {
-      container.innerHTML = cart.map(i => `
-        <div class="cart-item">
-          <div class="cart-item-img">${i.emoji}</div>
-          <div class="cart-item-info">
-            <strong>${i.name}</strong>
-            <span>Qté : ${i.qty}</span>
-          </div>
-          <div class="cart-item-price">${(i.price * i.qty)} €</div>
-          <button class="cart-item-remove" onclick="removeFromCart(${i.id})"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-      `).join('');
-      footer.style.display = 'block';
-      document.getElementById('cartTotal').textContent = total + ' €';
+      el.innerHTML = cart.map(i=>`<div class="cart-item"><div class="cart-item-img">${i.emoji}</div><div class="cart-item-info"><strong>${i.name}</strong><span>Qté : ${i.qty}</span></div><div class="cart-item-price">${i.price*i.qty} €</div><button class="cart-item-rm" onclick="removeFromCart(${i.id})"><i class="fa-solid fa-xmark"></i></button></div>`).join('');
+      ft.style.display = 'block';
+      document.getElementById('cartTotal').textContent = total+' €';
     }
   }
+  function checkout() { showNotif('Redirection vers le paiement sécurisé…'); setTimeout(toggleCart, 1200); }
 
-  function checkout() {
-    showNotif('Redirection vers le paiement sécurisé…');
-    setTimeout(() => toggleCart(), 1000);
-  }
-
-  // ── NOTIFICATION ──
   function showNotif(msg) {
     const el = document.getElementById('notif');
-    document.getElementById('notifText').textContent = msg;
+    document.getElementById('notifTxt').textContent = msg;
     el.classList.add('show');
-    setTimeout(() => el.classList.remove('show'), 2800);
+    setTimeout(()=>el.classList.remove('show'), 2800);
   }
 
-  // ── FILTRES PRODUITS ──
   function filterProducts(cat, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('.product-card').forEach(card => {
-      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+    document.querySelectorAll('.product-card').forEach(c=>{
+      c.style.display = (cat==='all'||c.dataset.cat===cat) ? 'block' : 'none';
     });
   }
 
-  // ── CONFIGURATEUR ──
-  function selectColor(el, name) {
-    document.querySelectorAll('.config-color').forEach(c => c.classList.remove('selected'));
-    el.classList.add('selected');
-    configState.color = name;
-    configState.colorBg = el.style.background;
-    document.getElementById('previewColor').textContent = name;
-    const box = document.getElementById('previewBox');
-    box.style.background = el.style.background;
-    updateConfigPrice();
+  function selColor(el, name) {
+    document.querySelectorAll('.cswatch').forEach(c=>c.classList.remove('sel'));
+    el.classList.add('sel');
+    cfg.color = name; cfg.colorBg = el.style.background;
+    document.getElementById('pvColor').textContent = name;
+    document.getElementById('prevBox').style.background = el.style.background;
+    calcPrice();
   }
-
-  function selectOption(el, type, value) {
-    const group = el.closest('.config-options');
-    group.querySelectorAll('.config-option').forEach(b => b.classList.remove('selected'));
-    el.classList.add('selected');
-    configState[type] = value;
-    if (type === 'motif') document.getElementById('previewMotif').textContent = value;
-    if (type === 'fixation') document.getElementById('previewFixation').textContent = value.replace(' (incluse)', '').replace(' (en option)', '');
-    updateConfigPrice();
+  function selMotif(el, name) {
+    el.closest('.motif-opts').querySelectorAll('.motif-btn').forEach(b=>b.classList.remove('sel'));
+    el.classList.add('sel'); cfg.motif = name;
+    document.getElementById('pvMotif').textContent = name;
+    calcPrice();
   }
-
-  function updatePreview() {
-    const l = document.getElementById('dimL').value || 80;
-    const h = document.getElementById('dimH').value || 70;
-    const p = document.getElementById('dimP').value || 45;
-    document.getElementById('previewDim').textContent = `${l} × ${h} × ${p} cm`;
-    updateConfigPrice();
+  function selFix(el, name) {
+    el.closest('.motif-opts').querySelectorAll('.motif-btn').forEach(b=>b.classList.remove('sel'));
+    el.classList.add('sel'); cfg.fix = name;
+    document.getElementById('pvFix').textContent = name.replace(' (incluse)','').replace(' (+30 €)','');
+    calcPrice();
   }
-
-  function updateConfigPrice() {
-    const l = parseInt(document.getElementById('dimL').value) || 80;
-    const h = parseInt(document.getElementById('dimH').value) || 70;
-    let price = 399;
-    if (l > 90 || h > 90) price = 449;
-    if (l > 100 || h > 100) price = 499;
-    if (configState.fixation.includes('pied')) price += 30;
-    document.getElementById('previewPrice').textContent = price + ' €';
+  function updatePrev() {
+    const l=document.getElementById('dL').value||80, h=document.getElementById('dH').value||70, p=document.getElementById('dP').value||45;
+    document.getElementById('pvDim').textContent = `${l} × ${h} × ${p} cm`;
+    calcPrice();
   }
-
-  function scrollToConfig() {
-    document.getElementById('sur-mesure').scrollIntoView({ behavior: 'smooth' });
+  function calcPrice() {
+    const l=parseInt(document.getElementById('dL').value)||80, h=parseInt(document.getElementById('dH').value)||70;
+    let p=399;
+    if(l>90||h>90) p=449;
+    if(l>100||h>100) p=499;
+    if(cfg.fix.includes('+30')) p+=30;
+    document.getElementById('pvPrice').textContent = p+' €';
   }
+  function scrollToSM() { document.getElementById('sur-mesure').scrollIntoView({behavior:'smooth'}); }
 
-  // ── DESIGNS ──
-  function toggleDesign(el) {
-    el.classList.toggle('active');
-  }
+  document.querySelectorAll('.design-card').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('active')));
 
-  // ── MODAL DEVIS ──
-  function openDevisModal() {
-    const l = document.getElementById('dimL').value || 80;
-    const h = document.getElementById('dimH').value || 70;
-    const p = document.getElementById('dimP').value || 45;
-    document.getElementById('devisConfig').innerHTML = `
-      <strong>Configuration sélectionnée :</strong><br>
-      Couleur : ${configState.color}<br>
-      Motif : ${configState.motif}<br>
-      Dimensions : ${l} × ${h} × ${p} cm<br>
-      Fixation : ${configState.fixation}
-    `;
+  function openModal() {
+    const l=document.getElementById('dL').value||80, h=document.getElementById('dH').value||70, p=document.getElementById('dP').value||45;
+    document.getElementById('modalRecap').innerHTML = `<strong>Configuration :</strong><br>Couleur : ${cfg.color}<br>Motif : ${cfg.motif}<br>Dimensions : ${l} × ${h} × ${p} cm<br>Fixation : ${cfg.fix}`;
     document.getElementById('devisModal').classList.add('open');
   }
-
-  function closeDevisModal() {
-    document.getElementById('devisModal').classList.remove('open');
-  }
-
+  function closeModal() { document.getElementById('devisModal').classList.remove('open'); }
+  document.getElementById('devisModal').addEventListener('click',e=>{if(e.target===document.getElementById('devisModal'))closeModal();});
   function submitDevis() {
-    const email = document.getElementById('devisEmail').value;
-    if (!email) { alert('Veuillez saisir votre email.'); return; }
-    closeDevisModal();
-    showNotif('Votre demande de devis a bien été envoyée !');
+    if(!document.getElementById('mEmail').value){alert('Veuillez renseigner votre email.');return;}
+    closeModal(); showNotif('Demande envoyée ! Réponse sous 24h.');
   }
+  function sendForm(e) { e.preventDefault(); showNotif('Message envoyé ! Nous vous répondons sous 24h.'); }
 
-  function submitForm(e) {
-    e.preventDefault();
-    showNotif('Message envoyé ! Nous vous répondons sous 24h.');
-  }
-
-  // Fermer modal en cliquant l'overlay
-  document.getElementById('devisModal').addEventListener('click', function(e) {
-    if (e.target === this) closeDevisModal();
-  });
-
-  // Init preview
-  updatePreview();
+  updatePrev();
 </script>
-
 </body>
 </html>
