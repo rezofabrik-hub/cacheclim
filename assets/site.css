@@ -537,3 +537,9 @@ footer .footer-logo span { color: rgba(255,255,255,.8); }
 @media (max-width: 1100px) { .footer-grid { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 700px)  { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px)  { .footer-grid { grid-template-columns: 1fr; } }
+
+/* Fiches modèle : photo produit en tête d'article */
+.modele-photo { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--gris-border); background: var(--bleu-very-pale); margin-bottom: 34px; }
+.modele-photo img { width: 100%; height: auto; display: block; }
+.product-name a { color: inherit; text-decoration: none; }
+.product-name a:hover { color: var(--bleu-mid); text-decoration: underline; }
