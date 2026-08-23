@@ -1,80 +1,116 @@
-# Grille tarifaire — alignement concurrentiel
+# Grille tarifaire — un seul prix par taille
 
-**Décidé le 23 août 2026.** Remplace la grille précédente (couleur 230–325 €,
-motif 299–399 €, sur mesure 399–499 €).
+**Décidée le 23 août 2026.** Remplace la grille précédente (couleur 230–325 €,
+motif 299–399 €, sur mesure 399–499 €) et la proposition intermédiaire à deux
+niveaux.
 
-## Nouvelle grille (TTC, livraison incluse)
+## La grille
 
-| Taille | Cache L × H | Profondeur réglable | Couleur unie | Motif / matière |
-|---|---|---|---|---|
-| S | 85 × 65 cm | 45 – 55 cm | **199 €** | **239 €** |
-| M | 93 × 73 cm | 50 – 60 cm | **229 €** | **269 €** |
-| L | 95 × 83 cm | 53 – 63 cm | **249 €** | **289 €** |
-| XL | 102 × 79 cm | 54 – 64 cm | **269 €** | **309 €** |
-| XXL | 105 × 95 cm | 60 – 70 cm | **299 €** | **339 €** |
-| Sur mesure | jusqu'à 110 × 120 cm | jusqu'à 65 cm | **dès 329 €** | **dès 369 €** |
+| Taille | Cache L × H | Profondeur réglable | Prix, toutes finitions |
+|---|---|---|---|
+| S | 85 × 65 cm | 45 – 55 cm | **219 €** |
+| M | 93 × 73 cm | 50 – 60 cm | **249 €** |
+| L | 95 × 83 cm | 53 – 63 cm | **279 €** |
+| XL | 102 × 79 cm | 54 – 64 cm | **279 €** |
+| XXL | 105 × 95 cm | 60 – 70 cm | **319 €** |
+| Sur mesure | jusqu'à 110 × 120 cm | jusqu'à 65 cm | **dès 349 €** |
 
-Option pied au sol : +30 €. Livraison France métropolitaine offerte, incluse dans ces prix.
+Prix TTC, livraison France métropolitaine et fixations murales incluses.
+Seule option payante : le pied au sol, +30 €.
 
 > Source unique : `assets/site.js`, table `TAILLES`. Modifier là et nulle part
-> ailleurs, puis lancer `./check-prix.sh` pour vérifier que les pages suivent.
+> ailleurs, puis lancer `./check-prix.sh`.
+
+## Le changement de structure
+
+L'ancienne proposition distinguait *couleur unie* et *motif imprimé*, avec 40 €
+d'écart. La nouvelle grille **supprime cette distinction** : couleur unie, motif
+imprimé et finition matière sont au même tarif.
+
+Ce n'est pas qu'une simplification comptable, c'est un argument de vente que
+personne n'a sur ce marché :
+
+> **Le motif ne coûte pas plus cher que l'uni.**
+
+Chez tous les concurrents, la décoration est une option payante. Ici elle est
+comprise. C'est immédiatement compréhensible, ça supprime une hésitation au
+moment du choix, et ça donne une raison de préférer votre boutique qui ne repose
+pas sur les avis clients — que vous n'avez pas encore.
 
 ## Positionnement face à Kach Klim
 
-| Taille | Kach Klim | Nous, couleur unie | Nous, motif |
+| Taille | Kach Klim | Nous | Écart |
 |---|---|---|---|
-| S | 229 € | 199 € (**−30 €**) | 239 € (+10 €) |
-| M | 269 € | 229 € (**−40 €**) | 269 € (=) |
-| L | 299 € | 249 € (**−50 €**) | 289 € (−10 €) |
-| XL | 299 € | 269 € (**−30 €**) | 309 € (+10 €) |
-| XXL | 339 € | 299 € (**−40 €**) | 339 € (=) |
-| Sur mesure | dès 369 € | dès 329 € (**−40 €**) | dès 369 € (=) |
+| S | 229 € | 219 € | −10 € |
+| M | 269 € | 249 € | −20 € |
+| L | 299 € | 279 € | −20 € |
+| XL | 299 € | 279 € | −20 € |
+| XXL | 339 € | 319 € | −20 € |
+| Sur mesure | dès 369 € | dès 349 € | −20 € |
 
-**La logique.** On attaque par le bas avec la couleur unie, nettement moins chère,
-pour donner une raison rationnelle de nous choisir malgré l'absence d'avis. On
-s'aligne au centime près sur la gamme motif, où la comparaison se fait sur le
-design et non sur le prix. Le sur mesure — notre vrai différenciateur, puisque
-nous fabriquons nous-mêmes — reste au niveau du marché.
+Systématiquement en dessous, sur toute la gamme, d'un montant constant. C'est
+lisible pour le client qui compare, et défendable : ce n'est pas du bradage,
+c'est un positionnement.
 
-## Écart avec l'ancienne grille
+**Et l'écart réel est plus grand que ces 20 €**, puisque chez eux un motif se
+paie plus cher que l'uni. Sur un cache décoré taille L, la comparaison n'est
+plus 299 contre 279 mais 299+ contre 279.
+
+## Écart avec l'existant
 
 | | Avant | Après | Écart |
 |---|---|---|---|
-| Couleur unie, entrée | 230 € | 199 € | −13 % |
-| Couleur unie, haut | 325 € | 299 € | −8 % |
-| Motif, entrée | 299 € | 239 € | −20 % |
-| Motif, haut | 399 € | 339 € | −15 % |
-| Sur mesure, entrée | 399 € | 329 € | −18 % |
+| Entrée de gamme, uni | 230 € | 219 € | −5 % |
+| Entrée de gamme, motif | 299 € | 219 € | **−27 %** |
+| Haut de gamme, uni | 325 € | 319 € | −2 % |
+| Haut de gamme, motif | 399 € | 319 € | **−20 %** |
+| Sur mesure, entrée | 399 € | 349 € | −13 % |
 
-## ⚠️ À vérifier avant d'appliquer
+L'effort porte donc presque entièrement sur la gamme motif. Sur l'uni, la baisse
+est marginale.
 
-Ces prix sont un **positionnement commercial**, pas un calcul de marge : je n'ai
-pas vos coûts. Trois points à contrôler avant de basculer.
+## ⚠️ Les trois vérifications avant d'appliquer
 
-1. **Le coût de revient d'un cache S.** À 199 € TTC, il vous reste 165,83 € HT.
-   Matière, découpe, temps machine, emballage : si le revient dépasse 100 € HT,
-   la marge devient trop mince pour financer la publicité.
-2. **Le coût réel du transport.** « Livraison offerte » veut dire que vous
-   l'absorbez. Un cache de 105 × 95 cm est un colis hors normes chez la plupart
-   des transporteurs. Faites chiffrer le tarif réel : s'il dépasse 25 € par
-   colis, remontez toute la grille de ce montant plutôt que de rogner la marge.
-3. **Le seuil du 3× sans frais.** Les frais du prestataire (Alma, Oney,
-   Klarna) tournent autour de 2 à 4 % du panier. À intégrer dans le prix, pas
-   à découvrir après.
+Ces prix sont un positionnement commercial, pas un calcul de marge : je n'ai pas
+vos coûts.
 
-Si un de ces trois points ne passe pas, **remontez la grille plutôt que de
-renoncer à l'alignement** : mieux vaut 219 € affiché honnêtement que 199 € qui
+### 1. Le surcoût réel d'un motif
+C'est le point critique de cette grille. Vendre un cache imprimé au prix d'un
+cache uni ne fonctionne que si l'impression numérique et l'adhésif contrecollé
+coûtent peu — ce qui est plausible puisque c'est votre métier et votre matériel,
+mais qui doit être chiffré.
+
+Calculez le surcoût d'un motif taille M (adhésif + encre + temps machine +
+contrecollage). Trois cas :
+
+- **Moins de 15 €** — la grille tient telle quelle. C'est votre atelier qui
+  finance l'argument commercial, et c'est un excellent placement.
+- **Entre 15 et 30 €** — la grille tient, mais remontez l'uni de 10 € pour
+  lisser (229 / 259 / 289 / 289 / 329). Vous restez sous Kach Klim.
+- **Plus de 30 €** — abandonnez le prix unique et revenez à deux niveaux. Mieux
+  vaut deux tarifs honnêtes qu'un tarif unique à perte.
+
+### 2. Le coût du transport
+« Livraison offerte » veut dire que vous l'absorbez. Un colis de 105 × 95 cm est
+hors normes chez la plupart des transporteurs. Faites chiffrer le tarif réel :
+au-delà de 25 € par colis, remontez toute la grille d'autant.
+
+### 3. Les frais du paiement fractionné
+Le 3× sans frais coûte 2 à 4 % du panier au marchand (Alma, Oney, Klarna). À
+intégrer au prix, pas à découvrir après.
+
+**Si l'une de ces vérifications ne passe pas, remontez la grille plutôt que de
+renoncer au positionnement.** Mieux vaut 239 € affiché honnêtement que 219 € qui
 vous fait perdre de l'argent à chaque vente.
 
 ## Ce qui compte plus que le prix
 
-L'audit du 23 août l'a montré : vous n'avez pas fait une seule vente parce que
-le paiement par carte était absent, pas parce que vous étiez 30 € trop cher.
-La baisse de prix est utile, mais elle arrive **en troisième position** derrière :
+Rappel de l'audit : vous n'avez pas fait une seule vente parce que le paiement
+par carte était absent, pas parce que vous étiez 30 € trop cher. Cette grille
+arrive **en quatrième position** derrière :
 
 1. le paiement par carte bancaire,
-2. les frais de port affichés (ou offerts),
+2. les frais de port affichés ou offerts,
 3. le guide des tailles.
 
-Appliquer la nouvelle grille sans corriger ces trois points reviendrait à vendre
-zéro cache, un peu moins cher.
+Appliquée seule, elle ferait vendre zéro cache, un peu moins cher.

@@ -4,20 +4,25 @@
    TOUS LES PRIX DU SITE SONT DÉFINIS ICI, ET NULLE PART AILLEURS.
    Pour changer un tarif, modifiez la table TAILLES ci-dessous :
    les pages, le configurateur et le panier se mettent à jour.
-   Grille alignée sur la concurrence (Kach Klim) — voir
-   docs/grille-tarifaire.md pour le détail du positionnement.
+
+   Un seul prix par taille, toutes finitions comprises : couleur unie,
+   motif imprimé et finition matière sont au même tarif. C'est un
+   argument de vente autant qu'une simplification — le motif ne coûte
+   pas plus cher que l'uni, ce que la concurrence ne propose pas.
+   Grille systématiquement 20 € sous Kach Klim (10 € sur la taille S).
+   Voir docs/grille-tarifaire.md pour le positionnement complet.
    ============================================================= */
 
 const TAILLES = [
-  { id: 'S',   L: 85,  H: 65,  Pmin: 45, Pmax: 55, couleur: 199, motif: 239 },
-  { id: 'M',   L: 93,  H: 73,  Pmin: 50, Pmax: 60, couleur: 229, motif: 269 },
-  { id: 'L',   L: 95,  H: 83,  Pmin: 53, Pmax: 63, couleur: 249, motif: 289 },
-  { id: 'XL',  L: 102, H: 79,  Pmin: 54, Pmax: 64, couleur: 269, motif: 309 },
-  { id: 'XXL', L: 105, H: 95,  Pmin: 60, Pmax: 70, couleur: 299, motif: 339 },
+  { id: 'S',   L: 85,  H: 65,  Pmin: 45, Pmax: 55, prix: 219 },
+  { id: 'M',   L: 93,  H: 73,  Pmin: 50, Pmax: 60, prix: 249 },
+  { id: 'L',   L: 95,  H: 83,  Pmin: 53, Pmax: 63, prix: 279 },
+  { id: 'XL',  L: 102, H: 79,  Pmin: 54, Pmax: 64, prix: 279 },
+  { id: 'XXL', L: 105, H: 95,  Pmin: 60, Pmax: 70, prix: 319 },
 ];
 
-/* Sur mesure : prix plancher, + supplément au décimètre carré au-delà du XXL */
-const SUR_MESURE = { couleur: 329, motif: 369, maxL: 110, maxH: 120, maxP: 65 };
+/* Sur mesure : prix plancher, majoré à la surface au-delà du gabarit XXL */
+const SUR_MESURE = { prix: 349, maxL: 110, maxH: 120, maxP: 65 };
 
 /* Options payantes */
 const OPTIONS = { pied: 30 };
@@ -65,18 +70,16 @@ function renderFinder() {
       '<div class="fr-size">Cache clim ' + t.id + '</div>' +
       '<div class="fr-dims">Dimensions du cache : ' + t.L + ' × ' + t.H + ' cm · profondeur réglable ' + t.Pmin + '–' + t.Pmax + ' cm</div>' +
       '<div class="fr-prices">' +
-        '<div class="fr-price"><b>' + euro(t.couleur) + '</b><span>Couleur unie · 6 teintes RAL</span></div>' +
-        '<div class="fr-price"><b>' + euro(t.motif) + '</b><span>Motif ou finition matière</span></div>' +
+        '<div class="fr-price"><b>' + euro(t.prix) + '</b><span>Toutes finitions · 6 coloris ou 15 motifs</span></div>' +
       '</div>' +
-      '<div class="fr-warn" style="background:#e3f0e8;color:#1e5e3f">Livraison offerte en France métropolitaine, incluse dans ces prix.</div>';
+      '<div class="fr-warn" style="background:#e3f0e8;color:#1e5e3f">Le motif ne coûte pas plus cher que l\'uni. Livraison offerte incluse dans ce prix.</div>';
   } else if (r.type === 'sur-mesure') {
     box.innerHTML =
       '<div class="fr-label">Aucune taille standard ne convient</div>' +
       '<div class="fr-size">Sur mesure</div>' +
       '<div class="fr-dims">Votre unité sort de nos gabarits standards, mais reste dans nos capacités d\'atelier.</div>' +
       '<div class="fr-prices">' +
-        '<div class="fr-price"><b>dès ' + euro(SUR_MESURE.couleur) + '</b><span>Couleur unie</span></div>' +
-        '<div class="fr-price"><b>dès ' + euro(SUR_MESURE.motif) + '</b><span>Motif ou finition</span></div>' +
+        '<div class="fr-price"><b>dès ' + euro(SUR_MESURE.prix) + '</b><span>Toutes finitions comprises</span></div>' +
       '</div>' +
       '<div class="fr-warn">Fabrication à vos cotes exactes, livrée en 7 à 10 jours. <a href="index.html#sur-mesure" style="color:#92400e;font-weight:700">Configurer mon cache sur mesure</a></div>';
   } else {
@@ -98,18 +101,16 @@ function renderGrilleTarifs(elId) {
     '<tr><th scope="row">' + t.id + '</th>' +
     '<td class="dims">' + t.L + ' × ' + t.H + ' cm</td>' +
     '<td class="dims">' + t.Pmin + ' – ' + t.Pmax + ' cm</td>' +
-    '<td class="price">' + euro(t.couleur) + '</td>' +
-    '<td class="price">' + euro(t.motif) + '</td></tr>'
+    '<td class="price">' + euro(t.prix) + '</td></tr>'
   ).join('');
   rows += '<tr class="highlight"><th scope="row">Sur mesure</th>' +
     '<td class="dims">jusqu\'à ' + SUR_MESURE.maxL + ' × ' + SUR_MESURE.maxH + ' cm</td>' +
     '<td class="dims">jusqu\'à ' + SUR_MESURE.maxP + ' cm</td>' +
-    '<td class="price">dès ' + euro(SUR_MESURE.couleur) + '</td>' +
-    '<td class="price">dès ' + euro(SUR_MESURE.motif) + '</td></tr>';
+    '<td class="price">dès ' + euro(SUR_MESURE.prix) + '</td></tr>';
   el.innerHTML =
     '<table class="grid"><thead><tr>' +
     '<th scope="col">Taille</th><th scope="col">Largeur × hauteur</th><th scope="col">Profondeur réglable</th>' +
-    '<th scope="col">Couleur unie</th><th scope="col">Motif / matière</th>' +
+    '<th scope="col">Prix, toutes finitions</th>' +
     '</tr></thead><tbody>' + rows + '</tbody></table>';
 }
 

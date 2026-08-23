@@ -144,7 +144,7 @@ Sans ça, rien d'autre ne compte.
 - [ ] Paiement par carte bancaire + 3× sans frais
 - [ ] Livraison offerte, annoncée en haut de chaque page
 - [ ] Guide des tailles avec calculateur *(déjà construit, voir `guide-tailles.html`)*
-- [ ] Nouvelle grille tarifaire *(voir `docs/grille-tarifaire.md`)*
+- [ ] Nouvelle grille tarifaire : 219 à 319 €, un seul prix par taille, systématiquement 20 € sous eux *(voir `docs/grille-tarifaire.md`)*
 - [ ] Lancer la collecte d'avis Google — objectif 30 avis en 3 mois
 - [ ] Cache de page + WebP + chargement différé
 

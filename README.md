@@ -31,7 +31,9 @@ Statique, sans dépendance ni étape de build. Quatre pages :
 ### Changer un prix
 
 Tous les tarifs sont définis dans la table `TAILLES` de `assets/site.js`, et
-nulle part ailleurs. Après modification :
+nulle part ailleurs. La grille retenue est **un seul prix par taille** — couleur
+unie, motif imprimé et finition matière au même tarif, de 219 € à 319 €, sur
+mesure dès 349 €. Après modification :
 
 ```bash
 ./check-prix.sh

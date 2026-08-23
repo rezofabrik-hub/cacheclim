@@ -54,18 +54,27 @@ consommation impose l'affichage des frais de livraison **avant** la commande.
 
 Grille complète et justification dans `docs/grille-tarifaire.md`.
 
-| Taille | Couleur unie | Motif / matière |
-|---|---|---|
-| Petit (S) | 199 € | 239 € |
-| Moyen (M) | 229 € | 269 € |
-| Grand (L) | 249 € | 289 € |
-| Très grand (XL) | 269 € | 309 € |
-| XXL *(à créer)* | 299 € | 339 € |
-| Sur mesure | dès 329 € | dès 369 € |
+| Taille | Prix, toutes finitions |
+|---|---|
+| Petit (S) | **219 €** |
+| Moyen (M) | **249 €** |
+| Grand (L) | **279 €** |
+| Très grand (XL) | **279 €** |
+| XXL *(à créer)* | **319 €** |
+| Sur mesure | **dès 349 €** |
+
+**Le changement structurant :** un seul prix par taille. Couleur unie, motif
+imprimé et finition matière passent au même tarif. Dans WooCommerce, cela veut
+dire que l'attribut « Motif » ne porte plus de supplément de prix — seule la
+variation « Taille » fait varier le tarif. C'est aussi beaucoup plus simple à
+maintenir.
+
+Mettez-le en avant partout : **« Le motif ne coûte pas plus cher que l'uni »**.
+Aucun concurrent ne le propose.
 
 **Comment appliquer vite :** Produits → cocher tout → Actions groupées →
-Modifier → champ Prix. Woo permet aussi un pourcentage : `-15%` sur la sélection
-« motif » approche la nouvelle grille en une opération, à ajuster ensuite.
+Modifier → champ Prix. Comme le prix ne dépend plus que de la taille, vous pouvez saisir
+les cinq mêmes montants sur tous les produits.
 
 Pensez à ajouter la variation **XXL** : c'est la taille qui manque pour les
 pompes à chaleur, et c'est le segment le moins concurrencé.
@@ -243,12 +252,12 @@ description longue.
 
 | Page | Titre SEO | Méta-description |
 |---|---|---|
-| Accueil | `Cache clim extérieur design, fabriqué en France — dès 199 €` | `Cache climatiseur et pompe à chaleur en aluminium composite, fabriqué à Canet-en-Roussillon. 15 designs, 6 coloris RAL, 5 tailles et sur mesure. Livraison offerte, dès 199 €.` |
-| Boutique | `Cache clim extérieur : 15 designs et 6 coloris — La Fabrik` | `Tous nos caches climatiseur en aluminium composite : couleurs unies dès 199 €, motifs décoratifs dès 239 €, sur mesure dès 329 €. Livraison offerte en France.` |
+| Accueil | `Cache clim extérieur design, fabriqué en France — dès 199 €` | `Cache climatiseur et pompe à chaleur en aluminium composite, fabriqué à Canet-en-Roussillon. 15 designs, 6 coloris RAL, 5 tailles et sur mesure. Un seul prix par taille, motif compris. Livraison offerte, dès 219 €.` |
+| Boutique | `Cache clim extérieur : 15 designs et 6 coloris — La Fabrik` | `Tous nos caches climatiseur en aluminium composite : un seul prix par taille dès 219 €, motif compris, sur mesure dès 349 €. Livraison offerte en France.` |
 | Cache clim | `Cache climatisation extérieur en aluminium — Rezo-Fabrik` | `Habillez votre unité extérieure sans gêner la ventilation. Aluminium composite, 5 tailles, pose en 20 minutes, fabrication française.` |
-| Sur mesure | `Cache clim sur mesure à vos dimensions — dès 329 €` | `Votre cache climatiseur fabriqué à vos cotes exactes, jusqu'à 110 × 120 cm. Coloris, motif ou votre propre visuel imprimé. Devis sous 24 h, livré en 7 à 10 jours.` |
+| Sur mesure | `Cache clim sur mesure à vos dimensions — dès 349 €` | `Votre cache climatiseur fabriqué à vos cotes exactes, jusqu'à 110 × 120 cm. Coloris, motif ou votre propre visuel imprimé. Devis sous 24 h, livré en 7 à 10 jours.` |
 | Devis | `Demande de devis cache clim sur mesure` | `Envoyez-nous vos dimensions et une photo de votre climatiseur : nous établissons votre devis sous 24 h ouvrées. Fabrication française, livraison offerte.` |
-| Fiche produit | `Cache clim extérieur <Motif> — aluminium, 5 tailles` | `<Première phrase de la description>. Livraison offerte, pose en 20 min, dès 239 €.` |
+| Fiche produit | `Cache clim extérieur <Motif> — aluminium, 5 tailles` | `<Première phrase de la description>. Livraison offerte, pose en 20 min, dès 219 €, motif compris.` |
 
 **À corriger en priorité :** la page d'accueil porte aujourd'hui deux
 méta-descriptions, dont celle de la démo Avada, en anglais
