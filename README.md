@@ -25,6 +25,8 @@ Statique, sans dépendance ni étape de build. Quatre pages :
 | `index.html` | Accueil : calculateur de taille, gamme, grille tarifaire, configurateur sur mesure, designs, pro |
 | `guide-tailles.html` | Guide de mesure, schéma coté, compatibilité par marque, tarifs |
 | `faq.html` | 17 questions : pose, aération, livraison, copropriété, retours, garantie |
+| `pose.html` | La pose dans le 66 : forfait tout compris, zone d'intervention, devis sur photo |
+| `cache-clim-perpignan.html` | Page locale — modèle pour les autres communes du département |
 | `pros.html` | Revendeurs et professionnels : remises par volume, kit revendeur |
 | `assets/site.css` | Feuille de style commune |
 | `assets/site.js` | **Source unique des tarifs**, calculateur de taille, panier |
@@ -73,6 +75,7 @@ pages, `sitemap.xml` et `robots.txt`.
 | [`docs/audit-boutique-2026-08.md`](docs/audit-boutique-2026-08.md) | Audit de la boutique WooCommerce : 10 blocages classés par impact |
 | [`docs/battre-kachklim.md`](docs/battre-kachklim.md) | Analyse technique du concurrent principal et plan en trois vagues |
 | [`docs/grille-tarifaire.md`](docs/grille-tarifaire.md) | Nouvelle grille alignée sur la concurrence, et ce qu'il faut vérifier avant de l'appliquer |
+| [`docs/plan-local-66.md`](docs/plan-local-66.md) | Devenir le cache clim des Pyrénées-Orientales : fiche Google, installateurs, pose, référencement local, tourisme |
 | [`docs/kit-wordpress.md`](docs/kit-wordpress.md) | Tout ce qui se colle directement dans rezo-fabrik.fr : paiement, tarifs, 15 descriptions produit, titres SEO, corrections |
 
 ## Avis clients
