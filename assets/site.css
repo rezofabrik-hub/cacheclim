@@ -454,3 +454,26 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .atelier-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-photo { display: none; }
 }
+
+/* ============================================================
+   NUANCIER RAL — remplace les pastilles incrustées dans les photos
+   ============================================================ */
+.nuancier { background: white; border: 1px solid var(--gris-border); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); }
+.nuancier-head { text-align: center; margin-bottom: 26px; }
+.nuancier-head h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--bleu); margin-bottom: 7px; }
+.nuancier-head p { color: var(--gris-texte); font-size: 14.5px; max-width: 520px; margin: 0 auto; line-height: 1.65; }
+.ral-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+.ral { text-align: center; }
+.ral-chip {
+  width: 100%; aspect-ratio: 1 / 1; border-radius: 12px; margin-bottom: 10px;
+  box-shadow: inset 0 0 0 1px rgba(15,23,42,.12), var(--shadow-sm);
+}
+.ral strong { display: block; font-size: 13.5px; font-weight: 700; color: var(--noir); line-height: 1.3; }
+.ral span { display: block; font-size: 11.5px; color: var(--gris-texte); margin-top: 3px; letter-spacing: .03em; }
+
+/* pastilles sur les fiches produit */
+.color-dots { display: flex; gap: 6px; margin-top: 12px; }
+.cdot { width: 17px; height: 17px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(15,23,42,.18); flex-shrink: 0; }
+
+@media (max-width: 900px) { .ral-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 480px) { .ral-grid { grid-template-columns: repeat(2, 1fr); } .nuancier { padding: 24px 18px; } }
