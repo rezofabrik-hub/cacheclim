@@ -1,25 +1,55 @@
-# Grille tarifaire — un seul prix par taille
+# Grille tarifaire — deux gammes, un prix par taille
 
 **Décidée le 23 août 2026.** Remplace la grille précédente (couleur 230–325 €,
 motif 299–399 €, sur mesure 399–499 €) et la proposition intermédiaire à deux
 niveaux.
 
+## Les deux gammes
+
+| | Ce que c'est |
+|---|---|
+| **Caisson** | Trois faces ajourées — avant, gauche, droite — et un dessus plein. Enveloppe l'unité. Quatre pièces assemblées par une visserie laquée dans la teinte du cache. |
+| **Panneau mural** | La face avant seule, fixée au mur devant l'unité. Une pièce au lieu de quatre. |
+
 ## La grille
 
-| Taille | Cache L × H | Profondeur réglable | Prix, toutes finitions |
-|---|---|---|---|
-| S | 85 × 65 cm | 45 – 55 cm | **219 €** |
-| M | 93 × 73 cm | 50 – 60 cm | **249 €** |
-| L | 95 × 83 cm | 53 – 63 cm | **279 €** |
-| XL | 102 × 79 cm | 54 – 64 cm | **279 €** |
-| XXL | 105 × 95 cm | 60 – 70 cm | **319 €** |
-| Sur mesure | jusqu'à 110 × 120 cm | jusqu'à 65 cm | **dès 349 €** |
+| Taille | Cache L × H | Profondeur | **Caisson** | **Panneau** |
+|---|---|---|---|---|
+| S | 85 × 65 cm | 45 – 55 cm | **219 €** | **149 €** |
+| M | 93 × 73 cm | 50 – 60 cm | **249 €** | **179 €** |
+| L | 95 × 83 cm | 53 – 63 cm | **279 €** | **209 €** |
+| XL | 102 × 79 cm | 54 – 64 cm | **279 €** | **209 €** |
+| XXL | 105 × 95 cm | 60 – 70 cm | **319 €** | **249 €** |
+| Sur mesure | jusqu'à 110 × 120 cm | jusqu'à 65 cm | **dès 349 €** | **dès 279 €** |
 
-Prix TTC, livraison France métropolitaine et fixations murales incluses.
-Seule option payante : le pied au sol, +30 €.
+Prix TTC, livraison France métropolitaine, visserie assortie et fixations
+murales incluses. Seule option payante : le pied au sol, +30 € (caisson).
+
+**L'écart est de 70 € à toutes les tailles.** C'est volontairement un montant
+fixe : facile à annoncer au téléphone, facile à tenir. Si votre calcul de
+revient montre que l'économie de matière augmente franchement avec la taille,
+un écart croissant (60 € en S, 90 € en XXL) serait plus juste — mais moins
+lisible.
 
 > Source unique : `assets/site.js`, table `TAILLES`. Modifier là et nulle part
 > ailleurs, puis lancer `./check-prix.sh`.
+
+## Quand vendre l'un ou l'autre
+
+Le **caisson** est le choix par défaut, et le seul qui vaille quand l'unité se
+voit sous plusieurs angles : milieu de terrasse, angle de façade, bord de
+piscine. C'est aussi lui qui protège de la pluie et des feuilles.
+
+Le **panneau** suffit quand l'unité est déjà encastrée dans une niche, coincée
+entre deux murs, ou posée en hauteur où seule la face se voit. Vos propres
+photos de chantier en montrent deux cas : la pompe à chaleur contre un mur, et
+l'unité en applique haute sur la façade commerciale.
+
+**Attention à ne pas cannibaliser le caisson.** Le panneau ouvre un prix
+d'appel à 149 € — nettement sous les 229 € d'entrée de Kach Klim — mais si le
+vendeur le propose systématiquement pour emporter la vente, la marge moyenne
+s'effondre. La règle simple : le panneau se propose quand la configuration le
+justifie, pas quand le client hésite sur le prix.
 
 ## Le changement de structure
 
@@ -39,14 +69,16 @@ pas sur les avis clients — que vous n'avez pas encore.
 
 ## Positionnement face à Kach Klim
 
-| Taille | Kach Klim | Nous | Écart |
-|---|---|---|---|
-| S | 229 € | 219 € | −10 € |
-| M | 269 € | 249 € | −20 € |
-| L | 299 € | 279 € | −20 € |
-| XL | 299 € | 279 € | −20 € |
-| XXL | 339 € | 319 € | −20 € |
-| Sur mesure | dès 369 € | dès 349 € | −20 € |
+| Taille | Kach Klim | Notre caisson | Écart | Notre panneau |
+|---|---|---|---|---|
+| S | 229 € | 219 € | −10 € | 149 € |
+| M | 269 € | 249 € | −20 € | 179 € |
+| L | 299 € | 279 € | −20 € | 209 € |
+| XL | 299 € | 279 € | −20 € | 209 € |
+| XXL | 339 € | 319 € | −20 € | 249 € |
+| Sur mesure | dès 369 € | dès 349 € | −20 € | dès 279 € |
+
+Kach Klim ne propose pas de panneau seul. Sur ce segment, il n'y a personne.
 
 Systématiquement en dessous, sur toute la gamme, d'un montant constant. C'est
 lisible pour le client qui compare, et défendable : ce n'est pas du bradage,
@@ -73,6 +105,12 @@ est marginale.
 
 Ces prix sont un positionnement commercial, pas un calcul de marge : je n'ai pas
 vos coûts.
+
+### 0. Le coût réel d'un panneau
+Le panneau, c'est une pièce au lieu de quatre : pas de dessus, pas de côtés,
+pas d'assemblage, moins d'emballage. L'écart de 70 € doit rester supérieur à
+l'économie de fabrication, sinon vous perdez de la marge à chaque fois qu'un
+client choisit le panneau. Chiffrez-le avant de publier.
 
 ### 1. Le surcoût réel d'un motif
 C'est le point critique de cette grille. Vendre un cache imprimé au prix d'un

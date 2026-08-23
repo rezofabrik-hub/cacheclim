@@ -5,24 +5,30 @@
    Pour changer un tarif, modifiez la table TAILLES ci-dessous :
    les pages, le configurateur et le panier se mettent à jour.
 
-   Un seul prix par taille, toutes finitions comprises : couleur unie,
-   motif imprimé et finition matière sont au même tarif. C'est un
-   argument de vente autant qu'une simplification — le motif ne coûte
-   pas plus cher que l'uni, ce que la concurrence ne propose pas.
-   Grille systématiquement 20 € sous Kach Klim (10 € sur la taille S).
+   Deux gammes, un seul prix par taille dans chacune :
+
+     CAISSON  — trois faces ajourées + dessus plein, enveloppe l'unité
+     PANNEAU  — une seule face, fixée au mur devant l'unité
+
+   Le panneau est systématiquement 70 € sous le caisson : une pièce au
+   lieu de quatre, pas de dessus, pas de côtés.
+
+   Dans les deux gammes, le motif ne coûte pas plus cher que l'uni et
+   les sept finitions sont au même tarif — ce que la concurrence ne
+   propose pas. Le caisson reste 20 € sous Kach Klim à taille égale.
    Voir docs/grille-tarifaire.md pour le positionnement complet.
    ============================================================= */
 
 const TAILLES = [
-  { id: 'S',   L: 85,  H: 65,  Pmin: 45, Pmax: 55, prix: 219 },
-  { id: 'M',   L: 93,  H: 73,  Pmin: 50, Pmax: 60, prix: 249 },
-  { id: 'L',   L: 95,  H: 83,  Pmin: 53, Pmax: 63, prix: 279 },
-  { id: 'XL',  L: 102, H: 79,  Pmin: 54, Pmax: 64, prix: 279 },
-  { id: 'XXL', L: 105, H: 95,  Pmin: 60, Pmax: 70, prix: 319 },
+  { id: 'S',   L: 85,  H: 65,  Pmin: 45, Pmax: 55, caisson: 219, panneau: 149 },
+  { id: 'M',   L: 93,  H: 73,  Pmin: 50, Pmax: 60, caisson: 249, panneau: 179 },
+  { id: 'L',   L: 95,  H: 83,  Pmin: 53, Pmax: 63, caisson: 279, panneau: 209 },
+  { id: 'XL',  L: 102, H: 79,  Pmin: 54, Pmax: 64, caisson: 279, panneau: 209 },
+  { id: 'XXL', L: 105, H: 95,  Pmin: 60, Pmax: 70, caisson: 319, panneau: 249 },
 ];
 
 /* Sur mesure : prix plancher, majoré à la surface au-delà du gabarit XXL */
-const SUR_MESURE = { prix: 349, maxL: 110, maxH: 120, maxP: 65 };
+const SUR_MESURE = { caisson: 349, panneau: 279, maxL: 110, maxH: 120, maxP: 65 };
 
 /* Options payantes */
 const OPTIONS = { pied: 30 };
@@ -70,16 +76,18 @@ function renderFinder() {
       '<div class="fr-size">Cache clim ' + t.id + '</div>' +
       '<div class="fr-dims">Dimensions du cache : ' + t.L + ' × ' + t.H + ' cm · profondeur réglable ' + t.Pmin + '–' + t.Pmax + ' cm</div>' +
       '<div class="fr-prices">' +
-        '<div class="fr-price"><b>' + euro(t.prix) + '</b><span>Toutes finitions · 6 coloris ou 15 motifs</span></div>' +
+        '<div class="fr-price"><b>' + euro(t.caisson) + '</b><span>Caisson · 3 faces + dessus</span></div>' +
+        '<div class="fr-price"><b>' + euro(t.panneau) + '</b><span>Panneau mural · face avant seule</span></div>' +
       '</div>' +
-      '<div class="fr-warn" style="background:#e3f0e8;color:#1e5e3f">Le motif ne coûte pas plus cher que l\'uni. Livraison offerte incluse dans ce prix.</div>';
+      '<div class="fr-warn" style="background:#e3f0e8;color:#1e5e3f">Les 16 designs et les 7 finitions sont au même prix. Livraison offerte incluse.</div>';
   } else if (r.type === 'sur-mesure') {
     box.innerHTML =
       '<div class="fr-label">Aucune taille standard ne convient</div>' +
       '<div class="fr-size">Sur mesure</div>' +
       '<div class="fr-dims">Votre unité sort de nos gabarits standards, mais reste dans nos capacités d\'atelier.</div>' +
       '<div class="fr-prices">' +
-        '<div class="fr-price"><b>dès ' + euro(SUR_MESURE.prix) + '</b><span>Toutes finitions comprises</span></div>' +
+        '<div class="fr-price"><b>dès ' + euro(SUR_MESURE.caisson) + '</b><span>Caisson sur mesure</span></div>' +
+        '<div class="fr-price"><b>dès ' + euro(SUR_MESURE.panneau) + '</b><span>Panneau sur mesure</span></div>' +
       '</div>' +
       '<div class="fr-warn">Fabrication à vos cotes exactes, livrée en 7 à 10 jours. <a href="index.html#sur-mesure" style="color:#92400e;font-weight:700">Configurer mon cache sur mesure</a></div>';
   } else {
@@ -101,16 +109,18 @@ function renderGrilleTarifs(elId) {
     '<tr><th scope="row">' + t.id + '</th>' +
     '<td class="dims">' + t.L + ' × ' + t.H + ' cm</td>' +
     '<td class="dims">' + t.Pmin + ' – ' + t.Pmax + ' cm</td>' +
-    '<td class="price">' + euro(t.prix) + '</td></tr>'
+    '<td class="price">' + euro(t.caisson) + '</td>' +
+    '<td class="price">' + euro(t.panneau) + '</td></tr>'
   ).join('');
   rows += '<tr class="highlight"><th scope="row">Sur mesure</th>' +
     '<td class="dims">jusqu\'à ' + SUR_MESURE.maxL + ' × ' + SUR_MESURE.maxH + ' cm</td>' +
     '<td class="dims">jusqu\'à ' + SUR_MESURE.maxP + ' cm</td>' +
-    '<td class="price">dès ' + euro(SUR_MESURE.prix) + '</td></tr>';
+    '<td class="price">dès ' + euro(SUR_MESURE.caisson) + '</td>' +
+    '<td class="price">dès ' + euro(SUR_MESURE.panneau) + '</td></tr>';
   el.innerHTML =
     '<table class="grid"><thead><tr>' +
     '<th scope="col">Taille</th><th scope="col">Largeur × hauteur</th><th scope="col">Profondeur réglable</th>' +
-    '<th scope="col">Prix, toutes finitions</th>' +
+    '<th scope="col">Caisson</th><th scope="col">Panneau mural</th>' +
     '</tr></thead><tbody>' + rows + '</tbody></table>';
 }
 
