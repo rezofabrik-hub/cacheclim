@@ -23,17 +23,49 @@ Le nom du fichier devient le nom de l'image sur le site. Écrivez-le en clair :
 - `bambou-noir-terrasse.jpg` ✅
 - `IMG_4471.jpg` ❌ — ça marche, mais c'est illisible dans le code
 
-## Deux points importants
+## Les légendes : la ville, jamais l'adresse
 
-**Les données GPS.** Votre téléphone enregistre les coordonnées exactes du lieu
-dans chaque photo. Publier une photo de chantier sans la nettoyer revient à
-publier l'adresse de votre client. Le script retire toutes ces données
-automatiquement — c'est une des raisons de passer par lui plutôt que de copier
-les fichiers à la main.
+Renseignez `legendes.csv`, à côté de ce fichier :
 
-**L'accord du client.** Une photo prise chez quelqu'un, même sans personne
-dessus, montre sa maison. Demandez systématiquement l'autorisation avant de
-publier, idéalement par écrit, ne serait-ce qu'un SMS.
+```
+pose-facade-bambou.jpg ; Argelès-sur-Mer ; Bambou ; Gris anthracite
+```
+
+La ville seule. Jamais le numéro, la rue, ni le quartier précis. Le script
+signale les photos de pose auxquelles il manque une légende.
+
+## Ce que le script retire, et ce qu'il ne peut pas retirer
+
+### Il retire — automatiquement, à chaque traitement
+
+| Donnée | Ce qu'elle révèle |
+|---|---|
+| Coordonnées GPS | La position du lieu, à quelques mètres près |
+| Date et heure de prise de vue | Quand vous étiez sur place |
+| Marque, modèle, numéro de série de l'appareil | Quel téléphone a pris la photo |
+| Réglages, logiciel, vignette intégrée | Divers |
+
+Vérifié sur une photo réelle : 16 champs avant, 0 après.
+
+### Il ne peut pas retirer — c'est à vous de regarder
+
+Ce sont des choses **visibles dans l'image** : aucun script ne les enlève.
+
+- Un **numéro de rue** sur la façade ou la boîte aux lettres
+- Un **nom** sur une boîte aux lettres, un interphone, une sonnette
+- Une **plaque d'immatriculation**
+- Un **panneau de rue** ou une enseigne voisine
+- Un **visage**, ou quelqu'un de reconnaissable
+- Dans un village, une **vue caractéristique** suffit parfois à situer la maison
+
+Regardez chaque photo avant de la publier. Au moindre doute, recadrez :
+un cache clim se photographie très bien serré, sans le reste de la maison.
+
+## L'accord du client
+
+Une photo prise chez quelqu'un, même sans personne dessus, montre sa maison.
+Demandez systématiquement l'autorisation avant de publier — un SMS suffit, mais
+gardez-en une trace.
 
 ## Ce qui fait une bonne photo de pose
 

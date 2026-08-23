@@ -37,6 +37,12 @@ PLANS = {
     'produits': ('assets/img/produits', [900, 450],       True),
 }
 
+# Fichier de légendes facultatif, à la racine de _a-traiter/ :
+#   nom-du-fichier ; ville ; design ; coloris
+# Exemple :
+#   pose-facade-bambou.jpg ; Argelès-sur-Mer ; Bambou ; Gris anthracite
+MANIFESTE = 'legendes.csv'
+
 EXT = ('.jpg', '.jpeg', '.png', '.webp', '.heic', '.HEIC', '.JPG', '.JPEG', '.PNG')
 
 
@@ -76,9 +82,27 @@ def traiter(chemin, dest, largeurs, en_carre):
     return base, produits
 
 
+def lire_legendes():
+    chemin = os.path.join(SOURCE, MANIFESTE)
+    if not os.path.exists(chemin):
+        return {}
+    legendes = {}
+    with open(chemin, encoding='utf-8') as f:
+        for ligne in f:
+            ligne = ligne.strip()
+            if not ligne or ligne.startswith('#'):
+                continue
+            champs = [c.strip() for c in ligne.split(';')]
+            if len(champs) >= 2:
+                legendes[champs[0].lower()] = champs[1:]
+    return legendes
+
+
 def main():
     total_avant = total_apres = 0
     traites = 0
+    legendes = lire_legendes()
+    sans_ville = []
 
     for sous, (dest_rel, largeurs, en_carre) in PLANS.items():
         dossier = os.path.join(SOURCE, sous)
@@ -104,7 +128,13 @@ def main():
             total_avant += avant
             total_apres += apres
             traites += 1
-            print(f"  ✓ {base:<34} {avant//1024:>5} Ko → {apres//1024:>5} Ko  ({len(produits)} fichiers)")
+            info = legendes.get(os.path.basename(f).lower())
+            legende = ' · '.join(x for x in info if x) if info else ''
+            if sous == 'poses' and not info:
+                sans_ville.append(os.path.basename(f))
+            suffixe_legende = f"   « {legende} »" if legende else ''
+            print(f"  ✓ {base:<34} {avant//1024:>5} Ko → {apres//1024:>5} Ko"
+                  f"  ({len(produits)} fichiers){suffixe_legende}")
 
     if not traites:
         print("Rien à traiter. Déposez vos photos dans assets/img/_a-traiter/<poses|atelier|produits>/")
@@ -114,7 +144,21 @@ def main():
     print(f"\n{traites} photo(s) traitée(s) · {total_avant/1024/1024:.1f} Mo → "
           f"{total_apres/1024/1024:.1f} Mo ({gain:.0f} % de gain)")
     print("EXIF retiré (dont les coordonnées GPS).")
-    print("Vérifiez le rendu, puis videz assets/img/_a-traiter/.")
+
+    if sans_ville:
+        print(f"\n⚠  {len(sans_ville)} photo(s) de pose sans légende. Une photo de chantier")
+        print("   doit porter une ville, jamais une adresse. Renseignez-les dans")
+        print(f"   assets/img/_a-traiter/{MANIFESTE} :")
+        for n in sans_ville[:6]:
+            print(f"     {n} ; Perpignan ; Feuillage ; Gris anthracite")
+        if len(sans_ville) > 6:
+            print(f"     … et {len(sans_ville) - 6} autre(s)")
+
+    print("\n⚠  Le script nettoie les métadonnées, pas le contenu de l'image.")
+    print("   Vérifiez à l'œil qu'aucune photo ne montre un numéro de rue, une")
+    print("   plaque d'immatriculation, un nom sur une boîte aux lettres ou un")
+    print("   visage. Ça, aucun script ne peut le retirer.")
+    print("\nVérifiez le rendu, puis videz assets/img/_a-traiter/.")
 
 
 if __name__ == '__main__':
