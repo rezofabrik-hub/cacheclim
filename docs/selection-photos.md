@@ -121,11 +121,10 @@ dépend.
 **Le modèle à lames horizontales.** Visible devant l'atelier, blanc, à lames
 régulières. Il ne fait pas partie des quinze designs du catalogue. À ajouter ?
 
-**Caisson ou panneau mural ?** Les photos montrent deux produits distincts : le
-caisson à trois faces, et le panneau plat fixé au mur devant l'unité. Le site ne
-parlait que du premier. Est-ce deux gammes, ou le panneau est-il une option du
-caisson ? Le tarif et le guide des tailles en dépendent — un panneau seul coûte
-forcément moins cher qu'un caisson.
+**Caisson ou panneau mural ?** — *Tranché : il n'y a que le caisson.* J'avais
+cru lire un panneau plat sur deux photos de chantier, où le cache paraissait
+sans côtés. C'était une erreur d'interprétation de ma part : tout est fabriqué
+en caisson. La gamme « panneau » et sa grille tarifaire ont été retirées.
 
 ---
 

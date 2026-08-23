@@ -66,10 +66,9 @@ de votre client. Les consignes de prise de vue sont dans
 ### Changer un prix
 
 Tous les tarifs sont définis dans la table `TAILLES` de `assets/site.js`, et
-nulle part ailleurs. La grille retenue est **deux gammes, un prix par taille dans
-chacune** : le caisson trois faces de 219 à 319 €, le panneau mural de 149 à
-249 €, sur mesure dès 349 / 279 €. Dans les deux gammes, les 16 designs et les
-7 finitions sont au même tarif. Après modification :
+nulle part ailleurs. La grille retenue est **un seul prix par taille** : de 219 à
+319 €, sur mesure dès 349 €. Les 16 designs et les 7 finitions sont au même
+tarif — le motif ne coûte pas plus cher que l'uni. Après modification :
 
 ```bash
 ./check-prix.sh
