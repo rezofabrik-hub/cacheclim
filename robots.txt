@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Pages transactionnelles : jamais dans l'index
+Disallow: /panier
+Disallow: /commande
+Disallow: /mon-compte
+Disallow: /*?add-to-cart=
+
+Sitemap: https://lafabrikducacheclim.fr/sitemap.xml
