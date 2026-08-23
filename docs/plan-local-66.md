@@ -79,17 +79,21 @@ Ce qu'il faut leur dire, en une phrase :
 
 ## 4. Le levier n°3 : la pose comme produit à part entière
 
-Vendre un cache : 249 €. Vendre un cache posé : 389 €.
+Vendre un cache, c'est un colis. Vendre un cache posé, c'est le colis plus une
+heure de camionnette — et la pose a une meilleure marge que la matière.
 
-**Le même client, la même heure de camionnette, +56 % de panier.** Et la pose
-a une meilleure marge que la matière.
+**Le prix de la pose n'est pas affiché sur le site, et c'est un choix.** Deux
+poses ne se ressemblent pas : hauteur, support, accès, nombre d'unités. Un
+forfait publié serait soit trop bas sur les chantiers difficiles, soit trop
+cher sur les faciles — et dans les deux cas il faudrait le renégocier sur
+place, ce qui abîme la confiance. Le devis sur photo règle ça.
 
 C'est aussi ce qui vous démarque radicalement : aucun concurrent national ne
 pose dans le 66. Un client qui hésite entre commander un carton sur internet et
 faire venir un artisan qui mesure, pose et garantit, ne choisit pas le carton.
 
-La page `pose.html` est construite : forfait tout compris, zone d'intervention
-détaillée, déroulé en quatre étapes, devis sur simple photo.
+La page `pose.html` est construite : ce qui est toujours compris, ce qui fait
+varier le prix, la zone d'intervention par secteur, le déroulé en quatre étapes.
 
 **Le point clé du dispositif : le devis sur photo.** Pas de visite préalable, pas
 de délai. Le client envoie une photo par SMS, vous répondez dans la journée avec
