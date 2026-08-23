@@ -31,6 +31,7 @@
   "description": "Atelier artisanal de fabrication de caches pour climatiseur et pompe à chaleur en aluminium composite. Découpe numérique de motifs ajourés, assemblage et laquage sur place. Sur mesure, particuliers et professionnels.",
   "url": "https://lafabrikducacheclim.fr/",
   "telephone": "+33775769232",
+  "email": "rezofabrik@gmail.com",
   "priceRange": "219€ - 450€",
   "address": {
     "@type": "PostalAddress",
@@ -199,7 +200,7 @@
 
     <div class="products-grid" id="productsGrid">
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="bambou" data-nom="Bambou">
         <a class="product-photo" href="modele-bambou.html" aria-label="Cache clim Bambou — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/bambou.webp" type="image/webp"><img src="assets/img/produits/bambou.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Bambou : caisson en aluminium composite à faces ajourées"></picture>
@@ -208,23 +209,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-bambou.html">Bambou</a></div>
           <div class="product-desc">Cannes verticales serrées, effet brise-vue naturel. Le motif qui rend le mieux quand le cache se voit de près, sur un balcon ou une coursive.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Bambou">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Bambou">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Bambou — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="feuillage" data-nom="Feuillage">
         <a class="product-photo" href="modele-feuillage.html" aria-label="Cache clim Feuillage — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/feuillage.webp" type="image/webp"><img src="assets/img/produits/feuillage.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Feuillage : caisson en aluminium composite à faces ajourées"></picture><span class="product-badge">Le plus demandé</span>
@@ -233,23 +246,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-feuillage.html">Feuillage</a></div>
           <div class="product-desc">Entrelacs de feuilles fines. Pensé pour faire disparaître l'unité dans la végétation plutôt que pour attirer l'œil. Notre modèle le plus demandé.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Feuillage">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Feuillage">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Feuillage — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="marguerite" data-nom="Marguerite">
         <a class="product-photo" href="modele-marguerite.html" aria-label="Cache clim Marguerite — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/marguerite.webp" type="image/webp"><img src="assets/img/produits/marguerite.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Marguerite : caisson en aluminium composite à faces ajourées"></picture>
@@ -258,23 +283,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-marguerite.html">Marguerite</a></div>
           <div class="product-desc">Semis de marguerites, léger et lumineux. Il allège les façades sud sans les charger, et reste lisible à distance.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Marguerite">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Marguerite">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Marguerite — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="orient-express" data-nom="Orient Express">
         <a class="product-photo" href="modele-orient-express.html" aria-label="Cache clim Orient Express — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/orient-express.webp" type="image/webp"><img src="assets/img/produits/orient-express.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Orient Express : caisson en aluminium composite à faces ajourées"></picture>
@@ -283,23 +320,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-orient-express.html">Orient Express</a></div>
           <div class="product-desc">Entrelacs géométriques inspirés des moucharabiehs. Le motif qui rend le mieux sur les murs blancs du Sud.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Orient Express">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Orient Express">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Orient Express — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="vue-sur-mer" data-nom="Vue sur mer">
         <a class="product-photo" href="modele-vue-sur-mer.html" aria-label="Cache clim Vue sur mer — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/vue-sur-mer.webp" type="image/webp"><img src="assets/img/produits/vue-sur-mer.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Vue sur mer : caisson en aluminium composite à faces ajourées"></picture>
@@ -308,23 +357,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-vue-sur-mer.html">Vue sur mer</a></div>
           <div class="product-desc">Lignes d'horizon méditerranéen. Dessiné ici, à huit cents mètres de la plage de Canet.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Vue sur mer">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Vue sur mer">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Vue sur mer — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="mosaique" data-nom="Mosaïque">
         <a class="product-photo" href="modele-mosaique.html" aria-label="Cache clim Mosaïque — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/mosaique.webp" type="image/webp"><img src="assets/img/produits/mosaique.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Mosaïque : caisson en aluminium composite à faces ajourées"></picture>
@@ -333,23 +394,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-mosaique.html">Mosaïque</a></div>
           <div class="product-desc">Pavage de tesselles irrégulières, dans l'esprit des azulejos du Roussillon. Excellent au bord d'une piscine.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Mosaïque">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Mosaïque">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Mosaïque — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="eden" data-nom="Eden">
         <a class="product-photo" href="modele-eden.html" aria-label="Cache clim Eden — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/eden.webp" type="image/webp"><img src="assets/img/produits/eden.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Eden : caisson en aluminium composite à faces ajourées"></picture>
@@ -358,23 +431,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-eden.html">Eden</a></div>
           <div class="product-desc">Végétation tropicale dense — palmes et fougères. Le plus graphique de la gamme, parfait en angle de terrasse.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Eden">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Eden">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Eden — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="horizon" data-nom="Horizon">
         <a class="product-photo" href="modele-horizon.html" aria-label="Cache clim Horizon — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/horizon.webp" type="image/webp"><img src="assets/img/produits/horizon.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Horizon : caisson en aluminium composite à faces ajourées"></picture>
@@ -383,23 +468,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-horizon.html">Horizon</a></div>
           <div class="product-desc">Bandes horizontales dégradées. Très sobre de loin, il se révèle en approchant. S'accorde aux enduits gris contemporains.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Horizon">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Horizon">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Horizon — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="cassis" data-nom="Cassis">
         <a class="product-photo" href="modele-cassis.html" aria-label="Cache clim Cassis — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/cassis.webp" type="image/webp"><img src="assets/img/produits/cassis.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Cassis : caisson en aluminium composite à faces ajourées"></picture>
@@ -408,23 +505,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-cassis.html">Cassis</a></div>
           <div class="product-desc">Vagues et baies stylisées. Le plus courbe de la gamme : il casse la rigidité d'un mur droit.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Cassis">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Cassis">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Cassis — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="fleurs" data-nom="Fleurs">
         <a class="product-photo" href="modele-fleurs.html" aria-label="Cache clim Fleurs — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/fleurs.webp" type="image/webp"><img src="assets/img/produits/fleurs.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Fleurs : caisson en aluminium composite à faces ajourées"></picture>
@@ -433,23 +542,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-fleurs.html">Fleurs</a></div>
           <div class="product-desc">Composition florale libre et généreuse. Pour ceux qui veulent que le cache se voie et se remarque.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Fleurs">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Fleurs">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Fleurs — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="fleur-de-lys" data-nom="Fleur de lys">
         <a class="product-photo" href="modele-fleur-de-lys.html" aria-label="Cache clim Fleur de lys — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/fleur-de-lys.webp" type="image/webp"><img src="assets/img/produits/fleur-de-lys.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Fleur de lys : caisson en aluminium composite à faces ajourées"></picture>
@@ -458,23 +579,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-fleur-de-lys.html">Fleur de lys</a></div>
           <div class="product-desc">Semis de lys stylisés, régulier, dans l'esprit d'un papier peint classique. S'accorde aux façades anciennes.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Fleur de lys">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Fleur de lys">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Fleur de lys — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="trefle" data-nom="Trèfle">
         <a class="product-photo" href="modele-trefle.html" aria-label="Cache clim Trèfle — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/trefle.webp" type="image/webp"><img src="assets/img/produits/trefle.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Trèfle : caisson en aluminium composite à faces ajourées"></picture>
@@ -483,23 +616,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-trefle.html">Trèfle</a></div>
           <div class="product-desc">Semis de trèfles discret. De loin il se lit comme un aplat texturé, de près le dessin apparaît.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Trèfle">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Trèfle">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Trèfle — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="zebre" data-nom="Zèbre">
         <a class="product-photo" href="modele-zebre.html" aria-label="Cache clim Zèbre — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/zebre.webp" type="image/webp"><img src="assets/img/produits/zebre.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Zèbre : caisson en aluminium composite à faces ajourées"></picture>
@@ -508,23 +653,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-zebre.html">Zèbre</a></div>
           <div class="product-desc">Rayures irrégulières à l'échelle du cache. Très graphique, pour les façades contemporaines minimalistes.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Zèbre">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Zèbre">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Zèbre — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="leopard" data-nom="Léopard">
         <a class="product-photo" href="modele-leopard.html" aria-label="Cache clim Léopard — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/leopard.webp" type="image/webp"><img src="assets/img/produits/leopard.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Léopard : caisson en aluminium composite à faces ajourées"></picture>
@@ -533,23 +690,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-leopard.html">Léopard</a></div>
           <div class="product-desc">Tacheture fauve franche. Assumé, décoratif, sans demi-mesure — souvent choisi pour les terrasses de restaurant.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Léopard">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Léopard">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Léopard — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="zoom" data-nom="Zoom">
         <a class="product-photo" href="modele-zoom.html" aria-label="Cache clim Zoom — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/zoom.webp" type="image/webp"><img src="assets/img/produits/zoom.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Zoom : caisson en aluminium composite à faces ajourées"></picture>
@@ -558,23 +727,35 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-zoom.html">Zoom</a></div>
           <div class="product-desc">Motif optique concentrique qui joue sur la profondeur. Selon l'angle et la lumière, le dessin semble bouger.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Zoom">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Zoom">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Zoom — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="designs">
+      <div class="product-card" data-cat="designs" data-slug="lames" data-nom="Lames">
         <a class="product-photo" href="modele-lames.html" aria-label="Cache clim Lames — voir la fiche du modèle">
           <picture><source srcset="assets/img/produits/lames.webp" type="image/webp"><img src="assets/img/produits/lames.jpg" width="900" height="850" loading="lazy" decoding="async"
                alt="Cache clim extérieur Lames : caisson en aluminium composite à lames horizontales"></picture><span class="product-badge vert">Nouveau</span>
@@ -583,19 +764,31 @@
           <div class="product-cat">Caisson ajouré · 7 finitions</div>
           <div class="product-name"><a href="modele-lames.html">Lames</a></div>
           <div class="product-desc">Des lames horizontales régulières, sans motif. Le plus sobre de la gamme, et le plus architectural : il se lit comme un claustra et s'accorde à tout — moderne comme ancien.</div>
-          <div class="color-dots" role="img" aria-label="Sept finitions : blanc, ivoire, gris anthracite, noir, vert anglais, chocolat, corten">
-            <div class="cdot" style="background:#F4F4F4" title="Blanc — RAL 9003"></div>
-            <div class="cdot" style="background:#E6D2B5" title="Ivoire — RAL 1015"></div>
-            <div class="cdot" style="background:#383E42" title="Gris anthracite — RAL 7016"></div>
-            <div class="cdot" style="background:#0A0A0A" title="Noir — RAL 9005"></div>
-            <div class="cdot" style="background:#114232" title="Vert anglais — RAL 6005"></div>
-            <div class="cdot" style="background:#642424" title="Chocolat — RAL 8015"></div>
-            <div class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" title="Corten — finition rouille"></div>
+          <div class="product-opts">
+            <div class="opt-label">Taille <a href="guide-tailles.html" class="opt-help" title="Comment mesurer">?</a></div>
+            <div class="opt-row" role="group" aria-label="Taille du cache clim Lames">
+              <button type="button" class="opt-chip" data-taille="S" data-prix="219" aria-pressed="false">S</button>
+              <button type="button" class="opt-chip is-on" data-taille="M" data-prix="249" aria-pressed="true">M</button>
+              <button type="button" class="opt-chip" data-taille="L" data-prix="279" aria-pressed="false">L</button>
+              <button type="button" class="opt-chip" data-taille="XL" data-prix="279" aria-pressed="false">XL</button>
+              <button type="button" class="opt-chip" data-taille="XXL" data-prix="319" aria-pressed="false">XXL</button>
+            </div>
+            <div class="opt-label">Finition</div>
+            <div class="opt-row color-dots" role="group" aria-label="Finition du cache clim Lames">
+              <button type="button" class="cdot is-on" style="background:#F4F4F4" data-fin="Blanc" aria-pressed="true" title="Blanc — RAL 9003"><span class="sr-only">Blanc</span></button>
+              <button type="button" class="cdot" style="background:#E6D2B5" data-fin="Ivoire" aria-pressed="false" title="Ivoire — RAL 1015"><span class="sr-only">Ivoire</span></button>
+              <button type="button" class="cdot" style="background:#383E42" data-fin="Gris anthracite" aria-pressed="false" title="Gris anthracite — RAL 7016"><span class="sr-only">Gris anthracite</span></button>
+              <button type="button" class="cdot" style="background:#0A0A0A" data-fin="Noir" aria-pressed="false" title="Noir — RAL 9005"><span class="sr-only">Noir</span></button>
+              <button type="button" class="cdot" style="background:#114232" data-fin="Vert anglais" aria-pressed="false" title="Vert anglais — RAL 6005"><span class="sr-only">Vert anglais</span></button>
+              <button type="button" class="cdot" style="background:#642424" data-fin="Chocolat" aria-pressed="false" title="Chocolat — RAL 8015"><span class="sr-only">Chocolat</span></button>
+              <button type="button" class="cdot" style="background:linear-gradient(135deg,#8A4A2B,#6E3720)" data-fin="Corten" aria-pressed="false" title="Corten — finition rouille"><span class="sr-only">Corten</span></button>
+            </div>
+            <p class="opt-recap">Taille <strong data-recap-taille>M</strong> · <strong data-recap-fin>Blanc</strong></p>
           </div>
         </div>
         <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · hors livraison</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Lames — taille M',249,'▤')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <div class="product-price"><strong data-prix-affiche>249 €</strong><small>TTC · hors livraison</small></div>
+          <button class="btn-add" data-add><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
@@ -846,7 +1039,7 @@
       <div class="cible-card">
         <span class="cible-icon" aria-hidden="true">🔧</span>
         <h3>Professionnels</h3>
-        <p>Climaticiens, paysagistes, hôtellerie, syndics. Remises de 15 à 35 % selon volume, règlement par virement sur devis, fabrication à la demande.</p>
+        <p>Climaticiens, paysagistes, hôtellerie, syndics. Tarif professionnel sur devis, règlement par virement, fabrication à la demande.</p>
         <span class="cible-tag"><a href="pros.html" style="color:inherit">Voir les tarifs pro →</a></span>
       </div>
       <div class="cible-card">
@@ -897,7 +1090,7 @@
         </div>
         <div class="contact-item">
           <div class="ci-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
-          <div class="ci-body"><strong>E-mail</strong><a href="mailto:contact@rezo-fabrik.fr">contact@rezo-fabrik.fr</a></div>
+          <div class="ci-body"><strong>E-mail</strong><a href="mailto:rezofabrik@gmail.com">rezofabrik@gmail.com</a></div>
         </div>
       </div>
       <div class="contact-form">
@@ -987,6 +1180,7 @@
         <a href="promoteurs.html">Promoteurs &amp; syndics</a>
         <a href="campings-hotellerie.html">Campings &amp; hôtellerie</a>
         <a href="tel:0775769232">07 75 76 92 32</a>
+        <a href="mailto:rezofabrik@gmail.com">rezofabrik@gmail.com</a>
         <a href="index.html#contact">9 rue de la Close, ZI Las Bigues<br>66140 Canet-en-Roussillon</a>
         <a href="index.html#contact">Lun–Ven 9h–17h sur rendez-vous</a>
       </div>

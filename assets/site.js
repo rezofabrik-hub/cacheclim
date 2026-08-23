@@ -180,6 +180,61 @@ function toggleMenu() {
 }
 
 /* -------------------------------------------------------------
+   Sélecteur taille + finition sur les cartes produit
+   Les boutons existent déjà dans le HTML (donc lisibles sans JS) :
+   on ne gère ici que l'état et le report sur le prix et le panier.
+   ------------------------------------------------------------- */
+function majCarte(card) {
+  const taille = card.querySelector('.opt-chip.is-on');
+  const fin    = card.querySelector('.cdot.is-on');
+  if (!taille || !fin) return;
+  const prix = Number(taille.dataset.prix);
+
+  const aff = card.querySelector('[data-prix-affiche]');
+  if (aff) aff.textContent = euro(prix);
+  const rt = card.querySelector('[data-recap-taille]');
+  if (rt) rt.textContent = taille.dataset.taille;
+  const rf = card.querySelector('[data-recap-fin]');
+  if (rf) rf.textContent = fin.dataset.fin;
+}
+
+function choisir(btn, selecteurFreres) {
+  const card = btn.closest('.product-card, .fiche-opts');
+  if (!card) return;
+  card.querySelectorAll(selecteurFreres).forEach(b => {
+    b.classList.remove('is-on');
+    b.setAttribute('aria-pressed', 'false');
+  });
+  btn.classList.add('is-on');
+  btn.setAttribute('aria-pressed', 'true');
+  majCarte(card);
+}
+
+function initSelecteurs() {
+  document.addEventListener('click', function (ev) {
+    const chip = ev.target.closest('.opt-chip');
+    if (chip) { choisir(chip, '.opt-chip'); return; }
+
+    const dot = ev.target.closest('.cdot[data-fin]');
+    if (dot) { choisir(dot, '.cdot[data-fin]'); return; }
+
+    const add = ev.target.closest('[data-add]');
+    if (add) {
+      const card   = add.closest('.product-card, .fiche-opts');
+      const nom    = card.dataset.nom || card.dataset.slug || 'Cache clim';
+      const taille = card.querySelector('.opt-chip.is-on');
+      const fin    = card.querySelector('.cdot.is-on');
+      if (!taille || !fin) return;
+      addToCart(
+        'Cache clim ' + nom + ' — ' + taille.dataset.taille + ' · ' + fin.dataset.fin,
+        Number(taille.dataset.prix), '\u25a3');
+    }
+  });
+
+  document.querySelectorAll('.product-card, .fiche-opts').forEach(majCarte);
+}
+
+/* -------------------------------------------------------------
    Init
    ------------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', function () {
@@ -189,5 +244,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (el) el.addEventListener('input', renderFinder);
   });
   renderFinder();
+  initSelecteurs();
   updateCart();
 });
