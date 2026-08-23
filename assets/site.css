@@ -511,3 +511,29 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .ombre-inner { grid-template-columns: 1fr; gap: 26px; }
   .ombre { padding: 28px 22px; }
 }
+
+/* ============================================================
+   PIED DE PAGE — texte en blanc, lisible
+   Les gris à 35–50 % d'opacité passaient sous le seuil de
+   contraste et rendaient les liens légaux difficiles à lire.
+   ============================================================ */
+footer .footer-col a,
+footer .footer-col ul li a { color: #ffffff; opacity: .92; }
+footer .footer-col a:hover,
+footer .footer-col ul li a:hover { opacity: 1; text-decoration: underline; }
+footer .footer-brand p,
+footer .footer-brand-desc { color: rgba(255,255,255,.86); }
+footer .footer-logo span { color: rgba(255,255,255,.8); }
+.footer-bottom { color: #ffffff; }
+.footer-bottom p,
+.footer-bottom span { color: rgba(255,255,255,.9); font-size: 12.5px; }
+.footer-bottom a { color: #ffffff; opacity: .95; font-weight: 600; text-decoration: none; }
+.footer-bottom a:hover { opacity: 1; text-decoration: underline; }
+.footer-social a { color: #ffffff; opacity: .9; }
+.footer-social a:hover { opacity: 1; }
+
+/* Pied de page : cinq colonnes depuis l'ajout du bloc communes */
+.footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr 1.2fr; gap: 34px; }
+@media (max-width: 1100px) { .footer-grid { grid-template-columns: 1fr 1fr 1fr; } }
+@media (max-width: 700px)  { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px)  { .footer-grid { grid-template-columns: 1fr; } }
