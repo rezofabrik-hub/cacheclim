@@ -79,7 +79,32 @@ Corrigé partout.
 
 ---
 
-## ⚠️ Deux points à trancher
+## Ce que le second envoi ajoute
+
+**Le caisson corten au bord de la piscine.** Deux prises de vue, dont une où le
+soleil projette le motif découpé en ombre sur la terrasse bois. C'est la plus
+belle photo produit du lot, et l'ombre portée est un argument esthétique que
+personne n'exploite : le cache ne fait pas que masquer, il dessine.
+**Usage : première image de la fiche du motif arabesque, et galerie.**
+
+**Le caisson corten posé sur une unité Mitsubishi**, à côté d'un caisson blanc
+mosaïque. Montre le rapport de taille réel et la compatibilité Mitsubishi.
+**Usage : page « cache clim pour Mitsubishi ».**
+
+**Le panneau blanc en applique haute sur une façade commerciale**, sous un logo
+d'enseigne. Unité fixée en hauteur, cache posé en applique.
+**Usage : argument professionnel — commerces, cabinets, agences.**
+
+**La table Summa F1612 en pleine découpe**, avec la plaque tracée. C'est la
+photo de fabrication la plus parlante : on voit la machine travailler.
+**Usage : section « L'atelier ». Nommez la machine, c'est un marqueur de sérieux.**
+
+**Deux poses de panneau mural plat** sur pompe à chaleur, dont une en chantier.
+Elles révèlent une seconde forme de produit, absente du site.
+
+---
+
+## ⚠️ Trois points à trancher
 
 **Le coloris corten.** Trois photos montrent un caisson **rouille corten**
 superbe. Il n'est pas dans les six teintes RAL du nuancier actuel (blanc,
@@ -89,6 +114,12 @@ dépend.
 
 **Le modèle à lames horizontales.** Visible devant l'atelier, blanc, à lames
 régulières. Il ne fait pas partie des quinze designs du catalogue. À ajouter ?
+
+**Caisson ou panneau mural ?** Les photos montrent deux produits distincts : le
+caisson à trois faces, et le panneau plat fixé au mur devant l'unité. Le site ne
+parlait que du premier. Est-ce deux gammes, ou le panneau est-il une option du
+caisson ? Le tarif et le guide des tailles en dépendent — un panneau seul coûte
+forcément moins cher qu'un caisson.
 
 ---
 
@@ -100,3 +131,6 @@ régulières. Il ne fait pas partie des quinze designs du catalogue. À ajouter 
 - **Une photo de la pose en cours**, avec les mains et l'outil. Elle justifie le
   forfait pose.
 - **Un gros plan sur la tranche de la découpe**, pour montrer la netteté du chant.
+- **Une photo de l'ombre portée** au sol, prise en fin de journée quand le soleil
+  est rasant. C'est l'argument le plus original du produit et il n'existe qu'en
+  arrière-plan d'une seule photo.
