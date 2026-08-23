@@ -1,5 +1,7 @@
 # La Fabrik du Cache Clim
 
+> `lafabrikducacheclim.fr` — marque grand public de l'atelier Rezo-Fabrik.
+
 Site de la marque dédiée aux caches pour climatiseur et pompe à chaleur, adossée
 à l'atelier **Rezo-Fabrik** (Canet-en-Roussillon, 66).
 
@@ -26,7 +28,22 @@ Statique, sans dépendance ni étape de build. Quatre pages :
 | `pros.html` | Revendeurs et professionnels : remises par volume, kit revendeur |
 | `assets/site.css` | Feuille de style commune |
 | `assets/site.js` | **Source unique des tarifs**, calculateur de taille, panier |
+| `assets/img/` | Photos du site (voir ci-dessous) |
 | `robots.txt`, `sitemap.xml` | Référencement |
+
+### Les photos
+
+Récupérées depuis rezo-fabrik.fr le 23 août 2026, puis redimensionnées et
+converties en WebP (17 Mo → 3,8 Mo, soit −78 %).
+
+| Dossier | Contenu |
+|---|---|
+| `assets/img/produits/` | Les 15 designs **en version unie** + le sur mesure. Chaque visuel montre le panneau ajouré et les 6 coloris RAL. Deux largeurs WebP (900 et 450 px) + un repli JPEG. |
+| `assets/img/realisations/` | 8 travaux de l'atelier — signalétique urbaine, mobilier, agencement. Ils illustrent la section « L'atelier », **pas** des poses de cache clim. |
+| `assets/img/hero-cache-clim.*` | Photo d'une pose réelle : modèle ajouré anthracite sur une unité Mitsubishi. Sert d'image héros et d'aperçu de partage. |
+
+Les visuels de la gamme « motif / matière » ont été écartés : seuls les
+modèles unis sont présentés.
 
 ### Changer un prix
 

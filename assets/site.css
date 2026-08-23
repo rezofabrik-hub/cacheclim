@@ -401,3 +401,56 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .finder { padding: 24px 20px; }
   .page-head { padding: 40px 5vw 48px; }
 }
+
+/* ============================================================
+   PHOTOS RÉELLES — héros, fiches produit, designs, atelier
+   ============================================================ */
+
+/* --- Héros avec photo --- */
+.hero-photo { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 16 / 10; }
+.hero-photo figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 32px 24px 18px;
+  background: linear-gradient(transparent, rgba(10,25,45,.88));
+  color: rgba(255,255,255,.92); font-size: 13px; font-weight: 500; line-height: 1.5;
+}
+
+/* --- Vignette produit avec photo --- */
+.product-photo {
+  position: relative; display: block; aspect-ratio: 1 / 1; overflow: hidden;
+  background: var(--gris-clair); border-bottom: 1px solid var(--gris-border);
+}
+.product-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s ease; }
+.product-card:hover .product-photo img { transform: scale(1.035); }
+.product-photo .product-badge { position: absolute; top: 12px; left: 12px; }
+
+/* --- Grille des designs avec photos --- */
+.designs-grid.photos { grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.design-tile {
+  background: white; border: 1px solid var(--gris-border); border-radius: var(--radius);
+  overflow: hidden; text-decoration: none; display: block; transition: all .25s;
+  box-shadow: var(--shadow-sm);
+}
+.design-tile:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--bleu-clair); }
+.design-tile img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+.design-tile span {
+  display: block; padding: 11px 12px; font-size: 13px; font-weight: 700;
+  color: var(--bleu); text-align: center; letter-spacing: .01em;
+}
+
+/* --- Galerie atelier --- */
+.atelier-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.atelier-item { border-radius: var(--radius); overflow: hidden; background: var(--gris-clair); box-shadow: var(--shadow-sm); }
+.atelier-item img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; transition: transform .4s ease; }
+.atelier-item:hover img { transform: scale(1.04); }
+.atelier-lead { max-width: 620px; margin: 0 auto 30px; text-align: center; color: var(--gris-texte); line-height: 1.75; }
+
+@media (max-width: 1100px) {
+  .designs-grid.photos { grid-template-columns: repeat(3, 1fr); }
+  .atelier-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .designs-grid.photos { grid-template-columns: repeat(2, 1fr); }
+  .atelier-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-photo { display: none; }
+}

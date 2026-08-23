@@ -16,6 +16,11 @@
 <meta property="og:title" content="Cache clim extérieur design, fabriqué en France">
 <meta property="og:description" content="15 designs, 6 coloris RAL, 5 tailles et sur mesure. Un seul prix par taille, motif compris. Livraison offerte, dès 219 €.">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://lafabrikducacheclim.fr/assets/img/hero-cache-clim.jpg">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="734">
+<meta property="og:image:alt" content="Cache clim gris anthracite à motif ajouré posé devant une unité extérieure">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="La Fabrik du Cache Clim">
 <script type="application/ld+json">
 {
@@ -97,6 +102,7 @@
       <a href="index.html#boutique">Boutique</a>
       <a href="guide-tailles.html">Guide des tailles</a>
       <a href="index.html#sur-mesure">Sur mesure</a>
+      <a href="index.html#atelier">L'atelier</a>
       <a href="pros.html">Pro &amp; Revendeurs</a>
       <a href="faq.html">FAQ</a>
       <a href="index.html#contact">Contact</a>
@@ -125,32 +131,21 @@
         <a href="guide-tailles.html" class="btn-ghost"><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i> Quelle taille pour ma clim ?</a>
       </div>
       <div class="hero-trust">
+        <div class="trust-item"><i class="fa-solid fa-tag" aria-hidden="true"></i><span>219 → 319 €, motif compris</span></div>
         <div class="trust-item"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i><span>Livraison offerte</span></div>
         <div class="trust-item"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i><span>14 jours pour changer d'avis</span></div>
         <div class="trust-item"><i class="fa-solid fa-credit-card" aria-hidden="true"></i><span>Paiement en 3× sans frais</span></div>
         <div class="trust-item"><i class="fa-solid fa-flag" aria-hidden="true"></i><span>Fabriqué en France</span></div>
       </div>
     </div>
-    <div class="hero-cards">
-      <div class="hero-card">
-        <div class="hc-label">Un seul tarif</div>
-        <div class="hc-title">Toutes finitions</div>
-        <div class="hc-desc">6 teintes RAL ou 15 motifs, au même prix</div>
-        <div class="hc-price">dès 219 € <small>TTC, livré</small></div>
-      </div>
-      <div class="hero-card">
-        <div class="hc-label">Toujours moins cher</div>
-        <div class="hc-title">20 € sous la concurrence</div>
-        <div class="hc-desc">À taille égale, sur toute la gamme</div>
-        <div class="hc-price">219 → 319 €</div>
-      </div>
-      <div class="hero-card">
-        <div class="hc-label">Vos cotes</div>
-        <div class="hc-title">Sur mesure</div>
-        <div class="hc-desc">Fabriqué en 7–10 jours</div>
-        <div class="hc-price">dès 349 €</div>
-      </div>
-    </div>
+    <figure class="hero-photo">
+      <picture>
+        <source srcset="assets/img/hero-cache-clim.webp" type="image/webp">
+        <img src="assets/img/hero-cache-clim.jpg" width="1400" height="734" fetchpriority="high" decoding="async"
+             alt="Cache clim gris anthracite à motif ajouré posé devant une unité extérieure Mitsubishi, contre un mur blanc, dans un jardin">
+      </picture>
+      <figcaption>Modèle ajouré gris anthracite (RAL 7016), posé sur une unité Mitsubishi. Le panneau laisse passer l'air et se démonte en quelques minutes.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -195,133 +190,261 @@
       <p>Compatibles avec toutes les marques : Daikin, Mitsubishi, Atlantic, Toshiba, LG, Samsung, Hitachi, Panasonic. Livrés avec fixations murales et notice, prêts à poser.</p>
     </div>
     <div class="filters">
-      <button class="filter-btn active" onclick="filterProducts('all',this)">Tous</button>
-      <button class="filter-btn" onclick="filterProducts('couleurs',this)">Couleurs unies</button>
-      <button class="filter-btn" onclick="filterProducts('motifs',this)">Motifs décoratifs</button>
-      <button class="filter-btn" onclick="filterProducts('matieres',this)">Finitions matières</button>
+      <button class="filter-btn active" onclick="filterProducts('all',this)">Les 15 designs</button>
       <button class="filter-btn" onclick="filterProducts('mesure',this)">Sur mesure</button>
     </div>
 
     <div class="products-grid" id="productsGrid">
 
-      <div class="product-card" data-cat="couleurs">
-        <div class="product-img" style="background:linear-gradient(135deg,#ffffff,#e2e8f0)" aria-hidden="true">🏠<span class="product-badge">Le plus vendu</span></div>
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Bambou — voir les tailles">
+          <picture><source srcset="assets/img/produits/bambou.webp" type="image/webp"><img src="assets/img/produits/bambou.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Bambou : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
         <div class="product-body">
-          <div class="product-cat">Couleur unie</div>
-          <div class="product-name">Cache clim couleur unie</div>
-          <div class="product-desc">Six teintes RAL au choix pour se fondre dans la façade ou trancher franchement. Laquage stable aux UV, ne jaunit pas.</div>
-          <div class="color-dots" role="list" aria-label="Coloris disponibles">
-            <div class="cdot" role="listitem" style="background:#fff;border-color:#ccc" title="Blanc RAL 9003"></div>
-            <div class="cdot" role="listitem" style="background:#fffff0;border-color:#ccc" title="Ivoire RAL 1015"></div>
-            <div class="cdot" role="listitem" style="background:#3d3d3d" title="Gris anthracite RAL 7016"></div>
-            <div class="cdot" role="listitem" style="background:#111" title="Noir RAL 9005"></div>
-            <div class="cdot" role="listitem" style="background:#2d6a4f" title="Vert anglais RAL 6005"></div>
-            <div class="cdot" role="listitem" style="background:#5c3d2e" title="Chocolat RAL 8015"></div>
-          </div>
-        </div>
-        <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim couleur unie — taille M',249,'🏠')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background:linear-gradient(135deg,#052e16,#14532d)" aria-hidden="true">🌿</div>
-        <div class="product-body">
-          <div class="product-cat">Motif végétal</div>
-          <div class="product-name">Feuillage</div>
-          <div class="product-desc">Un camaïeu de verts qui fait disparaître l'unité dans la végétation. Le choix des terrasses arborées et des jardins clos.</div>
-        </div>
-        <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Feuillage — taille M',249,'🌿')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background:linear-gradient(135deg,#fdf4ff,#f3e8ff)" aria-hidden="true">🌼</div>
-        <div class="product-body">
-          <div class="product-cat">Motif floral</div>
-          <div class="product-name">Marguerite</div>
-          <div class="product-desc">Un semis de fleurs blanches sur fond clair. Léger, lumineux, il allège les façades sud sans jouer la discrétion.</div>
-        </div>
-        <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Marguerite — taille M',249,'🌼')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background:linear-gradient(135deg,#0c4a6e,#075985)" aria-hidden="true">✨</div>
-        <div class="product-body">
-          <div class="product-cat">Motif arabesque</div>
-          <div class="product-name">Orient Express</div>
-          <div class="product-desc">Entrelacs géométriques inspirés des moucharabiehs. Le motif qui fonctionne le mieux sur les murs blancs du Sud.</div>
-        </div>
-        <div class="product-footer">
-          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Orient Express — taille M',249,'✨')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background:linear-gradient(135deg,#1c3a6e,#1e40af)" aria-hidden="true">🎋</div>
-        <div class="product-body">
-          <div class="product-cat">Motif naturel</div>
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
           <div class="product-name">Bambou</div>
-          <div class="product-desc">Cannes verticales serrées, effet brise-vue. Idéal quand le cache est vu de près, sur un balcon ou une coursive.</div>
+          <div class="product-desc">Cannes verticales serrées, effet brise-vue naturel. Le motif qui rend le mieux quand le cache se voit de près, sur un balcon ou une coursive.</div>
         </div>
         <div class="product-footer">
           <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Bambou — taille M',249,'🎋')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <button class="btn-add" onclick="addToCart('Cache clim Bambou — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="motifs">
-        <div class="product-img" style="background:linear-gradient(135deg,#0369a1,#0ea5e9)" aria-hidden="true">🌊</div>
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Feuillage — voir les tailles">
+          <picture><source srcset="assets/img/produits/feuillage.webp" type="image/webp"><img src="assets/img/produits/feuillage.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Feuillage : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture><span class="product-badge">Le plus demandé</span>
+        </a>
         <div class="product-body">
-          <div class="product-cat">Motif marin</div>
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Feuillage</div>
+          <div class="product-desc">Entrelacs de feuilles fines. Pensé pour faire disparaître l'unité dans la végétation plutôt que pour attirer l'œil. Notre modèle le plus demandé.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Feuillage — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Marguerite — voir les tailles">
+          <picture><source srcset="assets/img/produits/marguerite.webp" type="image/webp"><img src="assets/img/produits/marguerite.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Marguerite : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Marguerite</div>
+          <div class="product-desc">Semis de marguerites, léger et lumineux. Il allège les façades sud sans les charger, et reste lisible à distance.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Marguerite — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Orient Express — voir les tailles">
+          <picture><source srcset="assets/img/produits/orient-express.webp" type="image/webp"><img src="assets/img/produits/orient-express.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Orient Express : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Orient Express</div>
+          <div class="product-desc">Entrelacs géométriques inspirés des moucharabiehs. Le motif qui rend le mieux sur les murs blancs du Sud.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Orient Express — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Vue sur mer — voir les tailles">
+          <picture><source srcset="assets/img/produits/vue-sur-mer.webp" type="image/webp"><img src="assets/img/produits/vue-sur-mer.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Vue sur mer : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
           <div class="product-name">Vue sur mer</div>
-          <div class="product-desc">Dégradé d'horizon méditerranéen. Conçu ici, à 800 mètres de la plage de Canet — ça compte pour le rendu des bleus.</div>
+          <div class="product-desc">Lignes d'horizon méditerranéen. Dessiné ici, à huit cents mètres de la plage de Canet.</div>
         </div>
         <div class="product-footer">
           <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Vue sur mer — taille M',249,'🌊')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <button class="btn-add" onclick="addToCart('Cache clim Vue sur mer — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="matieres">
-        <div class="product-img" style="background:linear-gradient(135deg,#92400e,#b45309)" aria-hidden="true">🪵</div>
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Mosaïque — voir les tailles">
+          <picture><source srcset="assets/img/produits/mosaique.webp" type="image/webp"><img src="assets/img/produits/mosaique.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Mosaïque : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
         <div class="product-body">
-          <div class="product-cat">Finition matière</div>
-          <div class="product-name">Aspect bois</div>
-          <div class="product-desc">La chaleur d'un bardage bois, sans le grisaillement ni l'entretien annuel. Impression haute définition sur aluminium.</div>
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Mosaïque</div>
+          <div class="product-desc">Pavage de tesselles irrégulières, dans l'esprit des azulejos du Roussillon. Excellent au bord d'une piscine.</div>
         </div>
         <div class="product-footer">
           <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Aspect bois — taille M',249,'🪵')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <button class="btn-add" onclick="addToCart('Cache clim Mosaïque — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
-      <div class="product-card" data-cat="matieres">
-        <div class="product-img" style="background:linear-gradient(135deg,#7f1d1d,#b45309)" aria-hidden="true">🧱</div>
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Eden — voir les tailles">
+          <picture><source srcset="assets/img/produits/eden.webp" type="image/webp"><img src="assets/img/produits/eden.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Eden : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
         <div class="product-body">
-          <div class="product-cat">Finition matière</div>
-          <div class="product-name">Rouille corten</div>
-          <div class="product-desc">L'oxydation de l'acier corten, très présente en architecture contemporaine — sans le poids ni la vraie corrosion.</div>
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Eden</div>
+          <div class="product-desc">Végétation tropicale dense — palmes et fougères. Le plus graphique de la gamme, parfait en angle de terrasse.</div>
         </div>
         <div class="product-footer">
           <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
-          <button class="btn-add" onclick="addToCart('Cache clim Rouille corten — taille M',249,'🧱')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+          <button class="btn-add" onclick="addToCart('Cache clim Eden — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Horizon — voir les tailles">
+          <picture><source srcset="assets/img/produits/horizon.webp" type="image/webp"><img src="assets/img/produits/horizon.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Horizon : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Horizon</div>
+          <div class="product-desc">Bandes horizontales dégradées. Très sobre de loin, il se révèle en approchant. S'accorde aux enduits gris contemporains.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Horizon — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Cassis — voir les tailles">
+          <picture><source srcset="assets/img/produits/cassis.webp" type="image/webp"><img src="assets/img/produits/cassis.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Cassis : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Cassis</div>
+          <div class="product-desc">Vagues et baies stylisées. Le plus courbe de la gamme : il casse la rigidité d'un mur droit.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Cassis — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Fleurs — voir les tailles">
+          <picture><source srcset="assets/img/produits/fleurs.webp" type="image/webp"><img src="assets/img/produits/fleurs.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Fleurs : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Fleurs</div>
+          <div class="product-desc">Composition florale libre et généreuse. Pour ceux qui veulent que le cache se voie et se remarque.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Fleurs — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Fleur de lys — voir les tailles">
+          <picture><source srcset="assets/img/produits/fleur-de-lys.webp" type="image/webp"><img src="assets/img/produits/fleur-de-lys.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Fleur de lys : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Fleur de lys</div>
+          <div class="product-desc">Semis de lys stylisés, régulier, dans l'esprit d'un papier peint classique. S'accorde aux façades anciennes.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Fleur de lys — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Trèfle — voir les tailles">
+          <picture><source srcset="assets/img/produits/trefle.webp" type="image/webp"><img src="assets/img/produits/trefle.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Trèfle : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Trèfle</div>
+          <div class="product-desc">Semis de trèfles discret. De loin il se lit comme un aplat texturé, de près le dessin apparaît.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Trèfle — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Zèbre — voir les tailles">
+          <picture><source srcset="assets/img/produits/zebre.webp" type="image/webp"><img src="assets/img/produits/zebre.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Zèbre : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Zèbre</div>
+          <div class="product-desc">Rayures irrégulières à l'échelle du cache. Très graphique, pour les façades contemporaines minimalistes.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Zèbre — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Léopard — voir les tailles">
+          <picture><source srcset="assets/img/produits/leopard.webp" type="image/webp"><img src="assets/img/produits/leopard.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Léopard : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Léopard</div>
+          <div class="product-desc">Tacheture fauve franche. Assumé, décoratif, sans demi-mesure — souvent choisi pour les terrasses de restaurant.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Léopard — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="designs">
+        <a class="product-photo" href="#taille" aria-label="Cache clim Zoom — voir les tailles">
+          <picture><source srcset="assets/img/produits/zoom.webp" type="image/webp"><img src="assets/img/produits/zoom.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim extérieur Zoom : panneau ajouré en aluminium composite, avec les six coloris RAL disponibles"></picture>
+        </a>
+        <div class="product-body">
+          <div class="product-cat">Panneau ajouré · 6 coloris</div>
+          <div class="product-name">Zoom</div>
+          <div class="product-desc">Motif optique concentrique qui joue sur la profondeur. Selon l'angle et la lumière, le dessin semble bouger.</div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price"><strong>dès 219 €</strong><small>TTC · 5 tailles · livré</small></div>
+          <button class="btn-add" onclick="addToCart('Cache clim Zoom — taille M',249,'▣')"><i class="fa-solid fa-plus" aria-hidden="true"></i> Ajouter</button>
         </div>
       </div>
 
       <div class="product-card" data-cat="mesure" style="border:1.5px solid var(--bleu-clair)">
-        <div class="product-img" style="background:linear-gradient(135deg,var(--bleu-very-pale),var(--bleu-pale))" aria-hidden="true">📐<span class="product-badge or">Sur mesure</span></div>
+        <a class="product-photo" href="#sur-mesure" aria-label="Cache clim sur mesure">
+          <picture><source srcset="assets/img/produits/sur-mesure.webp" type="image/webp"><img src="assets/img/produits/sur-mesure.jpg" width="900" height="850" loading="lazy" decoding="async"
+               alt="Cache clim sur mesure fabriqué aux dimensions exactes de l'unité extérieure"></picture><span class="product-badge or">Sur mesure</span>
+        </a>
         <div class="product-body">
           <div class="product-cat">Personnalisé</div>
           <div class="product-name">Cache clim sur mesure</div>
-          <div class="product-desc">Vos cotes exactes, jusqu'à 110 × 120 × 65 cm. Coloris, motif ou votre propre visuel imprimé, sans supplément de finition. Fabriqué à Canet en 7 à 10 jours.</div>
+          <div class="product-desc">Vos cotes exactes, jusqu'à 110 × 120 × 65 cm. Le design de votre choix, ou votre propre visuel. Fabriqué à Canet en 7 à 10 jours.</div>
         </div>
         <div class="product-footer">
           <div class="product-price"><strong>dès 349 €</strong><small>TTC · livraison offerte</small></div>
@@ -432,27 +555,142 @@
     <div class="section-header center">
       <div class="s-tag"><i class="fa-solid fa-swatchbook" aria-hidden="true"></i> 15 designs</div>
       <h2>Tous nos motifs</h2>
-      <p>Impression numérique haute résolution sur adhésif contrecollé. Tenue aux UV d'environ 5 ans selon l'exposition, davantage à l'ombre.</p>
+      <p>Chaque design est découpé dans le panneau d'aluminium composite, sur notre table numérique. Ce n'est pas un adhésif collé : c'est la matière elle-même qui porte le dessin, et qui laisse passer l'air.</p>
     </div>
-    <div class="designs-grid">
-      <div class="design-card active"><div class="design-emoji" aria-hidden="true">🌿</div><div class="design-name">Feuillage</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🌸</div><div class="design-name">Fleurs</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🌅</div><div class="design-name">Horizon</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🐆</div><div class="design-name">Léopard</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">⚜️</div><div class="design-name">Fleur de lys</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🌼</div><div class="design-name">Marguerite</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🔷</div><div class="design-name">Mosaïque</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">✨</div><div class="design-name">Orient Express</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🍀</div><div class="design-name">Trèfle</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🦓</div><div class="design-name">Zèbre</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🌊</div><div class="design-name">Vue sur mer</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🔍</div><div class="design-name">Zoom</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🌴</div><div class="design-name">Eden</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🎋</div><div class="design-name">Bambou</div></div>
-      <div class="design-card"><div class="design-emoji" aria-hidden="true">🍇</div><div class="design-name">Cassis</div></div>
+    <div class="designs-grid photos">
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/feuillage-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Feuillage — panneau de cache clim ajouré">
+        <span>Feuillage</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/fleurs-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Fleurs — panneau de cache clim ajouré">
+        <span>Fleurs</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/horizon-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Horizon — panneau de cache clim ajouré">
+        <span>Horizon</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/leopard-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Léopard — panneau de cache clim ajouré">
+        <span>Léopard</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/fleur-de-lys-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Fleur de lys — panneau de cache clim ajouré">
+        <span>Fleur de lys</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/marguerite-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Marguerite — panneau de cache clim ajouré">
+        <span>Marguerite</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/mosaique-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Mosaïque — panneau de cache clim ajouré">
+        <span>Mosaïque</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/orient-express-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Orient Express — panneau de cache clim ajouré">
+        <span>Orient Express</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/trefle-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Trèfle — panneau de cache clim ajouré">
+        <span>Trèfle</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/zebre-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Zèbre — panneau de cache clim ajouré">
+        <span>Zèbre</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/vue-sur-mer-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Vue sur mer — panneau de cache clim ajouré">
+        <span>Vue sur mer</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/zoom-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Zoom — panneau de cache clim ajouré">
+        <span>Zoom</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/eden-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Eden — panneau de cache clim ajouré">
+        <span>Eden</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/bambou-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Bambou — panneau de cache clim ajouré">
+        <span>Bambou</span>
+      </a>
+      <a class="design-tile" href="#boutique">
+        <img src="assets/img/produits/cassis-450.webp" width="450" height="425" loading="lazy" decoding="async"
+             alt="Design Cassis — panneau de cache clim ajouré">
+        <span>Cassis</span>
+      </a>
     </div>
     <p style="text-align:center;color:var(--gris-texte);font-size:14px;margin-top:26px">
       Chaque design existe aussi en version <strong>couleur unie</strong>, et se décline sur les 5 tailles.
+    </p>
+  </div>
+</section>
+
+<!-- ============ L'ATELIER ============ -->
+<section id="atelier" style="background:var(--gris-clair)">
+  <div class="section-inner">
+    <div class="section-header center">
+      <div class="s-tag"><i class="fa-solid fa-industry" aria-hidden="true"></i> L'atelier</div>
+      <h2>Derrière la marque, un atelier bien réel</h2>
+    </div>
+    <p class="atelier-lead">
+      La Fabrik du Cache Clim est la marque grand public de <strong>Rezo-Fabrik</strong>, atelier
+      de fraisage et d'impression numérique installé à Canet-en-Roussillon depuis plus de vingt ans.
+      Voici ce qui sort de nos machines quand il ne s'agit pas de cache clim — signalétique urbaine,
+      mobilier, agencement. C'est le même atelier, la même table de découpe, les mêmes personnes.
+    </p>
+    <div class="atelier-grid">
+      <figure class="atelier-item">
+        <img src="assets/img/realisations/realisation-01-350.webp" width="350" height="350" loading="lazy" decoding="async"
+             alt="Réalisation de l'atelier Rezo-Fabrik : découpe et façonnage sur mesure">
+      </figure>
+      <figure class="atelier-item">
+        <img src="assets/img/realisations/realisation-02-350.webp" width="350" height="350" loading="lazy" decoding="async"
+             alt="Réalisation de l'atelier Rezo-Fabrik : découpe et façonnage sur mesure">
+      </figure>
+      <figure class="atelier-item">
+        <img src="assets/img/realisations/realisation-03-350.webp" width="350" height="350" loading="lazy" decoding="async"
+             alt="Réalisation de l'atelier Rezo-Fabrik : découpe et façonnage sur mesure">
+      </figure>
+      <figure class="atelier-item">
+        <img src="assets/img/realisations/realisation-04-350.webp" width="350" height="350" loading="lazy" decoding="async"
+             alt="Réalisation de l'atelier Rezo-Fabrik : découpe et façonnage sur mesure">
+      </figure>
+      <figure class="atelier-item">
+        <img src="assets/img/realisations/realisation-05-350.webp" width="350" height="350" loading="lazy" decoding="async"
+             alt="Réalisation de l'atelier Rezo-Fabrik : découpe et façonnage sur mesure">
+      </figure>
+      <figure class="atelier-item">
+        <img src="assets/img/realisations/realisation-06-350.webp" width="350" height="350" loading="lazy" decoding="async"
+             alt="Réalisation de l'atelier Rezo-Fabrik : découpe et façonnage sur mesure">
+      </figure>
+      <figure class="atelier-item">
+        <img src="assets/img/realisations/realisation-07-350.webp" width="350" height="350" loading="lazy" decoding="async"
+             alt="Réalisation de l'atelier Rezo-Fabrik : découpe et façonnage sur mesure">
+      </figure>
+      <figure class="atelier-item">
+        <img src="assets/img/realisations/realisation-08-350.webp" width="350" height="350" loading="lazy" decoding="async"
+             alt="Réalisation de l'atelier Rezo-Fabrik : découpe et façonnage sur mesure">
+      </figure>
+    </div>
+    <p style="text-align:center;color:var(--gris-texte);font-size:14px;margin-top:26px;max-width:640px;margin-left:auto;margin-right:auto">
+      C'est ce qui nous permet de fabriquer une cote hors gabarit sans surcoût, et d'imprimer
+      votre propre visuel sur un cache — le logo d'un hôtel, la charte d'un restaurant, une photo.
+      <a href="index.html#contact" style="color:var(--bleu-mid);font-weight:600">Parlons-en</a>.
     </p>
   </div>
 </section>
@@ -466,8 +704,8 @@
       <p>Un cache clim, ce n'est pas compliqué. Ce qui change, c'est qui le fabrique et ce qu'il y a autour.</p>
     </div>
     <div class="atouts-grid">
-      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></div><h3>On fabrique, on ne revend pas</h3><p>Fraisage et impression numérique dans notre atelier de Canet-en-Roussillon, depuis plus de vingt ans. Une cote hors norme ou un visuel personnalisé ne bloque rien.</p></div>
-      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div><h3>Aluminium composite</h3><p>Deux feuilles d'aluminium sur âme polyéthylène. Ne rouille pas, ne se déforme pas, stable de −50 °C à +90 °C. Le matériau de la signalétique extérieure.</p></div>
+      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></div><h3>On fabrique, on ne revend pas</h3><p>Chaque panneau est découpé sur notre table numérique, à Canet-en-Roussillon. Une cote hors norme, un design retouché ou votre propre visuel : rien ne bloque, c'est le même atelier depuis vingt ans.</p></div>
+      <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div><h3>Aluminium composite</h3><p>Deux feuilles d'aluminium sur âme polyéthylène, laquées dans la masse. Ne rouille pas, ne se déforme pas, stable de −50 °C à +90 °C. Le matériau de la signalétique extérieure.</p></div>
       <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-wind" aria-hidden="true"></i></div><h3>L'aération respectée</h3><p>5 cm de jeu en largeur et hauteur, 3 cm en profondeur, face avant ajourée. Votre clim évacue sa chaleur normalement et ne surconsomme pas.</p></div>
       <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div><h3>Posé en 20 minutes</h3><p>Deux équerres, la visserie et une notice illustrée. Aucune intervention sur le circuit frigorifique : la garantie de votre climatiseur n'est pas affectée.</p></div>
       <div class="atout-card"><div class="atout-icon"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></div><h3>Le prix affiché est le prix payé</h3><p>Livraison en France métropolitaine et fixations comprises. Pas de frais qui apparaissent au moment de payer.</p></div>
