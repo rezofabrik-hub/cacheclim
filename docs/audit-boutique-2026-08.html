@@ -1,0 +1,688 @@
+<title>Pourquoi Rezo-Fabrik ne vend pas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+
+<style>
+  :root {
+    --ground: #F6F8F5;
+    --surface: #FFFFFF;
+    --surface-2: #EDF1EC;
+    --ink: #141C18;
+    --ink-soft: #46554D;
+    --ink-mute: #6B7A72;
+    --rule: #D8E0DA;
+    --rule-strong: #B9C6BE;
+    --accent: #0F4436;
+    --accent-soft: #E2EDE7;
+    --crit: #9C3323;
+    --crit-bg: #F7E7E3;
+    --maj: #8A6108;
+    --maj-bg: #F7EEDB;
+    --ok: #2C6B4E;
+    --ok-bg: #E3F0E8;
+
+    --display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    --body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0E1411;
+      --surface: #161E1A;
+      --surface-2: #1D2722;
+      --ink: #E8EEE9;
+      --ink-soft: #B3C0B8;
+      --ink-mute: #8A9992;
+      --rule: #2A362F;
+      --rule-strong: #3C4B42;
+      --accent: #57B392;
+      --accent-soft: #1B2E27;
+      --crit: #E58C79;
+      --crit-bg: #33201C;
+      --maj: #D8AE55;
+      --maj-bg: #2F2718;
+      --ok: #6FBE94;
+      --ok-bg: #182C21;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0E1411;
+    --surface: #161E1A;
+    --surface-2: #1D2722;
+    --ink: #E8EEE9;
+    --ink-soft: #B3C0B8;
+    --ink-mute: #8A9992;
+    --rule: #2A362F;
+    --rule-strong: #3C4B42;
+    --accent: #57B392;
+    --accent-soft: #1B2E27;
+    --crit: #E58C79;
+    --crit-bg: #33201C;
+    --maj: #D8AE55;
+    --maj-bg: #2F2718;
+    --ok: #6FBE94;
+    --ok-bg: #182C21;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px 120px; }
+  .col { max-width: 660px; }
+
+  /* ---------- masthead ---------- */
+  .masthead { padding: 64px 0 34px; border-bottom: 2px solid var(--ink); }
+  .kicker {
+    font-family: var(--mono); font-size: 11.5px; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--ink-mute);
+    display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 26px;
+  }
+  .kicker b { color: var(--accent); font-weight: 600; }
+  h1 {
+    font-family: var(--display); font-weight: 800; letter-spacing: -.026em;
+    font-size: clamp(38px, 6.4vw, 68px); line-height: 1.02; text-wrap: balance;
+    margin-bottom: 22px;
+  }
+  .standfirst {
+    font-size: clamp(18px, 2.2vw, 21px); line-height: 1.55; color: var(--ink-soft);
+    max-width: 640px;
+  }
+
+  /* ---------- verdict strip ---------- */
+  .verdict {
+    margin: 0 0 8px; padding: 30px 0 34px; border-bottom: 1px solid var(--rule);
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px;
+  }
+  .stat-l {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .13em;
+    text-transform: uppercase; color: var(--ink-mute); margin-bottom: 9px;
+  }
+  .stat-v {
+    font-family: var(--display); font-weight: 700; font-size: 30px;
+    line-height: 1.05; letter-spacing: -.02em; font-variant-numeric: tabular-nums;
+  }
+  .stat-v.bad { color: var(--crit); }
+  .stat-n { font-family: var(--body); font-size: 14px; color: var(--ink-mute); margin-top: 7px; line-height: 1.4; }
+
+  /* ---------- sections ---------- */
+  section { padding: 62px 0 0; }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; }
+  .sec-num {
+    font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--accent);
+    letter-spacing: .1em; padding-top: 5px; flex-shrink: 0;
+  }
+  h2 {
+    font-family: var(--display); font-weight: 700; letter-spacing: -.022em;
+    font-size: clamp(25px, 3.4vw, 33px); line-height: 1.14; text-wrap: balance;
+  }
+  h3 {
+    font-family: var(--display); font-weight: 700; letter-spacing: -.015em;
+    font-size: 19px; line-height: 1.25; margin-bottom: 10px; text-wrap: balance;
+  }
+  p { margin-bottom: 17px; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+  strong { font-weight: 600; }
+  em.term { font-style: normal; font-family: var(--mono); font-size: .87em; background: var(--surface-2); padding: 1px 5px; border-radius: 3px; }
+
+  /* ---------- findings ---------- */
+  .findings { display: flex; flex-direction: column; gap: 0; }
+  .f {
+    display: grid; grid-template-columns: 84px 1fr; gap: 0 26px;
+    padding: 26px 0; border-top: 1px solid var(--rule);
+  }
+  .f:last-child { border-bottom: 1px solid var(--rule); }
+  .chip {
+    font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: .1em;
+    text-transform: uppercase; padding: 4px 8px; border-radius: 3px;
+    display: inline-block; white-space: nowrap;
+  }
+  .chip.c { background: var(--crit-bg); color: var(--crit); }
+  .chip.m { background: var(--maj-bg); color: var(--maj); }
+  .f-body { max-width: 640px; }
+  .f-body p { margin-bottom: 12px; font-size: 16.5px; }
+  .evidence {
+    font-family: var(--mono); font-size: 13px; line-height: 1.6;
+    background: var(--surface); border-left: 3px solid var(--rule-strong);
+    padding: 13px 16px; margin: 14px 0 4px; color: var(--ink-soft);
+    overflow-x: auto;
+  }
+  .evidence b { color: var(--ink); font-weight: 600; }
+  .fix {
+    margin-top: 14px; padding-top: 13px; border-top: 1px dashed var(--rule);
+    font-size: 16px; color: var(--ink-soft);
+  }
+  .fix span {
+    font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 5px;
+  }
+
+  /* ---------- table ---------- */
+  .tw { overflow-x: auto; margin-top: 8px; }
+  table { border-collapse: collapse; width: 100%; min-width: 660px; font-size: 15px; }
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  thead th {
+    font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-mute); border-bottom: 1.5px solid var(--rule-strong);
+  }
+  tbody th { font-family: var(--display); font-weight: 600; font-size: 15px; white-space: nowrap; }
+  td { font-variant-numeric: tabular-nums; }
+  .you { background: var(--surface); }
+  .you td, .you th { border-bottom-color: var(--rule-strong); }
+  .no { color: var(--crit); }
+  .yes { color: var(--ok); }
+
+  /* ---------- plan ---------- */
+  .phase { border-top: 1px solid var(--rule); padding: 26px 0; display: grid; grid-template-columns: 150px 1fr; gap: 0 26px; }
+  .phase:last-of-type { border-bottom: 1px solid var(--rule); }
+  .phase-when {
+    font-family: var(--mono); font-size: 11.5px; font-weight: 600; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--accent); line-height: 1.5;
+  }
+  .phase-when small { display: block; color: var(--ink-mute); font-weight: 400; letter-spacing: .06em; margin-top: 4px; }
+  .phase ul { list-style: none; max-width: 640px; }
+  .phase li { padding-left: 22px; position: relative; margin-bottom: 11px; font-size: 16.5px; }
+  .phase li:last-child { margin-bottom: 0; }
+  .phase li::before {
+    content: ''; position: absolute; left: 0; top: .62em;
+    width: 9px; height: 2px; background: var(--rule-strong);
+  }
+
+  /* ---------- callout ---------- */
+  .callout {
+    background: var(--accent-soft); border-radius: 4px; padding: 26px 28px;
+    margin-top: 8px; max-width: 700px;
+  }
+  .callout h3 { color: var(--accent); }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .foot {
+    margin-top: 72px; padding-top: 22px; border-top: 1px solid var(--rule);
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em;
+    color: var(--ink-mute); line-height: 1.8;
+  }
+
+  @media (max-width: 720px) {
+    body { font-size: 16.5px; }
+    .verdict { grid-template-columns: repeat(2, 1fr); gap: 24px 20px; }
+    .f { grid-template-columns: 1fr; gap: 12px; }
+    .phase { grid-template-columns: 1fr; gap: 14px; }
+    .sec-head { gap: 12px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="kicker">
+      <span>Audit e-commerce</span>
+      <span><b>www.rezo-fabrik.fr</b></span>
+      <span>WordPress&nbsp;7.1 · WooCommerce&nbsp;10.3.8 · Avada</span>
+      <span>23 août 2026</span>
+    </div>
+    <h1>Une vente en un an, ce n'est pas de la malchance</h1>
+    <p class="standfirst">
+      La boutique est techniquement fonctionnelle : 33 produits en ligne, un tunnel de commande
+      qui marche, des mentions légales à jour. Le problème n'est pas WordPress. Le problème,
+      c'est qu'un visiteur qui arrive sur une fiche produit n'a ni le moyen de payer comme
+      il en a l'habitude, ni la moindre raison de vous faire confiance, ni l'information
+      dont il a besoin pour choisir sa taille.
+    </p>
+  </header>
+
+  <div class="verdict">
+    <div>
+      <div class="stat-l">Moyens de paiement</div>
+      <div class="stat-v bad">PayPal</div>
+      <div class="stat-n">Seule passerelle installée. Aucun paiement par carte en direct.</div>
+    </div>
+    <div>
+      <div class="stat-l">Avis clients</div>
+      <div class="stat-v bad">0</div>
+      <div class="stat-n">Sur 33 fiches produit. Un concurrent en affiche 1&nbsp;900.</div>
+    </div>
+    <div>
+      <div class="stat-l">Guide des tailles</div>
+      <div class="stat-v bad">Aucun</div>
+      <div class="stat-n">4 tailles proposées, zéro aide pour mesurer sa clim.</div>
+    </div>
+    <div>
+      <div class="stat-l">Frais de port</div>
+      <div class="stat-v bad">Non affichés</div>
+      <div class="stat-n">Découverts uniquement au moment de payer.</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">01</div>
+      <h2>Ce qui bloque, du plus grave au moins grave</h2>
+    </div>
+    <div class="col" style="margin-bottom:30px">
+      <p>
+        J'ai passé le site au crible : en-têtes HTTP, code source des pages, API WooCommerce,
+        sitemaps, CGV, tunnel de commande. Voici ce que j'y ai trouvé, classé par
+        impact sur le chiffre d'affaires — pas par difficulté de correction.
+      </p>
+    </div>
+
+    <div class="findings">
+
+      <article class="f">
+        <div><span class="chip c">Critique</span></div>
+        <div class="f-body">
+          <h3>Vos clients ne peuvent pas payer par carte bancaire</h3>
+          <p>
+            La seule passerelle de paiement installée est <em class="term">woocommerce-paypal-payments</em>.
+            Sur un panier à 300&nbsp;€, imposer PayPal élimine une large part des acheteurs français,
+            qui règlent massivement par carte. Et vos propres CGV promettent autre chose.
+          </p>
+          <div class="evidence">
+            CGV, article 4 : « Paiement par carte bancaire, <b>PayPal</b> ou virement. »<br>
+            Réalité du tunnel : <b>PayPal uniquement</b> — aucune trace de Stripe, PayPlug, Mollie ou SystemPay.
+          </div>
+          <div class="fix">
+            <span>À faire</span>
+            Installer Stripe ou PayPlug (CB, Apple&nbsp;Pay, Google&nbsp;Pay) et garder PayPal en second choix.
+            Ajouter le paiement en 3× ou 4× — sur ce ticket moyen, c'est un déclencheur d'achat,
+            et c'est ce que fait déjà votre concurrent principal.
+          </div>
+        </div>
+      </article>
+
+      <article class="f">
+        <div><span class="chip c">Critique</span></div>
+        <div class="f-body">
+          <h3>Aucune preuve que quelqu'un a déjà acheté chez vous</h3>
+          <p>
+            Les 33 fiches produit affichent toutes <em class="term">review_count: 0</em>. Pas d'avis,
+            pas de note, pas une seule photo de client, aucun chantier montré en situation.
+            Un inconnu doit envoyer 300&nbsp;€ à un site qu'il découvre, sans le moindre signal
+            qu'il n'est pas le premier.
+          </p>
+          <div class="evidence">
+            33 produits · <b>0 avis</b> · note moyenne <b>0</b> · aucun balisage <em>aggregateRating</em><br>
+            Kach Klim affiche « <b>4,8/5 sur plus de 1 900 avis</b> » dès la page d'accueil.
+          </div>
+          <div class="fix">
+            <span>À faire</span>
+            Recontacter tous les clients de la partie fabrication/pose — vous avez 20 ans de
+            métier et des chantiers photographiés. Demandez un avis Google et une photo.
+            Objectif&nbsp;: 20 à 30 avis et 15 photos « avant / après » avant la prochaine saison.
+          </div>
+        </div>
+      </article>
+
+      <article class="f">
+        <div><span class="chip c">Critique</span></div>
+        <div class="f-body">
+          <h3>Personne ne sait quelle taille commander</h3>
+          <p>
+            La fiche produit demande de choisir entre <em class="term">Petit (L90, H70, P55)</em>,
+            <em class="term">Moyen</em>, <em class="term">Grand</em> et <em class="term">Très Grand</em>.
+            Aucun schéma, aucune explication de <em>quoi</em> mesurer, aucune correspondance avec
+            les modèles de climatiseurs du marché. La page dédiée annonce même
+            « Compatible avec toutes les marques&nbsp;<b>etc…</b> » — le texte de brouillon est
+            resté en ligne.
+          </p>
+          <div class="evidence">
+            Page <b>/cache-clim/</b>, en production : « Compatible avec toutes les marques <b>etc…</b> »
+          </div>
+          <div class="fix">
+            <span>À faire</span>
+            Un schéma coté (largeur / hauteur / profondeur), un mini-configurateur
+            « je saisis mes dimensions → voici ma taille », et un tableau de correspondance
+            par marque (Daikin, Mitsubishi, Atlantic, Toshiba…). C'est exactement ce que font
+            Kach Klim et Mon Cache Clim, et c'est ce qui débloque l'achat sans coup de fil.
+          </div>
+        </div>
+      </article>
+
+      <article class="f">
+        <div><span class="chip c">Critique</span></div>
+        <div class="f-body">
+          <h3>Le prix de la livraison n'apparaît jamais avant le paiement</h3>
+          <p>
+            Les fiches indiquent « Livraison entre 7 et 10 jours » mais jamais le coût. Les CGV
+            précisent « prix TTC, <b>hors frais de livraison</b> » et renvoient au site — où
+            l'information est absente. Sur un colis volumineux, l'acheteur suppose le pire
+            et referme l'onglet. C'est aussi un point de conformité : l'article L221-5 du code
+            de la consommation impose d'afficher les frais de livraison avant la commande.
+          </p>
+          <div class="fix">
+            <span>À faire</span>
+            Afficher le montant sur chaque fiche. Le plus efficace ici : intégrer le port dans
+            le prix et annoncer « <b>Livraison offerte</b> » — vos deux concurrents directs le font,
+            et c'est le premier argument de leur page d'accueil.
+          </div>
+        </div>
+      </article>
+
+      <article class="f">
+        <div><span class="chip m">Majeur</span></div>
+        <div class="f-body">
+          <h3>Le site est quasi invisible sur Google</h3>
+          <p>
+            La balise titre de la page d'accueil est <em class="term">Accueil - REZO-FABRIK</em> :
+            aucun mot que quelqu'un taperait. Il y a deux méta-descriptions, dont celle de la
+            démo Avada, en anglais. Les fiches produit n'ont pas de balise <em class="term">H1</em>.
+            Et surtout, les 30 caches sont décrits par deux textes identiques recopiés à
+            l'identique — 280 caractères pour les 15 modèles « couleur », 432 pour les 15 « motif ».
+          </p>
+          <div class="evidence">
+            &lt;title&gt;<b>Accueil - REZO-FABRIK</b>&lt;/title&gt;<br>
+            &lt;meta name="description" content="<b>Discover the ultimate handyman prebuilt website with Avada…</b>"&gt;<br>
+            Fiches produit : <b>0 balise H1</b> · descriptions strictement identiques sur 15 pages<br>
+            Aucun article de blog · <b>/boutique/</b> et <b>/shop/</b> répondent tous deux en 200 (contenu dupliqué)<br>
+            <b>/checkout/</b>, <b>/cart/</b> et <b>/my-account/</b> sont déclarés dans le sitemap
+          </div>
+          <div class="fix">
+            <span>À faire</span>
+            Réécrire titres et descriptions autour de ce que les gens cherchent réellement
+            (« cache clim extérieur design », « cache pompe à chaleur aluminium »).
+            Renommer les produits : « ZOOM MOTIF » ne veut rien dire pour un acheteur, alors que
+            « Cache clim extérieur motif bois — 4 tailles » se cherche. Un texte unique par
+            modèle. Rediriger <em class="term">/shop/</em> vers <em class="term">/boutique/</em> et
+            sortir panier / compte / commande du sitemap.
+          </div>
+        </div>
+      </article>
+
+      <article class="f">
+        <div><span class="chip m">Majeur</span></div>
+        <div class="f-body">
+          <h3>Les fiches produit ne donnent pas envie d'acheter</h3>
+          <p>
+            Une seule photo par produit, aucun descriptif court, aucune mise en situation.
+            Sur un produit dont l'argument principal est <em>esthétique</em>, c'est le point
+            le plus coûteux : on vend un objet décoratif avec une image de catalogue et
+            quatre lignes de texte technique.
+          </p>
+          <div class="evidence">
+            33 produits · <b>1 image chacun</b> · description courte <b>vide</b> partout<br>
+            Images en JPEG uniquement — <b>pas de WebP</b>, <b>pas de chargement différé</b><br>
+            Une miniature de 200&nbsp;px pèse <b>55 Ko</b> (elle devrait en peser 8)
+          </div>
+          <div class="fix">
+            <span>À faire</span>
+            5 à 8 visuels par modèle : le cache posé sur une façade, sur un balcon, en gros plan
+            sur la matière, avec une personne à côté pour l'échelle. Une vidéo de 20 secondes de
+            pose. Et sur chaque fiche, les 4 réponses qui manquent : combien coûte la livraison,
+            en combien de temps, comment ça se fixe, que faire si la taille ne va pas.
+          </div>
+        </div>
+      </article>
+
+      <article class="f">
+        <div><span class="chip m">Majeur</span></div>
+        <div class="f-body">
+          <h3>Le formulaire de devis décourage ceux qui veulent commander</h3>
+          <p>
+            La page <em class="term">/devis/</em> demande successivement « Modèle » (15 choix),
+            « Couleur ou Motif », « Motif », « Couleur », « Design » (15 choix à nouveau)
+            et « Couleur &amp; Motif » (11 choix). Les mêmes informations sont demandées trois fois
+            sous trois noms différents. Le texte d'introduction contient par ailleurs deux fautes.
+          </p>
+          <div class="evidence">
+            Champs du formulaire : <b>modele</b>, <b>couleur_ou_motif</b>, <b>motif</b>, <b>couleur</b> — puis « Design » et « Couleur &amp; Motif » en doublon<br>
+            « nous vous proposons <b>ne vous envoyé</b> un devis » · « dans les plus <b>bref</b> délais »
+          </div>
+          <div class="fix">
+            <span>À faire</span>
+            Réduire à : dimensions, photo de la clim, finition souhaitée, coordonnées. Quatre blocs,
+            un écran. Et relire l'ensemble des textes du site.
+          </div>
+        </div>
+      </article>
+
+      <article class="f">
+        <div><span class="chip m">Majeur</span></div>
+        <div class="f-body">
+          <h3>Des détails qui abîment la crédibilité</h3>
+          <p>
+            Le thème affiche le nom du compte auteur et un horodatage en plein milieu des pages
+            publiques. Le panier vide met en avant une « carte cadeau » à 2&nbsp;880&nbsp;€.
+            Chaque vignette de la boutique répète « Ce produit a plusieurs variations. Les options
+            peuvent être choisies sur la page du produit ». Séparément, ce sont des broutilles ;
+            ensemble, ils disent au visiteur que le site n'est pas tenu.
+          </p>
+          <div class="evidence">
+            Visible sur la page d'accueil : « Accueil <b>xavier tixador</b> 2025-11-10T08:51:28+01:00 »<br>
+            Visible sur le panier : « Panier <b>trotroyanas</b> 2025-05-19T14:49:38+01:00 »<br>
+            Panier vide → « Nouveautés : <b>CARTE CADEAU 2880 — 2 880,00 €</b> »
+          </div>
+        </div>
+      </article>
+
+      <article class="f">
+        <div><span class="chip m">Majeur</span></div>
+        <div class="f-body">
+          <h3>Vous ne mesurez probablement pas ce qui se passe</h3>
+          <p>
+            Une balise Google Ads est bien présente, ce qui laisse penser que du budget
+            publicitaire a été engagé. En revanche je ne vois pas d'identifiant GA4 en clair
+            dans le code — il passe peut-être par le conteneur Google Tag, à vérifier. Aucun
+            pixel Meta n'est installé, alors que vous êtes présents sur Facebook, Instagram et TikTok :
+            impossible de recibler les visiteurs qui repartent.
+          </p>
+          <div class="evidence">
+            Détecté : <b>AW-11198441612</b> (Google Ads) · <b>GT-5D9665B4</b> (Google Tag)<br>
+            Absents : identifiant <b>G-</b> en clair, <b>pixel Meta</b>, Clarity, Hotjar
+          </div>
+          <div class="fix">
+            <span>À faire</span>
+            Vérifier dans Google Analytics que les événements <em class="term">add_to_cart</em> et
+            <em class="term">purchase</em> remontent. Poser le pixel Meta et Microsoft Clarity —
+            Clarity est gratuit et enregistre les sessions : en une semaine vous verrez de vos yeux
+            où les gens abandonnent.
+          </div>
+        </div>
+      </article>
+
+      <article class="f">
+        <div><span class="chip m">Majeur</span></div>
+        <div class="f-body">
+          <h3>Le site est lent, et sur mobile ça se paie</h3>
+          <p>
+            Aucun cache de page n'est actif : chaque visite déclenche une génération PHP complète.
+            La fiche produit charge 24 fichiers JavaScript et 206 Ko de HTML, sans chargement
+            différé des images.
+          </p>
+          <div class="evidence">
+            Temps de réponse serveur mesuré : <b>1,53 s</b> · <em>cf-cache-status: DYNAMIC</em> (aucun cache)<br>
+            Page produit : <b>24 scripts</b> · <b>206 Ko</b> de HTML · 0 image en WebP · 0 <em>lazy loading</em>
+          </div>
+          <div class="fix">
+            <span>À faire</span>
+            Un plugin de cache (WP Rocket, ou LiteSpeed selon l'hébergeur), la conversion des
+            images en WebP, et l'activation du cache Cloudflare — le CDN est déjà devant le site,
+            il ne sert à rien pour l'instant.
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">02</div>
+      <h2>Face à vos concurrents directs</h2>
+    </div>
+    <div class="col" style="margin-bottom:26px">
+      <p>
+        Le marché du cache-clim décoratif est occupé par des acteurs qui vendent le même
+        produit, dans la même matière, à un prix comparable ou inférieur. Voici où vous
+        vous situez.
+      </p>
+    </div>
+    <div class="tw">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Site</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Avis affichés</th>
+            <th scope="col">Guide des tailles</th>
+            <th scope="col">Livraison</th>
+            <th scope="col">Paiement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="you">
+            <th scope="row">Rezo-Fabrik</th>
+            <td>230 – 399 €</td>
+            <td class="no">Aucun</td>
+            <td class="no">Aucun</td>
+            <td class="no">Prix non affiché · 7-10 j</td>
+            <td class="no">PayPal seul</td>
+          </tr>
+          <tr>
+            <th scope="row">Kach Klim</th>
+            <td>229 – 339 €</td>
+            <td class="yes">4,8/5 · 1 900 avis</td>
+            <td class="yes">Configurateur</td>
+            <td class="yes">Offerte · 72 h</td>
+            <td class="yes">CB, PayPal, 3× et 4×</td>
+          </tr>
+          <tr>
+            <th scope="row">Mon Cache Clim</th>
+            <td>dès 179 €</td>
+            <td class="yes">Avis vérifiés en page d'accueil</td>
+            <td class="yes">Outil de sélection</td>
+            <td class="yes">Offerte</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <th scope="row">Belle Clim, Devaux</th>
+            <td>Variable</td>
+            <td>Présents</td>
+            <td class="yes">Oui</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col" style="margin-top:26px">
+      <p>
+        La lecture est brutale : <strong>vous êtes plus cher que Kach Klim sur la gamme motif
+        (299–399 € contre 229–339 €), avec zéro avis, aucun guide de taille, des frais de port
+        inconnus et un seul moyen de paiement.</strong> À produit équivalent, il n'existe
+        aucune raison rationnelle de vous choisir — et le visiteur n'a aucun moyen de deviner
+        que vous fabriquez vous-mêmes, à Canet-en-Roussillon, depuis 20 ans.
+      </p>
+      <p>
+        C'est là qu'est votre vrai avantage, et il n'est nulle part sur la boutique :
+        <strong>l'atelier</strong>. Le sur-mesure, la découpe, l'impression numérique, la pose à domicile.
+        Vos concurrents vendent 4 tailles standard en carton. Vous pouvez faire n'importe quelle
+        dimension, n'importe quel visuel — y compris le logo d'un hôtel ou d'un restaurant.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">03</div>
+      <h2>Le plan, dans l'ordre</h2>
+    </div>
+    <div class="col" style="margin-bottom:26px">
+      <p>
+        Ne faites pas tout en même temps. L'ordre ci-dessous est classé par
+        rapport impact / effort : les deux premières semaines valent plus que les trois mois suivants.
+      </p>
+    </div>
+
+    <div class="phase">
+      <div class="phase-when">Semaine 1<small>Déblocage</small></div>
+      <ul>
+        <li>Installer Stripe ou PayPlug — paiement par carte, Apple Pay, Google Pay.</li>
+        <li>Afficher les frais de port sur chaque fiche, ou les intégrer au prix et annoncer « livraison offerte ».</li>
+        <li>Réécrire le titre et la méta-description de l'accueil ; supprimer la description de démo Avada restée en anglais.</li>
+        <li>Supprimer l'affichage du nom d'auteur et de la date sur les pages publiques (réglage du thème Avada).</li>
+        <li>Corriger le texte « Compatible avec toutes les marques etc… » et les fautes de la page devis.</li>
+        <li>Installer Microsoft Clarity (gratuit) et vérifier que GA4 enregistre bien les achats.</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <div class="phase-when">Semaines 2 à 4<small>Confiance</small></div>
+      <ul>
+        <li>Guide de mesure illustré + tableau de compatibilité par marque de climatiseur.</li>
+        <li>Collecter 20 à 30 avis auprès des clients de l'atelier ; les afficher sur les fiches produit.</li>
+        <li>Photographier 10 réalisations en situation : façade, terrasse, balcon, gros plan matière.</li>
+        <li>Ajouter sur chaque fiche : délai, coût de livraison, mode de fixation, garantie 2 ans, droit de rétractation 14 jours.</li>
+        <li>Simplifier le formulaire de devis à quatre blocs.</li>
+        <li>Activer un cache de page et convertir les images en WebP.</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <div class="phase-when">Mois 2 à 3<small>Acquisition</small></div>
+      <ul>
+        <li>Renommer et réécrire les 30 fiches produit — un texte unique par modèle, un nom qui se cherche sur Google.</li>
+        <li>Rediriger <em class="term">/shop/</em> vers <em class="term">/boutique/</em> ; retirer panier, compte et commande du sitemap.</li>
+        <li>Publier 6 à 10 articles utiles : « quelle taille de cache clim choisir », « cache clim et copropriété : ce que dit la loi », « cache clim pour Daikin / Mitsubishi / Atlantic », « faut-il un cache pour une pompe à chaleur ».</li>
+        <li>Poser le pixel Meta et relancer les visiteurs non acheteurs sur Instagram et Facebook.</li>
+        <li>Mettre en place le paiement en 3× ou 4×.</li>
+        <li>Ouvrir une offre revendeurs / professionnels : climaticiens, paysagistes, hôtellerie, syndics.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">04</div>
+      <h2>« Est-ce qu'on peut améliorer, même si c'est du WordPress ? »</h2>
+    </div>
+    <div class="callout">
+      <h3>Oui, et il ne faut surtout pas tout refaire</h3>
+      <p>
+        WooCommerce fait tourner une part considérable du e-commerce mondial. Il n'y a pas
+        une seule ligne de ce rapport qui nécessite de changer de plateforme : tout se règle
+        avec des extensions, du contenu et des photos. Refaire le site sur Shopify vous
+        coûterait plusieurs milliers d'euros et vous rendrait exactement le même
+        problème — un site sans avis, sans guide de taille et sans paiement par carte.
+      </p>
+      <p>
+        La seule chose que je remettrais en question à terme, c'est le thème Avada :
+        lourd, difficile à optimiser, et c'est lui qui affiche les noms d'auteur sur vos pages.
+        Mais c'est un chantier de mois 4, pas de semaine 1.
+      </p>
+    </div>
+    <div class="col" style="margin-top:30px">
+      <h3>Une question de fond, pour finir</h3>
+      <p>
+        Aujourd'hui, un visiteur qui cherche « cache clim design » atterrit sur le site d'un
+        atelier de fraisage et d'impression numérique qui fait aussi de la décoration et de
+        l'installation. La boutique est un onglet dans un menu. Vos concurrents, eux, ont
+        des sites qui ne parlent que de ça.
+      </p>
+      <p>
+        Une marque dédiée au cache-clim — avec son nom, son site, ses avis, son configurateur —
+        adossée à l'atelier Rezo-Fabrik qui fabrique, c'est probablement la bonne structure
+        à douze mois. Le dépôt contient d'ailleurs déjà une maquette allant dans ce sens.
+        Mais commencez par la semaine 1 : un moyen de paiement, un prix de livraison et
+        un guide de taille valent plus que n'importe quelle refonte.
+      </p>
+    </div>
+  </section>
+
+  <p class="foot">
+    Audit réalisé le 23 août 2026 à partir du site en production.<br>
+    Sources techniques : en-têtes HTTP, code source des pages, API WooCommerce Store,
+    sitemaps Yoast, CGV, page de devis, tunnel de commande.<br>
+    Comparatifs relevés sur kachklim.fr, moncache-clim.fr, belleclim.fr et devaux-sa.com.
+  </p>
+
+</div>
