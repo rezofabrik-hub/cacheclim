@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="assets/site.css">
 <title>Quelle taille de cache clim choisir ? Mesures, dégagements et compatibilité</title>
-<meta name="description" content="Mesurez votre climatiseur en 3 cotes et trouvez la taille de cache clim adaptée, de 219 à 319 €. Schéma des dégagements à respecter et compatibilité Daikin, Mitsubishi, Atlantic, Toshiba, LG, Samsung, Hitachi, Panasonic et 16 autres marques.">
+<meta name="description" content="Mesurez votre climatiseur en 3 cotes et trouvez la taille de cache clim adaptée. Schéma des dégagements, compatibilité Daikin, Mitsubishi, Atlantic, Toshiba, LG, Samsung, Hitachi, Panasonic et 14 autres marques. Tarifs 219 à 319 €.">
 <link rel="canonical" href="https://lafabrikducacheclim.fr/guide-tailles.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Quelle taille de cache clim choisir ?">
@@ -31,7 +31,7 @@
   "tool": [{ "@type": "HowToTool", "name": "Un mètre ruban" }],
   "step": [
     { "@type": "HowToStep", "name": "Mesurer la largeur", "text": "Relevez la largeur du bloc extérieur d'un bord latéral à l'autre, grilles comprises, sans les tuyaux ni les supports muraux." },
-    { "@type": "HowToStep", "name": "Mesurer la hauteur", "text": "Relevez la hauteur du dessous au dessus du bloc, sans les pieds ni les supports muraux de l'unité." },
+    { "@type": "HowToStep", "name": "Mesurer la hauteur", "text": "Relevez la hauteur du dessous au dessus du bloc, sans les pieds ni les équerres de fixation." },
     { "@type": "HowToStep", "name": "Mesurer la profondeur", "text": "Relevez la distance entre le mur et la face avant de l'unité, hors tuyaux et raccords." },
     { "@type": "HowToStep", "name": "Choisir la taille", "text": "Ajoutez le jeu d'aération de 5 cm en largeur et hauteur et 3 cm en profondeur, puis retenez la plus petite taille de cache qui couvre ces dimensions." }
   ]
@@ -154,7 +154,7 @@
           <!-- légende -->
           <text x="452" y="110" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b">Mesurez le bloc seul,</text>
           <text x="452" y="132" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b">sans les tuyaux ni</text>
-          <text x="452" y="154" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b">ses supports muraux.</text>
+          <text x="452" y="154" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b">les équerres murales.</text>
           <text x="452" y="196" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b">Le cache est toujours</text>
           <text x="452" y="218" font-family="Inter,sans-serif" font-size="13.5" fill="#64748b">plus grand que l'unité.</text>
         </svg>
@@ -164,7 +164,7 @@
       <h3>Les trois mesures, une par une</h3>
       <ul>
         <li><strong>La largeur</strong> — d'un bord latéral à l'autre, en incluant les grilles.</li>
-        <li><strong>La hauteur</strong> — du dessous au dessus du bloc, sans les pieds ni les supports muraux.</li>
+        <li><strong>La hauteur</strong> — du dessous au dessus du bloc, sans les pieds ni les supports.</li>
         <li><strong>La profondeur</strong> — du mur jusqu'à la face avant, hors tuyaux et raccords.</li>
       </ul>
 
@@ -256,7 +256,7 @@
 
       <div class="note" style="border-left-color:#c9a84c;background:#fdf8e9;color:#7a5f10">
         <strong>Une précision qui compte.</strong> Il n'existe pas de « norme légale » de prise de mesure pour
-        un cache clim &mdash; ce qui fait foi, ce sont les <strong>dégagements exigés par le constructeur de votre
+        un cache clim — ce qui fait foi, ce sont les <strong>dégagements exigés par le constructeur de votre
         climatiseur</strong>, publiés dans sa notice d'installation. Ils varient d'une marque et d'une puissance
         à l'autre, en particulier le dégagement frontal.
         <br><br>
@@ -272,7 +272,7 @@
       <p><strong>Un seul prix par taille.</strong> Quel que soit le design ou la finition, le tarif ne dépend que de la taille : la décoration n'est pas une option payante chez nous.</p>
       <p>Chaque cache est un <strong>caisson</strong> : il enveloppe l'unité sur trois faces — avant, gauche, droite — avec un dessus plein qui la protège de la pluie et des feuilles. Les quatre pièces sont assemblées par une visserie laquée dans la teinte exacte du cache.</p>
       <div class="table-wrap" id="grilleTarifs"></div>
-      <p style="font-size:13.5px">Prix TTC, toutes finitions comprises, visserie assortie et fixations murales incluses. <strong>Livraison 35 € TTC</strong> pour un ou deux caches, port et emballage compris, partout en France métropolitaine — ou <strong>retrait gratuit</strong> à l'atelier de Canet-en-Roussillon. Les équerres de fixation sont intégrées au caisson.</p>
+      <p style="font-size:13.5px">Prix TTC, toutes finitions comprises, visserie assortie et fixations murales incluses. <strong>Livraison 35 € TTC</strong> pour un ou deux caches, port et emballage compris, partout en France métropolitaine — ou <strong>retrait gratuit</strong> à l'atelier de Canet-en-Roussillon. Option pied au sol : +30 €.</p>
 
       <h2>Compatibilité par marque de climatiseur</h2>
       <p>Nos caches sont <strong>universels</strong> : ils se posent par-dessus l'unité, sans contact avec le circuit frigorifique et sans aucune intervention sur l'appareil. Ils fonctionnent donc avec toutes les marques, y compris celles qui ne figurent pas dans ce tableau.</p>
@@ -311,12 +311,12 @@
           </tbody>
         </table>
       </div>
-      <p style="font-size:13.5px">Votre marque n'est pas listée ? Elle est compatible quand même &mdash; envoyez-nous une photo et vos trois cotes au <a href="tel:0775769232">07 75 76 92 32</a>, nous confirmons la taille dans la journée.</p>
+      <p style="font-size:13.5px">Votre marque n'est pas listée ? Elle est compatible quand même — envoyez-nous une photo et vos trois cotes au <a href="tel:0775769232">07 75 76 92 32</a>, nous confirmons la taille dans la journée.</p>
 
       <div class="note">
         <strong>Un mot sur la garantie de votre climatiseur.</strong> Poser un cache ne touche ni au circuit
         frigorifique, ni aux raccords, ni à l'électronique : votre garantie constructeur reste entière. Ce qui
-        peut la remettre en cause, c'est un cache qui étouffe l'appareil &mdash; d'où l'importance des dégagements
+        peut la remettre en cause, c'est un cache qui étouffe l'appareil — d'où l'importance des dégagements
         ci-dessus. C'est précisément ce que nos gabarits garantissent.
       </div>
 
@@ -329,7 +329,7 @@
       <p>Deux caches séparés donnent un meilleur rendu qu'un seul grand, et restent démontables indépendamment. Si vous préférez un cache unique, c'est du sur mesure : envoyez-nous vos cotes et une photo.</p>
 
       <h3>Mon unité est au sol, pas au mur</h3>
-      <p>Il existe des solutions au sol, sans percer la façade — utiles en location ou en copropriété. Elles dépendent trop du support et de l'exposition pour être tarifées d'avance : envoyez-nous une photo et vos mesures, nous établissons un devis de fixation. Vous pouvez aussi vous rapprocher d'un installateur de climatisation près de chez vous, nous lui transmettons les cotes et la notice.</p>
+      <p>Choisissez l'option pied au sol (+30 €) plutôt que la fixation murale. Le cache repose alors sur ses propres montants, sans percer la façade — utile en location ou en copropriété.</p>
 
       <div class="note" style="border-left-color:#c9a84c;background:#fdf8e9;color:#7a5f10">
         <strong>Un doute ?</strong> Envoyez-nous une photo de votre climatiseur avec vos trois mesures au <a href="tel:0775769232" style="color:#7a5f10;font-weight:700">07 75 76 92 32</a>, nous vous confirmons la taille dans la journée. C'est gratuit et ça évite un retour.

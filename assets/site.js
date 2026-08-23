@@ -23,9 +23,6 @@ const TAILLES = [
 /* Sur mesure : prix plancher, majoré à la surface au-delà du gabarit XXL */
 const SUR_MESURE = { prix: 349, maxL: 110, maxH: 120, maxP: 65 };
 
-/* Options payantes */
-const OPTIONS = { pied: 30 };
-
 /* Jeu qui garantit l'aération : le cache doit dépasser l'unité */
 const MARGE = { L: 5, H: 5, P: 3 };
 
