@@ -47,6 +47,22 @@ converties en WebP (17 Mo → 3,8 Mo, soit −78 %).
 Les visuels de la gamme « motif / matière » ont été écartés : seuls les
 modèles unis sont présentés.
 
+### Ajouter vos propres photos
+
+Les quinze visuels produit actuels sont des **rendus 3D**, pas des photographies.
+Sur un produit décoratif, la photo réelle d'une pose est ce qui déclenche l'achat :
+remplacez-les dès que possible.
+
+1. Déposez vos photos dans `assets/img/_a-traiter/` — sous-dossier `poses/`,
+   `atelier/` ou `produits/` selon ce qu'elles montrent
+2. Lancez `python3 traiter-photos.py`
+
+Le script redimensionne, convertit en WebP, produit un repli JPEG et **retire les
+données EXIF**, dont les coordonnées GPS que votre téléphone inscrit dans chaque
+photo — publier une photo de chantier sans la nettoyer revient à publier l'adresse
+de votre client. Les consignes de prise de vue sont dans
+[`assets/img/_a-traiter/LISEZ-MOI.md`](assets/img/_a-traiter/LISEZ-MOI.md).
+
 ### Changer un prix
 
 Tous les tarifs sont définis dans la table `TAILLES` de `assets/site.js`, et

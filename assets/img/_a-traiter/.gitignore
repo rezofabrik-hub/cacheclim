@@ -1,0 +1,8 @@
+# Les originaux déposés ici sont des fichiers de travail : on ne les versionne pas.
+# Seuls les fichiers optimisés produits par traiter-photos.py entrent dans le dépôt.
+*
+!.gitignore
+!LISEZ-MOI.md
+!poses/
+!atelier/
+!produits/
