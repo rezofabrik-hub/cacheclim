@@ -14,7 +14,7 @@ elles font tenir la page, mais ce ne sont pas les bonnes.
 | Nom du fichier | La photo à mettre |
 |---|---|
 | `etape-1-decoupe.jpg` | **La Summa F1612 en pleine découpe**, avec la plaque tracée sur la table. C'est la photo la plus parlante de tout l'envoi. |
-| `etape-2-pliage.jpg` | **La face découpée posée à plat**, avec le pli à angle droit et la patte d'accrochage à trou de serrure bien visibles. |
+| `etape-2-assemblage.jpg` | **Les pièces avant assemblage** : une face découpée à plat, ou mieux, le caisson en cours de montage avec la visserie assortie visible. |
 | `etape-3-montage.jpg` | **Le caisson monté sous film** dans l'atelier — en recadrant pour sortir le salarié du cadre, ou avec son accord. |
 | `etape-4-pose.jpg` | **Une pose terminée chez un client.** La plus propre : le caisson corten au bord de la piscine, ou le caisson sur PAC avec ses plots. |
 
@@ -53,10 +53,15 @@ exactement comme le design. La photo réelle remplacera le rendu 3D :
 
 ```
 bambou.jpg   cassis.jpg   eden.jpg   feuillage.jpg   fleurs.jpg
-fleur-de-lys.jpg   horizon.jpg   leopard.jpg   marguerite.jpg
-mosaique.jpg   orient-express.jpg   trefle.jpg   vue-sur-mer.jpg
-zebre.jpg   zoom.jpg   sur-mesure.jpg
+fleur-de-lys.jpg   horizon.jpg   lames.jpg   leopard.jpg
+marguerite.jpg   mosaique.jpg   orient-express.jpg   trefle.jpg
+vue-sur-mer.jpg   zebre.jpg   zoom.jpg   sur-mesure.jpg
 ```
+
+> **`lames.jpg` est prioritaire.** Le modèle à lames horizontales vient
+> d'entrer au catalogue et n'a aucun visuel : il affiche pour l'instant celui
+> de Mosaïque. La photo des deux caissons blancs à lames devant l'atelier fera
+> parfaitement l'affaire, recadrée au carré sur l'un des deux.
 
 Les designs sans photo réelle gardent leur rendu — aucun risque de casser
 quoi que ce soit.

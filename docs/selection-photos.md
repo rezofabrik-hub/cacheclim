@@ -35,7 +35,7 @@ la piscine — celle-là est à écarter ou à recadrer.
 | Caisson **anthracite motif floral, format long**, terrasse bois, unité Daikin visible | Preuve de compatibilité Daikin. À utiliser sur la future page « cache clim pour Daikin ». |
 | Caisson **ivoire motif organique**, mur crépi gris, terrasse terre cuite, palmier nain | Fiche produit du motif, et galerie. |
 | Caisson **anthracite motif herbes** sur PAC, plots antivibratiles, gravier | La seule photo de **pompe à chaleur** : à réserver à la page PAC, c'est un segment entier que personne n'occupe. |
-| **Face découpée sur la table**, pli visible, patte à trou de serrure | Section « L'atelier ». Elle prouve le pli d'un seul tenant. |
+| **Face découpée sur la table**, posée à plat | Section « L'atelier ». Elle montre la pièce avant assemblage. |
 | Caisson devant la **vitrine de l'atelier**, avec l'enseigne aux flamants | Page « qui sommes-nous » et fiche Google Business Profile. |
 | Les **deux caissons devant la façade** (blanc à lames + anthracite vagues) | Idem. Montre le modèle à lames, absent du catalogue en ligne. |
 
@@ -67,10 +67,16 @@ la piscine — celle-là est à écarter ou à recadrer.
 Face avant et deux côtés ajourés, dessus plein. Toutes les poses le montrent.
 Corrigé partout.
 
-**2. La face et les côtés sont pliés dans une seule tôle.**
-Les photos de fabrication montrent le pli à angle droit et les pattes
-d'accrochage à trous de serrure, pliées dans la masse. Aucune vis dans les
-angles. C'est un argument de qualité qui n'apparaissait nulle part.
+**2. Le caisson s'assemble en quatre pièces, avec une visserie assortie.**
+Face avant, côté gauche, côté droit, dessus. Les quatre parties sont réunies par
+une visserie fournie et **laquée dans la teinte exacte du cache** — c'est
+pourquoi on ne la voit pas sur les photos de pose.
+
+*Correction : j'avais d'abord lu sur les photos d'atelier une tôle pliée d'un
+seul tenant. C'est faux, l'atelier l'a rectifié.* Le vrai argument est meilleur :
+la visserie assortie relève du soin d'artisan, le caisson se démonte pour
+l'entretien annuel du climatiseur, et une face abîmée se remplace seule au lieu
+du cache entier.
 Ajouté.
 
 **3. L'atelier a 25 ans, pas 20.**

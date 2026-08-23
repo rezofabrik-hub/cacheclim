@@ -462,7 +462,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .nuancier-head { text-align: center; margin-bottom: 26px; }
 .nuancier-head h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--bleu); margin-bottom: 7px; }
 .nuancier-head p { color: var(--gris-texte); font-size: 14.5px; max-width: 520px; margin: 0 auto; line-height: 1.65; }
-.ral-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+.ral-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 16px; }
 .ral { text-align: center; }
 .ral-chip {
   width: 100%; aspect-ratio: 1 / 1; border-radius: 12px; margin-bottom: 10px;
@@ -475,7 +475,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .color-dots { display: flex; gap: 6px; margin-top: 12px; }
 .cdot { width: 17px; height: 17px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(15,23,42,.18); flex-shrink: 0; }
 
-@media (max-width: 900px) { .ral-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1000px) { .ral-grid { grid-template-columns: repeat(4, 1fr); } }
 @media (max-width: 480px) { .ral-grid { grid-template-columns: repeat(2, 1fr); } .nuancier { padding: 24px 18px; } }
 
 /* ============================================================
