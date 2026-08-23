@@ -539,7 +539,7 @@ footer .footer-logo span { color: rgba(255,255,255,.8); }
 @media (max-width: 480px)  { .footer-grid { grid-template-columns: 1fr; } }
 
 /* Fiches modèle : photo produit en tête d'article */
-.modele-photo { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--gris-border); background: var(--bleu-very-pale); margin-bottom: 34px; }
+.modele-photo { max-width: 440px; margin: 0 auto 34px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--gris-border); background: var(--bleu-very-pale); }
 .modele-photo img { width: 100%; height: auto; display: block; }
 .product-name a { color: inherit; text-decoration: none; }
 .product-name a:hover { color: var(--bleu-mid); text-decoration: underline; }
@@ -591,3 +591,64 @@ footer .footer-col ul li a:hover,
 .footer-bottom a:hover { opacity: 1; color: #ffffff; }
 
 .footer-bottom { border-top: none; padding-top: 8px; }
+
+/* --- En-tête : le logo ne doit jamais se faire écraser par la nav --- */
+.logo { flex-shrink: 0; }
+.logo-text strong, .logo-text span { white-space: nowrap; }
+nav { flex-shrink: 1; min-width: 0; }
+@media (max-width: 1360px) { nav a { font-size: 13px; padding: 8px 10px; } }
+@media (max-width: 1230px) { nav a { font-size: 12.5px; padding: 8px 8px; } .header-inner { gap: 12px; } }
+
+/* --- Cartes produit de hauteur égale, pied aligné --- */
+.products-grid { align-items: stretch; }
+.product-card { display: flex; flex-direction: column; }
+.product-card .product-body { flex: 1 1 auto; display: flex; flex-direction: column; }
+.product-card .product-desc { flex: 0 0 auto; }
+.product-card .product-opts { margin-top: auto; }
+.product-card .product-footer { margin-top: 0; }
+
+/* La navigation compte dix entrées : elle débordait dès 1280 px, largeur
+   d'écran la plus courante sur portable. Le menu replié prend le relais
+   avant tout rognage, au lieu d'attendre 768 px. */
+@media (max-width: 1400px) {
+  nav { display: none; }
+  nav.mobile-open { display: flex; flex-direction: column; position: fixed; top: 113px; left: 0; right: 0; background: white; padding: 12px 16px; gap: 4px; z-index: 99; border-bottom: 1px solid var(--gris-border); box-shadow: var(--shadow); }
+  .hamburger { display: block; }
+}
+
+/* --- Mobile : l'en-tête débordait de ~50 px et faisait défiler la page
+   latéralement. Le mot « Panier » et le sous-titre du logo cèdent la place. --- */
+@media (max-width: 560px) {
+  header { padding: 0 16px; }
+  .header-inner { gap: 8px; }
+  .logo { gap: 9px; }
+  .logo-mark { width: 38px; height: 38px; font-size: 17px; }
+  .logo-text strong { font-size: 13.5px; white-space: normal; line-height: 1.15; }
+  .logo-text span { display: none; }
+  .btn-cart { padding: 10px 12px; }
+  .btn-cart #cartCount { display: none; }
+  .hamburger { font-size: 20px; padding: 0 2px; }
+}
+
+/* --- Deux causes de défilement horizontal sur mobile --- */
+
+/* 1. Un mot insécable (l'adresse e-mail) imposait au bloc contact une
+   largeur minimale supérieure à l'écran, et la colonne de grille suivait. */
+.contact-grid > *, .contact-item, .ci-body { min-width: 0; }
+.ci-body, .ci-body a, .ci-body p { overflow-wrap: anywhere; }
+
+/* 2. Le panier hors écran était positionné en `right: -460px`, ce qui
+   allonge le document. Un `transform` ne crée pas de zone défilable. */
+.cart-sidebar { right: 0; transform: translateX(105%); transition: transform .35s cubic-bezier(.4,0,.2,1); }
+.cart-sidebar.open { right: 0; transform: translateX(0); }
+
+/* --- Zones tactiles garanties ---
+   Les deux boutons de l'en-tête n'avaient pour toute largeur que celle de
+   leur icône Font Awesome. Si la police d'icônes ne charge pas — réseau
+   lent, CDN bloqué — le bouton menu tombe à quelques pixels et la
+   navigation mobile devient inatteignable. On leur impose une taille
+   minimale, qui est aussi le seuil tactile recommandé de 44 px. */
+.hamburger { min-width: 44px; min-height: 44px; display: none; align-items: center; justify-content: center; }
+@media (max-width: 1400px) { .hamburger { display: inline-flex; } }
+.btn-cart { min-height: 44px; }
+@media (max-width: 560px) { .btn-cart { min-width: 44px; justify-content: center; } }
