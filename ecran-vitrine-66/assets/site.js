@@ -31,16 +31,114 @@ var EV66 = {
   var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* -----------------------------------------------------------
-     Vitrine animée de l'accueil : rotation des messages
+     Menu de navigation (sous 1080 px)
      ----------------------------------------------------------- */
-  var diapos = document.querySelectorAll('#ecran .diapo');
-  if (diapos.length && !reduit) {
-    var i = 0;
-    setInterval(function () {
-      diapos[i].classList.remove('actif');
-      i = (i + 1) % diapos.length;
-      diapos[i].classList.add('actif');
-    }, 3600);
+  var burger = document.getElementById('burger'),
+      menu   = document.getElementById('menu');
+
+  if (burger && menu) {
+    var basculer = function (ouvrir) {
+      burger.setAttribute('aria-expanded', ouvrir ? 'true' : 'false');
+      burger.setAttribute('aria-label', ouvrir ? 'Fermer le menu' : 'Ouvrir le menu');
+      menu.hidden = !ouvrir;
+      if (ouvrir) { menu.setAttribute('data-ouvert', 'true'); }
+      else { menu.removeAttribute('data-ouvert'); }
+      document.body.classList.toggle('bloque', ouvrir);
+    };
+
+    burger.addEventListener('click', function () {
+      basculer(burger.getAttribute('aria-expanded') !== 'true');
+    });
+
+    /* un clic sur un lien referme le panneau */
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a')) basculer(false);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+        basculer(false);
+        burger.focus();
+      }
+    });
+
+    /* si l'écran s'élargit au-delà du point de bascule, on referme */
+    window.matchMedia('(min-width: 1080px)').addEventListener('change', function (e) {
+      if (e.matches) basculer(false);
+    });
+  }
+
+  /* -----------------------------------------------------------
+     Vitrine animée de l'accueil : rotation des messages,
+     halo coloré et jauge de défilement
+     ----------------------------------------------------------- */
+  var DUREE = 3800, GLISSEMENT = 780;
+  var diapos = document.querySelectorAll('#ecran .diapo'),
+      halo   = document.getElementById('halo'),
+      jauge  = document.getElementById('jauge');
+
+  if (diapos.length) {
+    var teinte = function (n) {
+      if (halo) halo.style.background = diapos[n].dataset.teinte || '#B3341F';
+    };
+    var relancerJauge = function () {
+      if (!jauge || reduit) return;
+      jauge.classList.remove('court');
+      void jauge.offsetWidth;          /* force le navigateur à repartir de zéro */
+      jauge.classList.add('court');
+    };
+
+    teinte(0);
+    relancerJauge();
+
+    if (!reduit) {
+      var i = 0;
+      setInterval(function () {
+        var sortante = i;
+        diapos[sortante].classList.remove('actif');
+        diapos[sortante].classList.add('sortante');
+
+        i = (i + 1) % diapos.length;
+        diapos[i].classList.add('actif');
+
+        /* une seule diapositive sortante à la fois, sinon elles s'empilent */
+        for (var n = 0; n < diapos.length; n++) {
+          if (n !== sortante) diapos[n].classList.remove('sortante');
+        }
+
+        /* la sortante disparaît dès que l'entrante l'a recouverte : sans cela
+           un liseré de l'ancienne image subsiste sur le bord incliné */
+        setTimeout(function () {
+          diapos[sortante].classList.remove('sortante');
+        }, GLISSEMENT);
+
+        teinte(i);
+        relancerJauge();
+      }, DUREE);
+    }
+  }
+
+  /* -----------------------------------------------------------
+     Rubrique courante surlignée pendant le défilement
+     ----------------------------------------------------------- */
+  var ancres = [].slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+  if (ancres.length && 'IntersectionObserver' in window) {
+    var parId = {};
+    var sections = [];
+    ancres.forEach(function (a) {
+      var el = document.getElementById(a.getAttribute('href').slice(1));
+      if (el) { parId[el.id] = a; sections.push(el); }
+    });
+
+    var vue = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        ancres.forEach(function (a) { a.classList.remove('actif'); });
+        parId[e.target.id].classList.add('actif');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    sections.forEach(function (el) { vue.observe(el); });
   }
 
   /* -----------------------------------------------------------
