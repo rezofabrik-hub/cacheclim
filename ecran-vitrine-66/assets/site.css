@@ -554,3 +554,15 @@ body.bloque{overflow:hidden}
   transform: translateY(-2px); box-shadow: 0 6px 18px rgba(20, 24, 36, .09);
 }
 @media (prefers-reduced-motion: reduce) { .saison-carte { transition: none; } }
+
+/* Lien d'évitement : invisible jusqu'à ce qu'on l'atteigne au clavier.
+   Sans lui, la tabulation traverse les huit rubriques du menu avant
+   d'arriver au texte de la page. */
+.saut {
+  position: absolute; left: 12px; top: -60px; z-index: 100;
+  background: var(--jaune, #FFC43D); color: #141824;
+  font-weight: 600; padding: 11px 18px; border-radius: 0 0 9px 9px;
+  text-decoration: none; transition: top .15s ease;
+}
+.saut:focus { top: 0; }
+@media (prefers-reduced-motion: reduce) { .saut { transition: none; } }

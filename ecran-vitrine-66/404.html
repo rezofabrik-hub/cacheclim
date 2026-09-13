@@ -5,19 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page introuvable | Écran Vitrine 66</title>
 <meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:#141824;color:#fff;font-family:"Poppins",sans-serif;text-align:center;padding:24px}
-h1{font-size:2.2rem;margin:0 0 10px;letter-spacing:-.02em}
-p{color:#B9BECD;margin:0 0 26px}
-a{display:inline-block;background:#FFC43D;color:#141824;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:10px}
+  :root{--nuit:#141824;--jaune:#FFC43D;--pale:#B9BECD}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;
+       background:var(--nuit);color:#fff;font-family:"Poppins",system-ui,sans-serif;
+       padding:32px 20px;line-height:1.6}
+  .boite{max-width:640px;width:100%}
+  h1{font-size:2.1rem;margin:0 0 10px;letter-spacing:-.02em;text-wrap:balance}
+  .intro{color:var(--pale);margin:0 0 30px}
+  h2{font-size:.78rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+     color:var(--pale);margin:0 0 14px}
+  .pistes{list-style:none;margin:0 0 32px;padding:0;
+          display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+  .pistes a{display:block;text-decoration:none;color:#fff;
+            background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+            border-radius:10px;padding:13px 16px;font-weight:500;font-size:.95rem;
+            transition:background .15s ease,border-color .15s ease}
+  .pistes a:hover,.pistes a:focus-visible{background:rgba(255,196,61,.14);border-color:var(--jaune)}
+  .pistes span{display:block;color:var(--pale);font-size:.82rem;font-weight:400;margin-top:2px}
+  .bas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{display:inline-block;background:var(--jaune);color:var(--nuit);text-decoration:none;
+       font-weight:700;padding:14px 24px;border-radius:10px}
+  .tel{color:var(--jaune);text-decoration:none;font-weight:600}
+  a:focus-visible{outline:2px solid var(--jaune);outline-offset:3px}
+  @media (prefers-reduced-motion:reduce){.pistes a{transition:none}}
 </style>
 </head>
 <body>
-<div>
+<div class="boite">
   <h1>Cette page n'existe pas</h1>
-  <p>Elle a peut-être changé d'adresse.</p>
-  <a href="/">Revenir à l'accueil</a>
+  <p class="intro">Elle a peut-être changé d'adresse. Voici les pages les plus consultées du site.</p>
+
+  <h2>Où aller</h2>
+  <ul class="pistes">
+    <li><a href="index.html#metiers">Votre métier<span>24 commerces, du restaurant à la mairie</span></a></li>
+    <li><a href="index.html#simulateur">Estimer votre mensualité<span>Le montant selon la taille</span></a></li>
+    <li><a href="zone-intervention.html">Notre zone<span>200 km autour de Perpignan</span></a></li>
+    <li><a href="blog.html">Conseils et réglementation<span>Autorisation, TLPE, prix</span></a></li>
+    <li><a href="blog-prix-ecran-vitrine.html">Combien ça coûte<span>La grille complète, en clair</span></a></li>
+    <li><a href="ecran-vitrine-perpignan.html">Perpignan<span>Et les 16 autres villes</span></a></li>
+  </ul>
+
+  <div class="bas">
+    <a class="btn" href="index.html">Revenir à l'accueil</a>
+    <span>ou appelez le <a class="tel" href="tel:+33662181401">06 62 18 14 01</a></span>
+  </div>
 </div>
 </body>
 </html>
