@@ -77,7 +77,20 @@ p{margin:0}
 .diapo small{font-size:.8rem;font-weight:700;letter-spacing:.08em;opacity:.8}
 .diapo strong{font-size:1.85rem;font-weight:800;line-height:1.08;letter-spacing:-.02em}
 .diapo em{font-style:normal;font-size:2.9rem;font-weight:800;letter-spacing:-.03em}
-.d1{background:linear-gradient(150deg,#B3341F,#7C1F12);color:#fff}
+/* La première diapositive porte une photo : c'est celle qui vend un plat.
+   Les autres restent typographiques — ce sont des informations, et un
+   aplat se lit mieux qu'une image chargée. Le texte descend en bas de
+   l'écran, le voile ne s'assombrit que sous lui : la photo reste lisible
+   sur les deux tiers hauts, comme sur un vrai visuel d'affichage.
+   Dès que Patrick aura photographié ses propres poses dans le 66, les
+   autres diapositives pourront recevoir le même traitement. */
+.d1{
+  align-content:end;padding-bottom:34px;
+  background:
+    linear-gradient(180deg,rgba(58,8,4,.06) 0%,rgba(58,8,4,.10) 34%,rgba(64,9,4,.72) 58%,rgba(58,8,4,.90) 100%),
+    url("../img/diapo-dessert.webp") center/cover no-repeat;
+  color:#fff;
+}
 .d2{background:linear-gradient(150deg,#1D6B4F,#0F4030);color:#fff}
 .d3{background:linear-gradient(150deg,var(--jaune),#E8A315);color:#2A1F00}
 .vitrine-pied{height:26px;margin:0 auto;width:44%;background:#2A3040;border-radius:0 0 8px 8px}
@@ -362,8 +375,8 @@ textarea{resize:vertical;min-height:96px}
 
 .nav{display:none;align-items:center;gap:1px}
 .nav a{
-  color:#C3C8D6;text-decoration:none;font-size:.875rem;font-weight:500;
-  padding:9px 12px;border-radius:8px;white-space:nowrap;
+  color:#C3C8D6;text-decoration:none;font-size:.855rem;font-weight:500;
+  padding:9px 10px;border-radius:8px;white-space:nowrap;
   transition:color .15s ease,background .15s ease;
 }
 .nav a:hover{color:#fff;background:rgba(255,255,255,.09)}
@@ -395,7 +408,7 @@ textarea{resize:vertical;min-height:96px}
 .menu .menu-actions{display:grid;gap:10px;margin-top:26px}
 body.bloque{overflow:hidden}
 
-@media (min-width:1080px){
+@media (min-width:1180px){
   .nav{display:flex}
   .burger{display:none}
   .menu{display:none!important}
@@ -475,3 +488,18 @@ body.bloque{overflow:hidden}
 .visuel-large img{width:100%;display:block}
 .visuel-large figcaption{padding:13px 16px;font-size:.85rem;color:var(--texte-clair)}
 @media (min-width:720px){ .poses{grid-template-columns:repeat(4,1fr)} }
+
+/* --- blog : date, liste d'articles --- */
+.date{color:#8E95A8;font-size:.85rem;font-weight:500;margin-bottom:12px;letter-spacing:.02em}
+.articles{display:grid;gap:16px;margin-top:34px}
+.article{
+  display:block;background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);
+  padding:24px;text-decoration:none;color:inherit;transition:border-color .15s ease;
+}
+.article:hover{border-color:var(--nuit)}
+.article .date{color:var(--texte-clair);margin-bottom:8px}
+.article h3{font-size:1.22rem;line-height:1.2}
+.article p{color:var(--texte);font-size:.96rem;margin-top:10px;max-width:70ch}
+.article .lire{display:inline-block;margin-top:14px;font-weight:700;font-size:.9rem;color:var(--nuit);
+  text-decoration:underline;text-decoration-color:var(--jaune-fonce);text-underline-offset:3px}
+.bloc--gris .article{background:#fff}
