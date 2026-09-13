@@ -1,20 +1,44 @@
-# La Fabrik du Cache Clim
+# Cache clim — Rezo-Fabrik
 
-> `lafabrikducacheclim.fr` — marque grand public de l'atelier Rezo-Fabrik.
+> Pages cache-clim de **rezo-fabrik.fr**, atelier Rezo-Fabrik, Canet-en-Roussillon (66).
 
-Site de la marque dédiée aux caches pour climatiseur et pompe à chaleur, adossée
-à l'atelier **Rezo-Fabrik** (Canet-en-Roussillon, 66).
+Contenu du pôle cache pour climatiseur et pompe à chaleur : gamme, tarifs, guide de
+mesure, FAQ, pose, pages communes et fiches modèle.
 
-## Architecture de marque
+## Ce dépôt et le site en ligne
 
-| | Rôle |
+Le dépôt est un **atelier de rédaction**, pas un site à déployer. Le site public est
+`rezo-fabrik.fr`, sous WordPress : le contenu travaillé ici part ensuite dans WordPress
+(voir [`docs/kit-wordpress.md`](docs/kit-wordpress.md)).
+
+Une piste de marque distincte, `lafabrikducacheclim.fr`, a été explorée puis
+**abandonnée** : tout est rattaché à Rezo-Fabrik. Le domaine n'a jamais été acheté et
+ne doit plus apparaître nulle part.
+
+Sur les 45 pages du dépôt, **15 existent déjà en ligne** et portent leur balise
+canonique vers leur URL WordPress réelle. Les **30 autres ne sont pas encore publiées** :
+leur canonique est remplacée par un commentaire qui indique l'URL à rétablir le jour de
+la mise en ligne, et elles sont absentes de `sitemap.xml` — un sitemap qui annonce des
+404 fait plus de mal que de bien.
+
+| Fichier du dépôt | URL en ligne |
 |---|---|
-| **rezo-fabrik.fr** | L'atelier : fraisage, impression numérique, décoration, installation. Cible B2B et projets sur devis. |
-| **La Fabrik du Cache Clim** | La boutique : un seul produit, un seul discours, un seul parcours d'achat. Cible grand public. |
+| `index.html` | `/cache-clim/` |
+| `faq.html` | `/faq-cache-clim/` |
+| `urbanisme.html` | `/cache-clim-urbanisme/` |
+| `bruit-climatiseur.html` | `/bruit-climatisation-exterieure/` |
+| `pros.html` | `/cache-clim-installateurs/` |
+| `cgv.html` | `/conditions-generales/` |
+| `mentions-legales.html` | `/mentions-legales/` |
+| `confidentialite.html` | `/politique-de-deconfidentialite/` |
+| `cache-clim-argeles-sur-mer.html` | `/cache-clim-argeles/` |
+| `cache-clim-canet-en-roussillon.html` | `/cache-clim-canet/` |
+| `cache-clim-{ceret,narbonne,perpignan,prades,thuir}.html` | même slug |
 
-Le site actuel mélange les deux, ce qui fait qu'un visiteur cherchant « cache
-clim design » atterrit sur une page d'atelier de fraisage. La séparation est la
-recommandation centrale de l'audit.
+Le site en ligne a par ailleurs 8 pages cache-clim que le dépôt ne contient pas :
+`aeration-cache-clim`, `cache-clim-copropriete`, `cache-pompe-a-chaleur`,
+`cache-clim-cabestany`, `cache-clim-elne`, `cache-clim-rivesaltes`,
+`conseils-cache-clim`, `boutique-cache-clim-sur-mesure`.
 
 ## Le site
 
@@ -79,10 +103,9 @@ toujours à la grille.
 
 ### Domaine
 
-Les balises canoniques pointent vers `lafabrikducacheclim.fr`. Ce domaine ne
-résout vers aucun serveur au 23 août 2026 — à confirmer auprès d'un bureau
-d'enregistrement avant achat. Pour un autre nom, remplacer l'URL dans les quatre
-pages, `sitemap.xml` et `robots.txt`.
+Tout pointe vers `https://www.rezo-fabrik.fr` (avec `www`, c'est la forme canonique).
+`sitemap.xml` ne liste que les 15 pages réellement en ligne ; `robots.txt` renvoie vers
+le sitemap Yoast du site, `sitemap_index.xml`.
 
 ## Documentation
 

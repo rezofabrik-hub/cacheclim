@@ -7,4 +7,5 @@ Disallow: /commande
 Disallow: /mon-compte
 Disallow: /*?add-to-cart=
 
-Sitemap: https://lafabrikducacheclim.fr/sitemap.xml
+Sitemap: https://www.rezo-fabrik.fr/sitemap_index.xml
+/

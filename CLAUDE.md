@@ -1,7 +1,7 @@
-# La Fabrik du Cache Clim — contexte projet
+# Cache clim — Rezo-Fabrik — contexte projet
 
-Dépôt du site statique **lafabrikducacheclim.fr**, marque grand public de l'atelier
-**Rezo-Fabrik** (SARL, SIREN 953 641 701), Canet-en-Roussillon (66).
+Dépôt de rédaction du pôle **cache clim** de **rezo-fabrik.fr**
+(SARL Rezo-Fabrik, SIREN 953 641 701), Canet-en-Roussillon (66).
 Gérant : Laurent Mienville.
 
 Ce fichier est la mémoire du projet. **Lis-le en entier avant toute intervention.**
@@ -30,15 +30,28 @@ https://www.rezo-fabrik.fr
 - ⚠️ Trois variantes de la zone ont circulé — « ZA », « ZI », « Zone » Las Bigues.
   **« ZA » est la bonne**, le dépôt a été unifié dessus le 13 septembre 2026.
 
-## 2. Architecture de marque
+## 2. Une seule marque : Rezo-Fabrik
 
-| | Rôle |
-|---|---|
-| **rezo-fabrik.fr** | L'atelier : fraisage, impression numérique, enseigne, décoration, pose. B2B et devis. WordPress/Avada. |
-| **La Fabrik du Cache Clim** (ce dépôt) | La boutique : un produit, un discours, un parcours d'achat. Grand public. Site statique. |
+⚠️ **Arbitrage de Laurent, 13 septembre 2026 — ne pas y revenir.**
 
-La séparation est la recommandation centrale de l'audit : un visiteur qui cherche
-« cache clim design » ne doit pas atterrir sur une page d'atelier de fraisage.
+Un audit avait recommandé de sortir le cache clim sous une marque distincte,
+« La Fabrik du Cache Clim », sur le domaine `lafabrikducacheclim.fr`. **Cette piste est
+abandonnée.** Le domaine n'a jamais été acheté, la marque n'existe pas, et ni le nom ni
+le domaine ne doivent réapparaître nulle part. Tout est Rezo-Fabrik.
+
+Le dépôt est un **atelier de rédaction, pas un site à déployer**. Le site public est
+`rezo-fabrik.fr` sous WordPress/Avada ; le contenu travaillé ici y est ensuite repris
+(voir `docs/kit-wordpress.md`).
+
+**15 des 45 pages existent déjà en ligne** et portent leur canonique vers leur URL
+WordPress réelle — la correspondance est dans le `README.md`, les slugs ne se devinent
+pas (`faq.html` → `/faq-cache-clim/`, `bruit-climatiseur.html` →
+`/bruit-climatisation-exterieure/`, `cgv.html` → `/conditions-generales/`…).
+Les **30 autres ne sont pas publiées** : pas de canonique, un commentaire HTML indique
+l'URL à rétablir le jour de la mise en ligne, et elles sont hors `sitemap.xml`.
+
+**Avant d'ajouter ou de modifier une canonique, vérifier que l'URL répond 200.**
+Une canonique vers une 404 est pire que pas de canonique du tout.
 
 ## 3. Le dépôt
 
@@ -73,8 +86,15 @@ en dur dans les pages et signale les écarts.
   qu'elle ne réintroduise pas de vieilles données.
 - Le JSON-LD est présent dans **76 blocs** répartis sur les pages. Après toute
   modification, revalider : `python3` + `json.loads` sur chaque bloc `application/ld+json`.
-- Les balises canoniques pointent vers `lafabrikducacheclim.fr`. Ce domaine ne résolvait
-  vers aucun serveur au 23 août 2026 — à confirmer avant achat.
+- Toutes les URL absolues pointent vers `https://www.rezo-fabrik.fr` — **avec `www`**,
+  c'est la forme canonique servie par le site. `robots.txt` renvoie vers le sitemap
+  Yoast (`sitemap_index.xml`), pas vers le `sitemap.xml` du dépôt.
+- Les `og:image` pointent vers un visuel réellement hébergé sur WordPress. Les images du
+  dépôt ne sont sur aucun serveur : ne pas les remettre en `og:image` tant qu'elles ne
+  sont pas dans la médiathèque. Dimensions déclarées : **960×648**, celles du fichier réel.
+  **À faire** : ce visuel est sous les 1200×630 recommandés, les réseaux risquent la
+  petite vignette au lieu de la grande carte. Prévoir un visuel de partage par fiche
+  modèle, en 1200×630 au minimum.
 
 ## 4. Règles métier — non négociables
 
@@ -106,9 +126,10 @@ Deux grilles coexistent et ne disent pas la même chose :
 | Ce dépôt (`assets/site.js`, `docs/grille-tarifaire.md`) | 219 → 319 € | dès 349 € |
 | Boutique WooCommerce de rezo-fabrik.fr | 230 → 325 € en uni | dès 399 € |
 
-La grille du dépôt est la nouvelle, positionnée sous Kach Klim. Tant que les deux sites
-sont en ligne, **un même produit est affiché à deux prix différents**. À trancher avec
-Laurent avant toute mise en ligne du domaine.
+La grille du dépôt est la nouvelle, positionnée sous Kach Klim. **La boutique en ligne
+affiche toujours l'ancienne** : les pages rédigées ici annoncent donc un prix que le
+panier ne pratique pas. À trancher avec Laurent, et à corriger dans WooCommerce avant
+de publier les pages tarifaires.
 
 ## 5. Les photos
 
@@ -124,9 +145,9 @@ Laurent avant toute mise en ligne du domaine.
 - Ses photos arrivent souvent compressées (540-960 px, filigrane « SHOT ON REDMI 7 »).
   Demander les originaux quand la qualité compte.
 
-## 6. L'autre site : rezo-fabrik.fr (WordPress / Avada)
+## 6. Le site en ligne : rezo-fabrik.fr (WordPress / Avada)
 
-Utile quand une info doit être répercutée des deux côtés. Stack : WordPress, thème
+C'est là que le contenu de ce dépôt finit par être publié. Stack : WordPress, thème
 **Avada** (Fusion Builder + Layout Sections), WooCommerce, Yoast, Stripe live,
 Redis Object Cache, Cloudflare devant, PHP 8.3.
 
@@ -165,7 +186,8 @@ versionnement. Compte admin utilisé jusqu'ici : `sandra`.
    prospects. **À traiter en premier.**
 3. **URL Facebook et Instagram** à obtenir, puis corriger les 43 pieds de page.
 4. Arbitrer le conflit de grille tarifaire (§4).
-5. Confirmer la disponibilité du domaine `lafabrikducacheclim.fr`.
+5. Publier sur WordPress les 30 pages du dépôt qui n'y sont pas encore, puis
+   rétablir leur canonique et les rajouter au sitemap.
 6. Remplacer les rendus 3D par de vraies photos de pose.
 7. Connecter Jetpack et Google Search Console côté rezo-fabrik.fr (en attente de
    validation par Laurent — les connexions OAuth sont à lui).

@@ -1,5 +1,5 @@
 /* =============================================================
-   La Fabrik du Cache Clim — logique commune
+   Rezo-Fabrik — cache clim, logique commune
    -------------------------------------------------------------
    TOUS LES PRIX DU SITE SONT DÉFINIS ICI, ET NULLE PART AILLEURS.
    Pour changer un tarif, modifiez la table TAILLES ci-dessous :
