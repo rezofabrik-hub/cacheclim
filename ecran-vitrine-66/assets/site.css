@@ -12,6 +12,11 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+/* L'en-tête est collant : sans cette marge, un clic sur une rubrique fait
+   passer le haut de la section dessous. La valeur couvre les 69 px de
+   l'en-tête plus un peu d'air, pour que toutes les rubriques arrivent au
+   même endroit quelle que soit celle qu'on choisit. */
+[id]{scroll-margin-top:78px}
 body{
   margin:0;font-family:"Poppins",system-ui,sans-serif;color:var(--nuit);
   background:#fff;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;
