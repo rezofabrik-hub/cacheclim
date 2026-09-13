@@ -13,6 +13,7 @@
 var EV66 = {
   CLE_WEB3FORMS: 'VOTRE_CLE_WEB3FORMS',
   TEL: '+33662181401',
+  TEL_AFF: '06 62 18 14 01',
   WHATSAPP: '33662181401',
 
   /* Mensualités client HT, tout compris. [48 mois, 60 mois] */
@@ -229,36 +230,84 @@ var EV66 = {
   }
 
   /* -----------------------------------------------------------
-     Formulaires : clé unique, et repli WhatsApp tant qu'elle
-     n'est pas renseignée. Vaut pour toutes les pages du site.
+     Formulaires : envoi sans quitter la page, confirmation
+     affichée sur place, et repli WhatsApp si quoi que ce soit
+     échoue. Une demande ne doit jamais se perdre en silence.
      ----------------------------------------------------------- */
   var formulaires = document.querySelectorAll('form[action*="web3forms"]');
   var configuree = EV66.CLE_WEB3FORMS !== 'VOTRE_CLE_WEB3FORMS' && EV66.CLE_WEB3FORMS !== '';
+
+  var IGNORE = ['access_key', 'subject', 'from_name', 'botcheck'];
+  var VIDES = ['Je ne sais pas', 'À déterminer', 'Je ne sais pas encore'];
+
+  function recapitulatif(form) {
+    var lignes = [];
+    new FormData(form).forEach(function (v, k) {
+      if (IGNORE.indexOf(k) > -1) return;
+      if (!v || VIDES.indexOf(v) > -1) return;
+      lignes.push(k.replace(/_/g, ' ') + ' : ' + v);
+    });
+    return 'Demande de devis — Écran Vitrine 66\n\n' + lignes.join('\n');
+  }
+
+  function versWhatsApp(form) {
+    window.open('https://wa.me/' + EV66.WHATSAPP + '?text=' +
+                encodeURIComponent(recapitulatif(form)), '_blank');
+  }
+
+  function confirmer(form, parWhatsApp) {
+    var bloc = document.createElement('div');
+    bloc.className = 'merci';
+    bloc.setAttribute('role', 'status');
+    bloc.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" ' +
+      'stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg>' +
+      '<b>Votre demande est partie.</b>' +
+      '<p>' + (parWhatsApp
+        ? 'Elle s\u2019ouvre dans WhatsApp : il ne reste qu\u2019à appuyer sur envoyer.'
+        : 'Nous revenons vers vous sous 48 heures ouvrées.') +
+      ' Si c\u2019est urgent, appelez le <a href="tel:' + EV66.TEL + '">' + EV66.TEL_AFF + '</a>.</p>';
+    form.replaceWith(bloc);
+    bloc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 
   formulaires.forEach(function (form) {
     var cle = form.querySelector('input[name="access_key"]');
     if (cle) cle.value = EV66.CLE_WEB3FORMS;
 
     var repli = form.querySelector('.repli');
-    if (configuree) { if (repli) repli.style.display = 'none'; return; }
-    if (repli) repli.style.display = 'block';
+    if (repli) repli.style.display = configuree ? 'none' : 'block';
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!form.reportValidity()) return;
 
-      var ignore = ['access_key', 'subject', 'from_name', 'botcheck'],
-          vides  = ['Je ne sais pas', 'À déterminer', 'Je ne sais pas encore'],
-          lignes = [];
+      /* Sans clé renseignée, la demande part directement par WhatsApp */
+      if (!configuree) {
+        versWhatsApp(form);
+        confirmer(form, true);
+        return;
+      }
 
-      new FormData(form).forEach(function (v, k) {
-        if (ignore.indexOf(k) > -1) return;
-        if (!v || vides.indexOf(v) > -1) return;
-        lignes.push(k.replace(/_/g, ' ') + ' : ' + v);
+      var bouton = form.querySelector('button[type="submit"]');
+      var texte = bouton ? bouton.textContent : '';
+      if (bouton) { bouton.disabled = true; bouton.textContent = 'Envoi en cours…'; }
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        confirmer(form, false);
+      }).catch(function () {
+        /* L'e-mail n'est pas parti : plutôt que de perdre la demande,
+           on la bascule sur WhatsApp. */
+        versWhatsApp(form);
+        confirmer(form, true);
+      }).finally(function () {
+        if (bouton) { bouton.disabled = false; bouton.textContent = texte; }
       });
-
-      var txt = 'Demande de devis — Écran Vitrine 66\n\n' + lignes.join('\n');
-      window.open('https://wa.me/' + EV66.WHATSAPP + '?text=' + encodeURIComponent(txt), '_blank');
     });
   });
 })();

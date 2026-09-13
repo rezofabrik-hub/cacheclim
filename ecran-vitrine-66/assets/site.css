@@ -515,3 +515,13 @@ body.bloque{overflow:hidden}
 .article .lire{display:inline-block;margin-top:14px;font-weight:700;font-size:.9rem;color:var(--nuit);
   text-decoration:underline;text-decoration-color:var(--jaune-fonce);text-underline-offset:3px}
 .bloc--gris .article{background:#fff}
+
+/* --- confirmation après envoi du formulaire --- */
+.merci{
+  background:#fff;border-radius:var(--rayon);padding:34px 28px;color:var(--nuit);
+  display:grid;justify-items:center;text-align:center;gap:10px;
+}
+.merci svg{width:46px;height:46px;color:#1D6B4F;background:#E6F4EE;border-radius:50%;padding:10px}
+.merci b{font-size:1.25rem;font-weight:800;letter-spacing:-.02em}
+.merci p{color:var(--texte);font-size:.96rem;max-width:44ch}
+.merci a{color:var(--nuit);font-weight:700}
