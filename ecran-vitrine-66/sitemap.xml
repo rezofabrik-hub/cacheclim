@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ecran-vitrine-66.fr/</loc><lastmod>2026-09-13</lastmod><priority>1.0</priority></url>
+  <!-- Zone d'intervention : page pivot vers les 17 pages villes -->
+  <url><loc>https://ecran-vitrine-66.fr/zone-intervention.html</loc><lastmod>2026-09-13</lastmod><priority>0.9</priority></url>
   <!-- Pages métiers : elles convertissent mieux que les pages villes -->
   <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-restaurant.html</loc><lastmod>2026-09-13</lastmod><priority>0.9</priority></url>
   <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-agence-immobiliere.html</loc><lastmod>2026-09-13</lastmod><priority>0.9</priority></url>
@@ -15,9 +17,16 @@
   <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-saint-cyprien.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-le-barcares.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-cabestany-claira.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-saint-esteve.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-rivesaltes.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-thuir.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-elne.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-ceret.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-leucate.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-narbonne.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-beziers.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-carcassonne.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-agde.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://ecran-vitrine-66.fr/ecran-vitrine-montpellier.html</loc><lastmod>2026-09-13</lastmod><priority>0.8</priority></url>
   <url><loc>https://ecran-vitrine-66.fr/mentions-legales.html</loc><lastmod>2026-09-13</lastmod><priority>0.1</priority></url>
 </urlset>

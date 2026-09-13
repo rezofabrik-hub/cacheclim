@@ -112,14 +112,16 @@ d'affichage dynamique pour les commerçants des Pyrénées-Orientales. Matériel
 ADN Digital Solution, Patrick Thais sur le terrain, RezoFabrik à la
 communication.
 
-Statique lui aussi, sans dépendance ni étape de build. 19 pages : accueil,
-6 pages métiers, 10 pages villes, mentions légales et page d'erreur.
+Statique lui aussi, sans dépendance ni étape de build. 27 pages : accueil,
+zone d'intervention, 6 pages métiers, 17 pages villes, mentions légales et
+page d'erreur. Zone couverte : 200 km autour de Perpignan, France uniquement.
 
 | Fichier | Rôle |
 |---|---|
 | `ecran-vitrine-66/index.html` | Accueil : hero animé, 4 solutions, simulateur de mensualité, guide des tailles, ScreenLab, FAQ, formulaire |
 | `ecran-vitrine-66/ecran-vitrine-<métier>.html` | 6 pages métiers — restauration, immobilier, pharmacie et institut, boulangerie et boucherie, coiffure et optique, auto-école et salle de sport |
-| `ecran-vitrine-66/ecran-vitrine-<ville>.html` | 10 pages villes, de Perpignan à Montpellier |
+| `ecran-vitrine-66/ecran-vitrine-<ville>.html` | 17 pages villes, de Perpignan à Montpellier |
+| `ecran-vitrine-66/zone-intervention.html` | Les 200 km : trois couronnes, les communes sans page dédiée, et pourquoi la zone s'arrête à la frontière |
 | `ecran-vitrine-66/assets/site.js` | **Source unique** : clé du formulaire, téléphone, grille des mensualités |
 | `ecran-vitrine-66/assets/site.css` | Feuille de style commune aux 19 pages |
 | `ecran-vitrine-66/LISEZ-MOI.txt` | Mise en ligne, domaine, ce qu'il reste à faire |

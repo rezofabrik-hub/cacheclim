@@ -2,19 +2,20 @@
 ================================================
 
 Site en HTML/CSS/JS, sans framework, sans étape de build.
-19 pages : l'accueil, 6 pages métiers, 10 pages villes, les mentions
-légales et la page d'erreur.
+27 pages : l'accueil, la zone d'intervention, 6 pages métiers,
+17 pages villes, les mentions légales et la page d'erreur.
 
 
 CONTENU DU DOSSIER
 -------------------
   index.html .................... la page principale
+  zone-intervention.html ........ les 200 km, France uniquement
   ecran-vitrine-<metier>.html ... 6 pages métiers
-  ecran-vitrine-<ville>.html .... 10 pages villes
+  ecran-vitrine-<ville>.html .... 17 pages villes
   mentions-legales.html ......... page légale (À COMPLÉTER, voir plus bas)
   404.html ...................... page d'erreur
   robots.txt .................... autorise l'indexation
-  sitemap.xml ................... plan du site, les 18 pages indexables
+  sitemap.xml ................... plan du site, les 26 pages indexables
   assets/site.css ............... toute la mise en forme du site
   assets/site.js ................ LA CLÉ DU FORMULAIRE ET LES TARIFS
   img/ .......................... 14 photos d'installations
@@ -30,7 +31,7 @@ nulle part ailleurs :
   TEL / WHATSAPP le numéro de téléphone
   GRILLE         les mensualités du simulateur
 
-Les 19 pages lisent ce fichier. Vous ne modifiez jamais la même chose
+Les 27 pages lisent ce fichier. Vous ne modifiez jamais la même chose
 deux fois.
 
 
@@ -48,8 +49,8 @@ POUR RECEVOIR LES DEMANDES PAR E-MAIL (recommandé, 2 minutes)
 2. Ouvrir assets/site.js avec le Bloc-notes (pas Word)
 3. Ligne 14 environ, remplacer VOTRE_CLE_WEB3FORMS par la clé,
    en gardant les apostrophes
-4. Enregistrer. Le repli WhatsApp se désactive tout seul, sur toutes
-   les pages d'un coup.
+4. Enregistrer. Le repli WhatsApp se désactive tout seul, sur les
+   27 pages d'un coup.
 
 Gratuit jusqu'à 250 demandes par mois.
 
@@ -100,7 +101,7 @@ Méthode B (garder les DNS chez Gandi) :
 
 REMPLACER LE DOMAINE PROVISOIRE
 --------------------------------
-« ecran-vitrine-66.fr » est écrit dans 20 fichiers. Une commande suffit,
+« ecran-vitrine-66.fr » est écrit dans une trentaine de fichiers. Une commande suffit,
 depuis le dossier du site :
 
     sh outils/changer-domaine.sh votre-vrai-domaine.fr
@@ -146,7 +147,7 @@ reprend sans autre modification.
 
 RÈGLES ÉDITORIALES APPLIQUÉES DANS TOUT LE SITE
 ------------------------------------------------
-Elles ont guidé la rédaction des 16 nouvelles pages, gardez-les en tête
+Elles ont guidé la rédaction des 24 pages d'atterrissage, gardez-les en tête
 si vous écrivez la suite :
 
 - Aucun texte copié du fabricant ni d'un concurrent. Les faits se
@@ -161,9 +162,26 @@ si vous écrivez la suite :
   des obligations propres à ce métier. Des pages identiques où seul le
   nom change sont des doorway pages, et Google déclasse le domaine entier.
 
+LA ZONE DES 200 KM
+-------------------
+zone-intervention.html porte le rayon de 200 km autour de Perpignan et
+sert de pivot vers les 17 pages villes. Elle nomme aussi, en texte, la
+cinquantaine de communes qui n'ont pas de page à elles : Collioure,
+Prades, Gruissan, Limoux, Pézenas, Sète, Nîmes, Toulouse, Foix…
+
+C'est ce qui permet de couvrir la zone en référencement sans fabriquer
+cinquante pages jumelles. Une commune citée sur cette page est déjà
+couverte ; une commune ne mérite sa propre page que si l'on a quelque
+chose de précis à en dire.
+
+La page dit aussi noir sur blanc que nous n'allons pas en Espagne, et
+pourquoi : financement, garantie, facturation et SAV relèvent d'un autre
+cadre juridique. C'est une question qui revient sans arrêt à Perpignan,
+autant y répondre une bonne fois.
+
 Si vous ajoutez une ville, écrivez-la vraiment, ou ne l'ajoutez pas.
-Mieux vaut dix pages différentes que trente pages jumelles. Et ajoutez
-l'URL dans sitemap.xml.
+Mieux vaut dix-sept pages différentes que cinquante pages jumelles. Et
+ajoutez l'URL dans sitemap.xml.
 
 
 AVANT DE COMMUNIQUER DESSUS
