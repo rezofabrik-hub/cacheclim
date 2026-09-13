@@ -45,7 +45,9 @@ Rien à installer.
 
 POUR RECEVOIR LES DEMANDES PAR E-MAIL (recommandé, 2 minutes)
 --------------------------------------------------------------
-1. web3forms.com > saisir josydiffusion@gmail.com > la clé arrive par mail
+1. web3forms.com > saisir commercial-rezofabrik@gmail.com > la clé arrive
+   par mail. C'est l'adresse qui recevra les demandes : l'agence filtre
+   avant de transmettre à Patrick.
 2. Ouvrir assets/site.js avec le Bloc-notes (pas Word)
 3. Ligne 14 environ, remplacer VOTRE_CLE_WEB3FORMS par la clé,
    en gardant les apostrophes
