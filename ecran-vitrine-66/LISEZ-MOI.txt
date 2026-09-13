@@ -1,0 +1,174 @@
+ÉCRAN VITRINE 66 — site statique prêt à publier
+================================================
+
+Site en HTML/CSS/JS, sans framework, sans étape de build.
+19 pages : l'accueil, 6 pages métiers, 10 pages villes, les mentions
+légales et la page d'erreur.
+
+
+CONTENU DU DOSSIER
+-------------------
+  index.html .................... la page principale
+  ecran-vitrine-<metier>.html ... 6 pages métiers
+  ecran-vitrine-<ville>.html .... 10 pages villes
+  mentions-legales.html ......... page légale (À COMPLÉTER, voir plus bas)
+  404.html ...................... page d'erreur
+  robots.txt .................... autorise l'indexation
+  sitemap.xml ................... plan du site, les 18 pages indexables
+  assets/site.css ............... toute la mise en forme du site
+  assets/site.js ................ LA CLÉ DU FORMULAIRE ET LES TARIFS
+  img/ .......................... 14 photos d'installations
+  outils/changer-domaine.sh ..... remplace le domaine partout, en une commande
+
+
+UN SEUL FICHIER À CONNAÎTRE : assets/site.js
+---------------------------------------------
+Tout ce qui se règle sur ce site se règle en haut de ce fichier, et
+nulle part ailleurs :
+
+  CLE_WEB3FORMS  la clé du formulaire (voir ci-dessous)
+  TEL / WHATSAPP le numéro de téléphone
+  GRILLE         les mensualités du simulateur
+
+Les 19 pages lisent ce fichier. Vous ne modifiez jamais la même chose
+deux fois.
+
+
+LE SITE FONCTIONNE DÉJÀ SANS RIEN CONFIGURER
+---------------------------------------------
+Tant que la clé Web3Forms n'est pas renseignée, les formulaires de
+toutes les pages basculent automatiquement sur WhatsApp : au clic sur
+« Envoyer ma demande », le récapitulatif part vers le 06 62 18 14 01.
+Rien à installer.
+
+
+POUR RECEVOIR LES DEMANDES PAR E-MAIL (recommandé, 2 minutes)
+--------------------------------------------------------------
+1. web3forms.com > saisir josydiffusion@gmail.com > la clé arrive par mail
+2. Ouvrir assets/site.js avec le Bloc-notes (pas Word)
+3. Ligne 14 environ, remplacer VOTRE_CLE_WEB3FORMS par la clé,
+   en gardant les apostrophes
+4. Enregistrer. Le repli WhatsApp se désactive tout seul, sur toutes
+   les pages d'un coup.
+
+Gratuit jusqu'à 250 demandes par mois.
+
+Chaque demande indique la page d'où elle vient (champ « Page ») :
+vous saurez si le lead arrive de la page Perpignan, de la page
+restaurant ou de l'accueil.
+
+
+METTRE À JOUR UN TARIF
+-----------------------
+Dans assets/site.js, table GRILLE, au format [48 mois, 60 mois].
+Cela met à jour le simulateur de l'accueil.
+
+Les tableaux de tarifs affichés sur les pages villes sont en revanche
+écrits en clair dans chaque page : si vous changez la grille, cherchez
+les montants dans les fichiers .html et corrigez-les aussi.
+
+
+MISE EN LIGNE — CLOUDFLARE PAGES (gratuit)
+-------------------------------------------
+Méthode simple, sans rien installer :
+1. dash.cloudflare.com > Workers & Pages > Create > Pages > Upload assets
+2. Nommer le projet « ecran-vitrine-66 », glisser TOUT le dossier
+   ecran-vitrine-66, déployer
+3. Le site est en ligne sur https://ecran-vitrine-66.pages.dev
+
+Méthode en ligne de commande :
+    npm i -g wrangler
+    wrangler login
+    wrangler pages deploy ./ecran-vitrine-66 --project-name=ecran-vitrine-66
+
+
+DOMAINE PRIS CHEZ GANDI — 2 méthodes
+-------------------------------------
+Méthode A (la plus simple, recommandée) :
+  Gandi > le domaine > onglet Serveurs de noms > « Serveurs de noms externes »
+  Saisir les 2 serveurs que Cloudflare affiche quand on ajoute le site
+  (Cloudflare > Add a domain > plan Free). Puis dans le projet Pages :
+  Custom domains > Set up a domain. Tout devient automatique.
+
+Méthode B (garder les DNS chez Gandi) :
+  Gandi > le domaine > Enregistrements DNS > ajouter :
+    CNAME   www   ecran-vitrine-66.pages.dev
+    ALIAS   @     ecran-vitrine-66.pages.dev      (Gandi gère l'ALIAS)
+  Puis Cloudflare Pages > Custom domains > ajouter le domaine.
+  Le certificat HTTPS arrive en quelques minutes.
+
+
+REMPLACER LE DOMAINE PROVISOIRE
+--------------------------------
+« ecran-vitrine-66.fr » est écrit dans 20 fichiers. Une commande suffit,
+depuis le dossier du site :
+
+    sh outils/changer-domaine.sh votre-vrai-domaine.fr
+
+Puis vérifier qu'il ne reste rien :
+
+    grep -r ecran-vitrine-66.fr .
+
+
+CE QU'IL RESTE À FAIRE AVANT LA MISE EN LIGNE
+----------------------------------------------
+1. mentions-legales.html : raison sociale, forme juridique, SIRET,
+   adresse du siège. Le bandeau jaune en haut de la page rappelle
+   ce qui manque ; supprimez-le une fois complété.
+2. La clé Web3Forms dans assets/site.js (facultatif, le repli WhatsApp
+   fonctionne).
+3. Le vrai domaine (commande ci-dessus).
+
+
+APRÈS LA MISE EN LIGNE
+-----------------------
+1. Google Search Console > ajouter le site > soumettre sitemap.xml
+2. Créer Instagram puis la Page Facebook au même nom
+3. NE PAS créer de fiche Google Business à l'adresse de Canet :
+   il y a déjà Rezofabrik et Solaire 66. Une 3e fiche = risque de
+   suspension des deux autres. Si fiche il y a, c'est à Patrick de la
+   créer à sa propre adresse professionnelle.
+
+
+LES PHOTOS
+-----------
+Les 14 photos de img/ viennent de la plaquette du fabricant et montrent
+des installations faites ailleurs en France. Elles tiennent leur rôle
+en attendant, et elles sont créditées comme telles sur l'accueil.
+
+Remplacez-les dès la première pose de Patrick dans le 66. Une vitrine
+photographiée à Perpignan vaut mieux que dix photos de région parisienne,
+et c'est ce qui fera la différence avec le site du fabricant.
+
+Pour remplacer une photo : gardez le même nom de fichier, le site la
+reprend sans autre modification.
+
+
+RÈGLES ÉDITORIALES APPLIQUÉES DANS TOUT LE SITE
+------------------------------------------------
+Elles ont guidé la rédaction des 16 nouvelles pages, gardez-les en tête
+si vous écrivez la suite :
+
+- Aucun texte copié du fabricant ni d'un concurrent. Les faits se
+  reprennent (4000 cd/m², IP55, Samsung et LG), les formulations jamais.
+- Pas de statistique invérifiable, pas de faux témoignage, pas de
+  compteur inventé.
+- Aucun logo d'enseigne cliente du fabricant.
+- Aucune commission d'agent nulle part : ni dans les pages, ni dans les
+  commentaires du code, ni dans les messages de commit.
+- Aucune page gabarit. Chaque page ville cite ses vraies rues, ses zones
+  d'activité et sa saisonnalité ; chaque page métier parle des usages et
+  des obligations propres à ce métier. Des pages identiques où seul le
+  nom change sont des doorway pages, et Google déclasse le domaine entier.
+
+Si vous ajoutez une ville, écrivez-la vraiment, ou ne l'ajoutez pas.
+Mieux vaut dix pages différentes que trente pages jumelles. Et ajoutez
+l'URL dans sitemap.xml.
+
+
+AVANT DE COMMUNIQUER DESSUS
+----------------------------
+- Accord écrit d'ADN Digital Solution (nom, ScreenLab, photos, prix HT,
+  zone des 200 km)
+- Confirmation que les mensualités affichées sont bien HT
+- SIRET et raison sociale dans mentions-legales.html

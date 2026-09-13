@@ -1,0 +1,354 @@
+:root{
+  --nuit:#141824;
+  --nuit-2:#1E2331;
+  --jaune:#FFC43D;
+  --jaune-fonce:#C9951C;
+  --gris:#F2F3F6;
+  --bord:#E2E4EA;
+  --texte:#41465A;
+  --texte-clair:#7A8194;
+  --rayon:14px;
+  --shell:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:"Poppins",system-ui,sans-serif;color:var(--nuit);
+  background:#fff;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{line-height:1.1;margin:0;font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.75rem,4vw,2.7rem)}
+h3{font-size:1.16rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:20px}
+.bloc{padding:72px 0}
+.bloc--gris{background:var(--gris)}
+.bloc--nuit{background:var(--nuit);color:#fff}
+.intro{max-width:56ch;color:var(--texte);margin-top:14px;font-size:1.03rem}
+.bloc--nuit .intro{color:#B9BECD}
+:focus-visible{outline:3px solid var(--jaune);outline-offset:3px;border-radius:4px}
+
+/* --- boutons --- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:15px 26px;border-radius:10px;font-weight:700;font-size:1rem;
+  text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;
+  transition:background .15s ease,color .15s ease,border-color .15s ease;
+}
+.btn--jaune{background:var(--jaune);color:var(--nuit)}
+.btn--jaune:hover{background:#FFD470}
+.btn--ligne{border-color:rgba(255,255,255,.45);color:#fff}
+.btn--ligne:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn--sombre{background:var(--nuit);color:#fff}
+.btn--sombre:hover{background:var(--nuit-2)}
+.btn--large{width:100%;padding:17px 26px;font-size:1.05rem}
+
+/* --- en-tête --- */
+.entete{position:sticky;top:0;z-index:60;background:rgba(20,24,36,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.09)}
+.entete .shell{display:flex;align-items:center;justify-content:space-between;gap:14px;height:68px}
+.marque{color:#fff;text-decoration:none;font-weight:800;font-size:1.08rem;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.marque svg{width:26px;height:26px;flex:none}
+.entete .btn{padding:11px 20px;font-size:.94rem}
+.entete-tel{display:none}
+.entete-mini{padding:10px 16px!important;font-size:.9rem!important}
+
+/* --- hero --- */
+.hero{background:var(--nuit);color:#fff;overflow:hidden;position:relative}
+.hero .shell{display:grid;gap:48px;padding-block:64px 72px}
+.hero h1{font-size:clamp(2.3rem,6.2vw,4.05rem)}
+.hero-texte>p{color:#C3C8D6;font-size:1.09rem;margin-top:20px;max-width:50ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.hero-tags span{border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 14px;font-size:.85rem;color:#C3C8D6}
+.prix-cle{display:flex;align-items:baseline;gap:10px;margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14)}
+.prix-cle b{font-size:2.5rem;font-weight:800;color:var(--jaune);letter-spacing:-.03em}
+.prix-cle span{color:#B9BECD;font-size:.95rem;max-width:22ch;line-height:1.35}
+
+/* vitrine animée */
+.vitrine{position:relative;margin-inline:auto;width:100%;max-width:255px}
+.vitrine-cadre{
+  background:linear-gradient(#2A3040,#1A1F2C);border:1px solid rgba(255,255,255,.14);
+  border-radius:18px;padding:16px;box-shadow:0 30px 60px rgba(0,0,0,.45);
+}
+.vitrine-ecran{position:relative;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#000}
+.diapo{position:absolute;inset:0;display:grid;align-content:center;gap:10px;padding:26px;opacity:0;transition:opacity .7s ease;text-align:center}
+.diapo.actif{opacity:1}
+.diapo small{font-size:.8rem;font-weight:700;letter-spacing:.08em;opacity:.8}
+.diapo strong{font-size:1.85rem;font-weight:800;line-height:1.08;letter-spacing:-.02em}
+.diapo em{font-style:normal;font-size:2.9rem;font-weight:800;letter-spacing:-.03em}
+.d1{background:linear-gradient(150deg,#B3341F,#7C1F12);color:#fff}
+.d2{background:linear-gradient(150deg,#1D6B4F,#0F4030);color:#fff}
+.d3{background:linear-gradient(150deg,var(--jaune),#E8A315);color:#2A1F00}
+.vitrine-pied{height:26px;margin:0 auto;width:44%;background:#2A3040;border-radius:0 0 8px 8px}
+.vitrine-note{text-align:center;color:#8E95A8;font-size:.82rem;margin-top:14px}
+
+/* --- bénéfices --- */
+.benefices{display:grid;gap:22px}
+.benefice{display:flex;gap:14px;align-items:flex-start}
+.benefice svg{width:34px;height:34px;flex:none;color:var(--jaune-fonce)}
+.benefice b{display:block;font-size:1rem}
+.benefice span{color:var(--texte);font-size:.93rem}
+
+/* --- solutions --- */
+.solutions{display:grid;gap:20px;margin-top:40px}
+.solution{background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);overflow:hidden;display:flex;flex-direction:column}
+.solution-visuel{background:var(--nuit);padding:26px;display:grid;place-items:center;min-height:180px}
+.solution-corps{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.solution-corps p{color:var(--texte);font-size:.95rem;margin-top:10px}
+.etiquette{align-self:flex-start;background:var(--jaune);color:var(--nuit);font-weight:800;font-size:.86rem;padding:5px 12px;border-radius:7px;margin-bottom:12px}
+.solution ul{list-style:none;margin:16px 0 0;padding:0;font-size:.88rem;color:var(--texte-clair)}
+.solution li{padding:7px 0;border-top:1px solid var(--bord)}
+
+/* --- simulateur --- */
+.simu{background:#fff;border-radius:var(--rayon);border:1px solid var(--bord);overflow:hidden;margin-top:36px}
+.simu-choix{padding:26px 24px}
+.simu-etape+.simu-etape{margin-top:24px}
+.simu-etape>p{font-weight:700;font-size:.95rem;margin-bottom:12px}
+.options{display:flex;flex-wrap:wrap;gap:9px}
+.opt{
+  border:2px solid var(--bord);background:#fff;border-radius:10px;padding:11px 15px;
+  font-family:inherit;font-size:.93rem;font-weight:600;color:var(--nuit);cursor:pointer;line-height:1.25;text-align:left;
+}
+.opt small{display:block;font-weight:500;font-size:.75rem;color:var(--texte-clair)}
+.opt[aria-pressed="true"]{border-color:var(--nuit);background:var(--nuit);color:#fff}
+.opt[aria-pressed="true"] small{color:#AAB0C0}
+.opt:disabled{opacity:.35;cursor:not-allowed}
+.simu-sortie{background:var(--nuit);color:#fff;padding:28px 24px;display:grid;gap:18px;align-content:start}
+.simu-montant{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.simu-montant b{font-size:3.1rem;font-weight:800;color:var(--jaune);letter-spacing:-.03em;line-height:1}
+.simu-montant span{color:#B9BECD;font-weight:600}
+.simu-jour{color:#fff;font-weight:600}
+.simu-eco{color:var(--jaune);font-weight:700;font-size:.92rem}
+.simu-detail{color:#9AA1B2;font-size:.85rem;line-height:1.5}
+
+/* --- tailles --- */
+.tailles{margin-top:36px;background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:26px 20px}
+.echelle{display:flex;align-items:flex-end;gap:12px;overflow-x:auto;padding-bottom:8px}
+.taille{flex:none;text-align:center}
+.taille div{background:var(--nuit);border:2px solid var(--nuit);border-radius:4px;margin-bottom:8px}
+.taille b{display:block;font-size:.92rem}
+.taille small{color:var(--texte-clair);font-size:.76rem}
+.tailles table{width:100%;border-collapse:collapse;margin-top:26px;font-size:.9rem}
+.tailles th,.tailles td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--bord)}
+.tailles th{font-weight:700;font-size:.8rem;color:var(--texte-clair)}
+.note{color:var(--texte-clair);font-size:.86rem;margin-top:16px}
+
+/* --- 5 euros --- */
+.cout{background:var(--jaune);padding:56px 0}
+.cout .shell{display:grid;gap:20px;align-items:center}
+.cout b{font-size:clamp(3.2rem,9vw,5rem);font-weight:800;letter-spacing:-.04em;line-height:1;display:block}
+.cout p{font-size:1.14rem;font-weight:600;max-width:46ch}
+
+/* --- inclus --- */
+.inclus{list-style:none;padding:0;margin:36px 0 0;display:grid;gap:2px}
+.inclus li{display:flex;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.14)}
+.inclus li:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
+.inclus svg{width:22px;height:22px;flex:none;color:var(--jaune);margin-top:3px}
+.inclus b{display:block}
+.inclus span{color:#B9BECD;font-size:.93rem}
+
+/* --- logiciel --- */
+.logiciel{display:grid;gap:16px;margin-top:38px}
+.carte-log{background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:22px}
+.carte-log svg{width:26px;height:26px;color:var(--jaune-fonce);margin-bottom:12px}
+.carte-log p{color:var(--texte);font-size:.92rem;margin-top:7px}
+.immo{background:var(--nuit);color:#fff;border-radius:var(--rayon);padding:26px;margin-top:20px;display:grid;gap:10px}
+.immo p{color:#C3C8D6;font-size:.97rem;max-width:62ch}
+
+/* --- métiers --- */
+.metiers{display:grid;gap:1px;background:var(--bord);border:1px solid var(--bord);border-radius:var(--rayon);overflow:hidden;margin-top:38px}
+.metier{background:#fff;padding:22px;color:inherit;text-decoration:none;display:block;transition:background .15s ease}
+a.metier:hover{background:#FFFDF5}
+a.metier h3{text-decoration:underline;text-decoration-color:var(--jaune-fonce);text-underline-offset:3px}
+.metier svg{width:26px;height:26px;color:var(--jaune-fonce);margin-bottom:10px}
+.metier p{color:var(--texte);font-size:.9rem;margin-top:6px}
+
+/* --- faq --- */
+.faq{margin-top:34px;border-top:1px solid var(--bord)}
+.faq details{border-bottom:1px solid var(--bord)}
+.faq summary{cursor:pointer;padding:19px 34px 19px 0;font-weight:700;position:relative;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:15px;font-size:1.5rem;font-weight:400;color:var(--jaune-fonce)}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 0 20px;color:var(--texte);max-width:70ch;font-size:.96rem}
+
+/* --- formulaire --- */
+.devis .shell{display:grid;gap:40px}
+.rassure{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px;color:#C3C8D6;font-size:.95rem}
+.rassure li{display:flex;gap:11px;align-items:flex-start}
+.rassure svg{width:20px;height:20px;color:var(--jaune);flex:none;margin-top:3px}
+form{background:#fff;border-radius:var(--rayon);padding:24px;color:var(--nuit)}
+.champs{display:grid;gap:15px}
+label{display:block;font-weight:600;font-size:.88rem}
+input,select,textarea{
+  width:100%;margin-top:7px;padding:13px 13px;border:1.5px solid var(--bord);border-radius:9px;
+  font-family:inherit;font-size:1rem;color:var(--nuit);background:#fff;
+}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--nuit)}
+textarea{resize:vertical;min-height:96px}
+.plus{margin-top:18px;border:1px solid var(--bord);border-radius:10px;overflow:hidden}
+.plus summary{cursor:pointer;padding:15px;font-weight:700;font-size:.94rem;background:var(--gris);list-style:none}
+.plus summary::-webkit-details-marker{display:none}
+.plus-corps{padding:18px 15px}
+.plus-corps>p{font-size:.86rem;color:var(--texte-clair);margin-bottom:16px}
+.photo{background:#FFF7E2;border:1.5px dashed var(--jaune-fonce);border-radius:10px;padding:16px;margin-top:18px}
+.photo b{display:block;font-size:.95rem}
+.photo p{font-size:.87rem;color:var(--texte);margin-top:5px}
+.photo a{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-weight:700;font-size:.92rem;color:var(--nuit)}
+.photo svg{width:19px;height:19px}
+.rgpd{font-size:.78rem;color:var(--texte-clair);margin-top:14px;line-height:1.5}
+.rgpd a{color:var(--texte)}
+
+/* --- réalisations --- */
+.real{display:grid;gap:12px;margin-top:38px;grid-template-columns:repeat(2,1fr)}
+.real figure{margin:0;border-radius:10px;overflow:hidden;background:var(--nuit);position:relative}
+.real img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;display:block}
+.real figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;color:#fff;font-size:.8rem;font-weight:600;background:linear-gradient(transparent,rgba(10,12,20,.85))}
+.real--large img{aspect-ratio:3/4}
+.credit{color:var(--texte-clair);font-size:.82rem;margin-top:16px;max-width:70ch}
+.bloc--nuit .credit{color:#8E95A8}
+
+/* --- fabricant --- */
+.fab{display:grid;gap:22px;margin-top:36px}
+.fab-carte{background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:22px}
+.fab-carte b{display:block;font-size:1.9rem;font-weight:800;color:var(--jaune-fonce);letter-spacing:-.02em}
+.fab-carte p{color:var(--texte);font-size:.93rem;margin-top:6px}
+.enseignes{margin-top:26px;padding:20px;background:#fff;border:1px solid var(--bord);border-radius:var(--rayon)}
+.enseignes p{color:var(--texte);font-size:.95rem}
+
+/* --- logiciel visuel --- */
+.log-visuel{margin-top:30px;border-radius:var(--rayon);overflow:hidden;border:1px solid var(--bord);background:#fff}
+.log-visuel img{width:100%;display:block}
+
+/* --- pied --- */
+.pied{background:var(--nuit);color:#fff;padding:52px 0 30px;border-top:1px solid rgba(255,255,255,.1)}
+.pied .shell{display:grid;gap:30px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--jaune)}
+.pied-contact{font-style:normal;color:#C3C8D6;line-height:1.9;font-size:.95rem}
+.pied-contact b{color:#fff;display:block;font-size:1.02rem}
+.pied-bas{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;color:#7A8194;font-size:.8rem}
+.villes{color:#8E95A8;font-size:.86rem;line-height:1.8;max-width:70ch}
+
+/* --- bouton flottant --- */
+.flottant{
+  position:fixed;right:16px;bottom:16px;z-index:70;background:var(--jaune);color:var(--nuit);
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  box-shadow:0 10px 26px rgba(0,0,0,.3);text-decoration:none;
+}
+.flottant svg{width:25px;height:25px}
+
+@media (min-width:720px){
+  .bloc{padding:88px 0}
+  .benefices{grid-template-columns:repeat(2,1fr);gap:26px}
+  .solutions{grid-template-columns:repeat(2,1fr)}
+  .logiciel{grid-template-columns:repeat(2,1fr)}
+  .metiers{grid-template-columns:repeat(2,1fr)}
+  .champs{grid-template-columns:repeat(2,1fr)}
+  .champs .large{grid-column:1/-1}
+  .real{grid-template-columns:repeat(3,1fr)}
+  .fab{grid-template-columns:repeat(3,1fr)}
+  .cout .shell{grid-template-columns:auto 1fr;gap:40px}
+  .entete-tel{display:inline-flex}
+  .entete-mini{display:none}
+}
+@media (min-width:980px){
+  .hero .shell{grid-template-columns:1.15fr .85fr;align-items:center;padding-block:84px 96px;gap:60px}
+  .vitrine{max-width:370px}
+  .benefices{grid-template-columns:repeat(4,1fr)}
+  .simu{display:grid;grid-template-columns:1.25fr .75fr}
+  .simu-sortie{align-content:center}
+  .metiers{grid-template-columns:repeat(3,1fr)}
+  .real{grid-template-columns:repeat(4,1fr)}
+  .fab{grid-template-columns:repeat(3,1fr)}
+  .devis .shell{grid-template-columns:.85fr 1.15fr;align-items:start;gap:56px}
+  .pied .shell{grid-template-columns:1.2fr .8fr .8fr}
+  .flottant{display:none}
+  form{padding:32px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+
+/* =========================================================
+   PAGES MÉTIERS ET VILLES
+   Styles propres aux pages d'atterrissage. L'accueil n'en
+   utilise aucun : ils ne s'appliquent qu'aux pages secondaires.
+   ========================================================= */
+
+/* --- fil d'Ariane --- */
+.fil{background:var(--gris);border-bottom:1px solid var(--bord);font-size:.84rem}
+.fil .shell{padding-block:11px}
+.fil a{color:var(--texte-clair);text-decoration:none}
+.fil a:hover{color:var(--nuit)}
+.fil span{color:var(--texte-clair)}
+.fil b{font-weight:600;color:var(--nuit)}
+
+/* --- en-tête de page --- */
+.tete{background:var(--nuit);color:#fff}
+.tete .shell{padding-block:52px 56px;display:grid;gap:36px}
+.tete h1{font-size:clamp(1.95rem,4.6vw,3.1rem)}
+.tete>.shell>div>p{color:#C3C8D6;font-size:1.06rem;margin-top:18px;max-width:54ch}
+.tete-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.tete-photo{margin:0;border-radius:var(--rayon);overflow:hidden;background:var(--nuit-2)}
+.tete-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.tete-photo figcaption{font-size:.78rem;color:#8E95A8;padding:9px 2px 0}
+
+/* --- corps rédactionnel --- */
+.texte{max-width:70ch}
+.texte h2{font-size:clamp(1.45rem,3.2vw,2.05rem);margin-top:46px}
+.texte h2:first-child{margin-top:0}
+.texte h3{margin-top:30px}
+.texte p{color:var(--texte);margin-top:15px;font-size:1.01rem}
+.texte ul{color:var(--texte);margin:15px 0 0;padding-left:22px;font-size:1.01rem}
+.texte li{margin-top:9px}
+.texte li::marker{color:var(--jaune-fonce)}
+.texte a{color:var(--nuit);text-decoration:underline;text-decoration-color:var(--jaune-fonce);text-underline-offset:3px;font-weight:600}
+.texte strong{font-weight:700;color:var(--nuit)}
+
+/* --- encadré --- */
+.encadre{background:#FFF7E2;border-left:4px solid var(--jaune);border-radius:0 10px 10px 0;padding:20px 22px;margin-top:26px}
+.encadre b{display:block;font-size:1.02rem}
+.encadre p{margin-top:8px;font-size:.96rem;color:var(--texte)}
+.encadre--sombre{background:var(--nuit);border-left-color:var(--jaune);color:#fff;border-radius:var(--rayon)}
+.encadre--sombre p{color:#C3C8D6}
+
+/* --- tableau de tarifs --- */
+.tarifs{margin-top:26px;overflow-x:auto}
+.tarifs table{width:100%;border-collapse:collapse;font-size:.93rem;min-width:440px}
+.tarifs th,.tarifs td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--bord)}
+.tarifs thead th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--texte-clair);font-weight:700}
+.tarifs tbody th{font-weight:600}
+.tarifs td b{color:var(--nuit)}
+
+/* --- pages sœurs --- */
+.soeurs{display:grid;gap:12px;margin-top:38px}
+.soeur{display:block;background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:18px 20px;text-decoration:none;transition:border-color .15s ease}
+.soeur:hover{border-color:var(--nuit)}
+.soeur b{display:block;font-size:1rem}
+.soeur span{display:block;color:var(--texte-clair);font-size:.89rem;margin-top:4px}
+.bloc--gris .soeur{background:#fff}
+
+/* --- bandeau d'appel --- */
+.appel{background:var(--jaune);padding:52px 0}
+.appel .shell{display:grid;gap:22px;align-items:center}
+.appel h2{font-size:clamp(1.6rem,3.6vw,2.3rem)}
+.appel p{font-weight:500;max-width:52ch;margin-top:10px}
+.appel-actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* --- formulaire court --- */
+.court{background:var(--nuit);color:#fff}
+.court .shell{display:grid;gap:34px}
+.court h2{font-size:clamp(1.6rem,3.6vw,2.2rem)}
+
+@media (min-width:720px){
+  .tete .shell{grid-template-columns:1.25fr .75fr;align-items:center;padding-block:64px 70px;gap:46px}
+  .soeurs{grid-template-columns:repeat(3,1fr)}
+  .appel .shell{grid-template-columns:1.3fr auto;gap:40px}
+}
+@media (min-width:980px){
+  .court .shell{grid-template-columns:.8fr 1.2fr;align-items:start;gap:54px}
+}

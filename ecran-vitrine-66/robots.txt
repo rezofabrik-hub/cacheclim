@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ecran-vitrine-66.fr/sitemap.xml

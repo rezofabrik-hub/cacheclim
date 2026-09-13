@@ -101,3 +101,28 @@ témoignages présents dans la version précédente ont été retirés : publier
 avis inventés est une pratique commerciale trompeuse (art. L121-2 du code de la
 consommation), sanctionnée par la DGCCRF. Le bloc contient le modèle de carte à
 remplir avec de vrais avis.
+
+---
+
+## Écran Vitrine 66 — second site du dépôt
+
+Le dossier [`ecran-vitrine-66/`](ecran-vitrine-66/) héberge un site distinct,
+sans rapport avec la boutique de caches clim : **Écran Vitrine 66**, marque
+d'affichage dynamique pour les commerçants des Pyrénées-Orientales. Matériel
+ADN Digital Solution, Patrick Thais sur le terrain, RezoFabrik à la
+communication.
+
+Statique lui aussi, sans dépendance ni étape de build. 19 pages : accueil,
+6 pages métiers, 10 pages villes, mentions légales et page d'erreur.
+
+| Fichier | Rôle |
+|---|---|
+| `ecran-vitrine-66/index.html` | Accueil : hero animé, 4 solutions, simulateur de mensualité, guide des tailles, ScreenLab, FAQ, formulaire |
+| `ecran-vitrine-66/ecran-vitrine-<métier>.html` | 6 pages métiers — restauration, immobilier, pharmacie et institut, boulangerie et boucherie, coiffure et optique, auto-école et salle de sport |
+| `ecran-vitrine-66/ecran-vitrine-<ville>.html` | 10 pages villes, de Perpignan à Montpellier |
+| `ecran-vitrine-66/assets/site.js` | **Source unique** : clé du formulaire, téléphone, grille des mensualités |
+| `ecran-vitrine-66/assets/site.css` | Feuille de style commune aux 19 pages |
+| `ecran-vitrine-66/LISEZ-MOI.txt` | Mise en ligne, domaine, ce qu'il reste à faire |
+
+Les deux sites ne partagent ni code, ni feuille de style, ni image. Le détail
+de l'exploitation est dans `ecran-vitrine-66/LISEZ-MOI.txt`.
