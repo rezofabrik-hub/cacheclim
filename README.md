@@ -117,6 +117,7 @@ le sitemap Yoast du site, `sitemap_index.xml`.
 | [`docs/battre-kachklim.md`](docs/battre-kachklim.md) | Analyse technique du concurrent principal et plan en trois vagues |
 | [`docs/grille-tarifaire.md`](docs/grille-tarifaire.md) | Nouvelle grille alignée sur la concurrence, et ce qu'il faut vérifier avant de l'appliquer |
 | [`docs/plan-local-66.md`](docs/plan-local-66.md) | Devenir le cache clim des Pyrénées-Orientales : fiche Google, installateurs, pose, référencement local, tourisme |
+| [`docs/hausse-prix-woocommerce.md`](docs/hausse-prix-woocommerce.md) | La hausse de 10 € HT à saisir dans WooCommerce : prix produit par produit et marche à suivre |
 | [`docs/kit-wordpress.md`](docs/kit-wordpress.md) | Tout ce qui se colle directement dans rezo-fabrik.fr : paiement, tarifs, 15 descriptions produit, titres SEO, corrections |
 
 ## Avis clients
