@@ -96,6 +96,24 @@ en dur dans les pages et signale les écarts.
   petite vignette au lieu de la grande carte. Prévoir un visuel de partage par fiche
   modèle, en 1200×630 au minimum.
 
+### Ce qu'on ne peut pas faire depuis un conteneur cloud
+
+Vérifié le 13 septembre 2026 : **le site en ligne n'est modifiable par aucun moyen**
+depuis une session cloud.
+
+| Voie | État |
+|---|---|
+| SSH / WP-CLI | aucune clé, `wp` pas installé |
+| API REST WordPress | `POST /wp-json/` → **401** |
+| Jetpack / WordPress.com | `rezo-fabrik.fr` absent de la liste des sites ; seul `social-miroir.fr` remonte, en plan gratuit |
+
+Donc : tout changement de prix, de contenu ou de fiche produit fait ici **reste dans le
+dépôt** tant que personne ne le reporte dans WordPress. Le dire clairement à Laurent
+plutôt que de laisser croire que le site est à jour.
+
+Pour débloquer : approuver la connexion Jetpack (chantier §7), ou fournir un accès SSH.
+**Ne jamais s'authentifier à sa place.**
+
 ## 4. Règles métier — non négociables
 
 1. **Prix affichés uniquement sur le cache-clim.** Sur la découpe plexi, l'enseigne et
@@ -123,13 +141,21 @@ Deux grilles coexistent et ne disent pas la même chose :
 
 | | Standard | Sur mesure |
 |---|---|---|
-| Ce dépôt (`assets/site.js`, `docs/grille-tarifaire.md`) | 219 → 319 € | dès 349 € |
-| Boutique WooCommerce de rezo-fabrik.fr | 230 → 325 € en uni | dès 399 € |
+| Ce dépôt (`assets/site.js`) | 231 → 331 € TTC (5 tailles) | dès 361 € |
+| Boutique WooCommerce de rezo-fabrik.fr | 230 → 325 € (4 tailles) | dès 399 € |
 
-La grille du dépôt est la nouvelle, positionnée sous Kach Klim. **La boutique en ligne
-affiche toujours l'ancienne** : les pages rédigées ici annoncent donc un prix que le
-panier ne pratique pas. À trancher avec Laurent, et à corriger dans WooCommerce avant
-de publier les pages tarifaires.
+Le dépôt a pris **+10 € HT (+12 € TTC) par taille le 13 septembre 2026**, sur demande de
+Laurent. La boutique en ligne n'a pas bougé : les pages rédigées ici annoncent donc un
+prix que le panier ne pratique pas, et le nombre de tailles diffère aussi (5 contre 4).
+**La hausse reste à saisir dans WooCommerce** — elle n'a pas pu être faite d'ici, voir
+§3 « Ce qu'on ne peut pas faire depuis un conteneur ».
+
+⚠️ **Les prix du site sont TTC.** Une consigne donnée en HT se convertit avant report :
++10 € HT = +12 € TTC à 20 %. Ne jamais reporter un montant HT tel quel.
+
+⚠️ La grille n'est plus systématiquement sous Kach Klim (229 – 339 €) : en taille S on
+est désormais 2 € au-dessus de leur entrée de gamme. `docs/grille-tarifaire.md` décrit
+l'ancien positionnement et n'est plus à jour.
 
 ## 5. Les photos
 

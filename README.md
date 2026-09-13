@@ -90,8 +90,10 @@ de votre client. Les consignes de prise de vue sont dans
 ### Changer un prix
 
 Tous les tarifs sont définis dans la table `TAILLES` de `assets/site.js`, et
-nulle part ailleurs. La grille retenue est **un seul prix par taille** : de 219 à
-319 €, sur mesure dès 349 €. Les 16 designs et les 7 finitions sont au même
+nulle part ailleurs. La grille retenue est **un seul prix par taille** : de 231 à
+331 € TTC, sur mesure dès 361 €. Les prix affichés sont TTC (CGV : « toutes taxes
+comprises ») — une hausse exprimée en HT doit donc être multipliée par 1,20 avant
+d'être reportée ici. Les 16 designs et les 7 finitions sont au même
 tarif — le motif ne coûte pas plus cher que l'uni. Après modification :
 
 ```bash

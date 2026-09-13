@@ -8,20 +8,24 @@
    Un seul prix par taille, toutes finitions comprises. Les 16 designs
    et les 7 finitions sont au même tarif : le motif ne coûte pas plus
    cher que l'uni, ce que la concurrence ne propose pas.
-   Grille systématiquement 20 € sous Kach Klim (10 € sur la taille S).
-   Voir docs/grille-tarifaire.md pour le positionnement complet.
+   Hausse de 10 € HT (12 € TTC) par taille appliquée le 13 septembre 2026.
+   Attention : la grille n'est plus systématiquement sous Kach Klim
+   (229 – 339 €). En taille S nous sommes maintenant 2 € au-dessus de
+   leur entrée de gamme ; l'écart ne reste favorable que sur le haut
+   de gamme (331 € contre 339 €). docs/grille-tarifaire.md décrit
+   l'ancien positionnement et n'est plus à jour sur ce point.
    ============================================================= */
 
 const TAILLES = [
-  { id: 'S',   L: 85,  H: 65,  Pmin: 45, Pmax: 55, prix: 219 },
-  { id: 'M',   L: 93,  H: 73,  Pmin: 50, Pmax: 60, prix: 249 },
-  { id: 'L',   L: 95,  H: 83,  Pmin: 53, Pmax: 63, prix: 279 },
-  { id: 'XL',  L: 102, H: 79,  Pmin: 54, Pmax: 64, prix: 279 },
-  { id: 'XXL', L: 105, H: 95,  Pmin: 60, Pmax: 70, prix: 319 },
+  { id: 'S',   L: 85,  H: 65,  Pmin: 45, Pmax: 55, prix: 231 },
+  { id: 'M',   L: 93,  H: 73,  Pmin: 50, Pmax: 60, prix: 261 },
+  { id: 'L',   L: 95,  H: 83,  Pmin: 53, Pmax: 63, prix: 291 },
+  { id: 'XL',  L: 102, H: 79,  Pmin: 54, Pmax: 64, prix: 291 },
+  { id: 'XXL', L: 105, H: 95,  Pmin: 60, Pmax: 70, prix: 331 },
 ];
 
 /* Sur mesure : prix plancher, majoré à la surface au-delà du gabarit XXL */
-const SUR_MESURE = { prix: 349, maxL: 110, maxH: 120, maxP: 65 };
+const SUR_MESURE = { prix: 361, maxL: 110, maxH: 120, maxP: 65 };
 
 /* Jeu qui garantit l'aération : le cache doit dépasser l'unité */
 const MARGE = { L: 5, H: 5, P: 3 };
