@@ -77,7 +77,8 @@ p{margin:0}
 .diapo small{font-size:.8rem;font-weight:700;letter-spacing:.08em;opacity:.8}
 .diapo strong{font-size:1.85rem;font-weight:800;line-height:1.08;letter-spacing:-.02em}
 .diapo em{font-style:normal;font-size:2.9rem;font-weight:800;letter-spacing:-.03em}
-/* La première diapositive porte une photo : c'est celle qui vend un plat.
+/* Les deux premières diapositives portent une photo : ce sont celles qui
+   montrent un produit.
    Les autres restent typographiques — ce sont des informations, et un
    aplat se lit mieux qu'une image chargée. Le texte descend en bas de
    l'écran, le voile ne s'assombrit que sous lui : la photo reste lisible
@@ -91,7 +92,13 @@ p{margin:0}
     url("../img/diapo-dessert.webp") center/cover no-repeat;
   color:#fff;
 }
-.d2{background:linear-gradient(150deg,#1D6B4F,#0F4030);color:#fff}
+.d2{
+  align-content:end;padding-bottom:34px;
+  background:
+    linear-gradient(180deg,rgba(6,38,26,.04) 0%,rgba(6,38,26,.10) 34%,rgba(8,48,33,.74) 58%,rgba(6,40,28,.93) 100%),
+    url("../img/diapo-arrivage.webp") center/cover no-repeat;
+  color:#fff;
+}
 .d3{background:linear-gradient(150deg,var(--jaune),#E8A315);color:#2A1F00}
 .vitrine-pied{height:26px;margin:0 auto;width:44%;background:#2A3040;border-radius:0 0 8px 8px}
 .vitrine-note{text-align:center;color:#8E95A8;font-size:.82rem;margin-top:14px}
