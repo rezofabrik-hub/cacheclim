@@ -525,3 +525,32 @@ body.bloque{overflow:hidden}
 .merci b{font-size:1.25rem;font-weight:800;letter-spacing:-.02em}
 .merci p{color:var(--texte);font-size:.96rem;max-width:44ch}
 .merci a{color:var(--nuit);font-weight:700}
+
+/* -----------------------------------------------------------------
+   Bloc de saison : les métiers dont c'est la période. Le contenu est
+   réécrit chaque mois par outils/saison.py. Les liens partent de la
+   page d'accueil, qui est la plus forte du site : c'est là que ce
+   type de mise en avant a un effet réel.
+   ----------------------------------------------------------------- */
+.saison-mois {
+  font-size: .78rem; font-weight: 600; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--jaune-fonce, #A8770B);
+  margin: 0 0 .35rem;
+}
+.saison-cartes {
+  display: grid; gap: 1rem; margin-top: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+.saison-carte {
+  display: block; text-decoration: none; color: inherit;
+  background: #fff; border: 1px solid #E2E4EA;
+  border-left: 3px solid var(--jaune, #FFC43D);
+  border-radius: 0 10px 10px 0; padding: 1.1rem 1.2rem;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.saison-carte h3 { margin: 0 0 .4rem; font-size: 1.02rem; }
+.saison-carte p { margin: 0; font-size: .92rem; color: #6A7183; line-height: 1.5; }
+.saison-carte:hover, .saison-carte:focus-visible {
+  transform: translateY(-2px); box-shadow: 0 6px 18px rgba(20, 24, 36, .09);
+}
+@media (prefers-reduced-motion: reduce) { .saison-carte { transition: none; } }
